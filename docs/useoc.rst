@@ -1,5 +1,5 @@
-Using OpenCATS-The building blocks: companies, contacts, job orders, and candidates
-===================================================================================
+4. Using OpenCATS-The building blocks: companies, contacts, job orders, and candidates
+======================================================================================
 
 .. image:: ../docs/_static/uoc1.png
 
@@ -51,7 +51,7 @@ Click on ``Add Company``
 
 There are two ways to add information into OpenCATS.
 
-* Copy and paste it into the box labelled ``cut and paste freeform address here``  Then clck the ``<--`` button to populate the fields. 
+* Copy and paste it into the box labeled ``cut and paste free-form address here``  Then click the ``<--`` button to populate the fields. 
 * Manually type and paste it into each field on the left.
 
 .. note:: Don't forget to enter key technologies for the company and any miscellaneous notes that you want to save in the bottom two fields for future reference.
@@ -128,7 +128,10 @@ This will take you to your new Job Order screen.
 
 .. image:: ../docs/_static/uoc10.png
 
-If everything looks correct, let's move on to adding our frst candidate in OpenCATS and into the pipeline for this job.
+If everything looks correct, let's move on to adding our first candidate in OpenCATS and into the pipeline for this job.
+
+Adding a Candidate and attaching them to the Job Order pipeline
+---------------------------------------------------------------
 
 Click ``Add Candidate to This Job Order Pipeline`` at the bottom of the screen.
 
@@ -138,7 +141,19 @@ Then ``Add Candidate``.
 
 .. image:: ../docs/_static/uoc12.png
 
+Click ``Browse`` to upload a resume from your local file system.  
 
+From this screen you need to manually copy and paste into the information fields on the left.  When you have filled out all of the necessary information, click ``Add Candidate`` in the bottom left corner.
+
+.. image:: ../docs/_static/uoc13.png
+
+Success!  We have a candidate in the pipeline! 
+
+.. note:: Make sure to Rate your candidates with the stars under **Match** on the bottom this screen.  It will help with quick reference later on.
+
+
+
+ 
 
 
 

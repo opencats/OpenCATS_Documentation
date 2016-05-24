@@ -1,5 +1,5 @@
-How to install OpenCATS
-=======================
+3. How to install OpenCATS
+==========================
 
 Installation options are a private server, VPS, local computer or shared hosting environment.  See related section for installation specifics.
 

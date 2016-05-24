@@ -27,7 +27,7 @@ The commercial CATS product is a highly polished, professionally supported, host
 OpenCATS, on the other hand, has somewhat less functionality, is installed on your server(s), and is supported only by you -- with some help from the development community.
 
 General Features
-================
+----------------
 
 **Free!:**  OpenCATS is open source software.  Which means it is free (no cost) to use, and you are free to modify it in (almost) any way you want.  Seriously, if you can do it, get down into the code and change absolutely anything!  
 
