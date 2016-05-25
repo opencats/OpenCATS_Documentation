@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>3. How to install OpenCATS &mdash; OpenCATS 0.9.3 documentation</title>
+  <title>Windows - OpenCATS Installation Instructions &mdash; OpenCATS 0.9.3 documentation</title>
   
 
   
@@ -31,8 +31,8 @@
 
   
     <link rel="top" title="OpenCATS 0.9.3 documentation" href="index.html"/>
-        <link rel="next" title="Windows - OpenCATS Installation Instructions" href="install-windows.html"/>
-        <link rel="prev" title="2. Introduction" href="introduction.html"/> 
+        <link rel="next" title="4. Using OpenCATS-The building blocks: companies, contacts, job orders, and candidates" href="useoc.html"/>
+        <link rel="prev" title="3. How to install OpenCATS" href="install.html"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -86,12 +86,8 @@
 <li class="toctree-l1"><a class="reference internal" href="toc.html">Contents</a></li>
 <li class="toctree-l1"><a class="reference internal" href="preface.html">1. Preface</a></li>
 <li class="toctree-l1"><a class="reference internal" href="introduction.html">2. Introduction</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">3. How to install OpenCATS</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#requirements">Requirements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#installation-unix-linux-prerequisites">Installation-Unix/Linux Prerequisites</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="install-windows.html">Windows - OpenCATS Installation Instructions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install.html">3. How to install OpenCATS</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Windows - OpenCATS Installation Instructions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="useoc.html">4. Using OpenCATS-The building blocks: companies, contacts, job orders, and candidates</a></li>
 </ul>
 
@@ -123,11 +119,11 @@
   <ul class="wy-breadcrumbs">
     <li><a href="index.html">Docs</a> &raquo;</li>
       
-    <li>3. How to install OpenCATS</li>
+    <li>Windows - OpenCATS Installation Instructions</li>
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="_sources/install.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/install-windows.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -137,27 +133,10 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="how-to-install-opencats">
-<h1>3. How to install OpenCATS<a class="headerlink" href="#how-to-install-opencats" title="Permalink to this headline">¶</a></h1>
-<p>Installation options are a private server, VPS, local computer or shared hosting environment.  See related section for installation specifics.</p>
-<div class="section" id="requirements">
-<h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li>Operating System: GNU/Linux, FreeBSD or Windows</li>
-<li>LAMP-Linux Apache MySQL (or MariaDB) PHP server environment</li>
-<li>Antiword, PdfToText, html2text, UnRTF</li>
-<li>PHP Zip library</li>
-<li>PHP LDAP library</li>
-</ul>
-</div>
-<div class="section" id="installation-unix-linux-prerequisites">
-<h2>Installation-Unix/Linux Prerequisites<a class="headerlink" href="#installation-unix-linux-prerequisites" title="Permalink to this headline">¶</a></h2>
-<p><strong>LAMP</strong></p>
-<p>CentOS 7: <a class="reference external" href="http://krizna.com/centos/install-lamp-server-centos-7">CentOS Install LAMP tutorial</a>, <a class="reference external" href="https://www.howtoforge.com/apache_php_mysql_on_centos_7_lamp">CentOS Install LAMP tutorial#2</a></p>
-<p>Debian 8:  <a class="reference external" href="http://www.unixmen.com/how-to-install-lamp-stack-on-debian-8/">Debian Install LAMP tutorial</a>, <a class="reference external" href="https://www.howtoforge.com/tutorial/install-apache-with-php-and-mysql-lamp-on-debian-jessie/">Debian Install LAMP tutorial#2</a></p>
-<p>Ubuntu 16.06: <a class="reference external" href="http://howtoubuntu.org/how-to-install-lamp-on-ubuntu">Ubuntu install LAMP tutorial</a></p>
+  <div class="section" id="windows-opencats-installation-instructions">
+<h1>Windows - OpenCATS Installation Instructions<a class="headerlink" href="#windows-opencats-installation-instructions" title="Permalink to this headline">¶</a></h1>
 <p><strong>Windows</strong></p>
-<p>These instructions are for the WXAMPP environment only.  Download and install the following software:</p>
+<p>These instructions are for the (Windows) XAMPP environment only.  Download and install the following software:</p>
 <ul class="simple">
 <li><a class="reference external" href="http://www.apachefriends.org/en/xampp-windows.html">XAMPP</a></li>
 <li><a class="reference external" href="http://downloads.opencats.org/setupResumeIndexingTools.exe">OpenCATS resume indexing tools</a></li>
@@ -165,11 +144,34 @@
 <li><a class="reference external" href="http://www.foolabs.com/xpdf/download.html">PdfToText</a></li>
 <li><a class="reference external" href="http://www.mbayer.de/html2text/">html2text</a></li>
 <li><a class="reference external" href="http://www.gnu.org/software/unrtf/unrtf.html">UnRTF</a></li>
+<li><a class="reference external" href="http://www.7-zip.org/">7-Zip or equivalent</a></li>
 </ul>
-<p><strong>OpenCATS installation</strong></p>
-<p>Go to localhost/OpenCATS-opencats-0.9.3/</p>
-<p>(Or use the address of your server or VPS in place of &#8220;localhost&#8221;)</p>
-<p>Click: <code class="docutils literal"><span class="pre">Installation</span> <span class="pre">Wizard</span></code></p>
+<p>Installation instructions are given for the XAMPP default install environment only. And Prequisite Installation notes below.</p>
+<ul class="simple">
+<li>Download and install XAMPP to c:xampp by following the directions provided on the XAMPP website. Very easy.</li>
+<li>Download the OpenCats Resume Indexing Tools. Run the executable and accept the default install locations.</li>
+<li>Optionally download 7Zip and install. This will allow you to extract the tar ball and gz files later. If you already have an extractor then you may skip this step.</li>
+<li>Now you are ready to get OpenCats Download <a class="reference external" href="http://downloads.opencats.org/opencats-0.9.1a.tar.gz">OpenCATS.9.1a</a></li>
+</ul>
+<p>Open tarball (cats-0.9.1.tar.gz) using 7Zip and extract all files to C:xampphtdocsopencats Verify that there is a readme.txt file in the directory C:xampphtdocsopencats. If so you got it right :)</p>
+<p>Launch phpMyAdmin. <a class="reference external" href="http://localhost/phpmyadmin/">http://localhost/phpmyadmin/</a></p>
+<ul class="simple">
+<li>In the page that displays, type &#8216;opencats&#8217; into the textbox under Create new database and click the Create button.</li>
+<li>Accept all the other defaults.</li>
+</ul>
+<p>In your Web Browser, visit <a class="reference external" href="http://localhost/opencats">http://localhost/opencats</a> If OpenCATS has been configured correctly, you should see a page that looks like this:</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<ul class="last simple">
+<li>If you are running OpenCATS locally on your computer, the host address will be localhost.</li>
+</ul>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<ul class="last simple">
+<li>If your server, VPS (some shared hosting too) has a specific address or IP, you will need to enter the specific address in place of localhost to access.</li>
+</ul>
+</div>
 <img alt="_images/installation-wizard.png" src="_images/installation-wizard.png" />
 <p><strong>Step 1 System Connectivity</strong>
 This step makes sure you have the required server environment set up correctly.</p>
@@ -185,12 +187,14 @@ This step makes sure you have the required server environment set up correctly.<
 <p class="first admonition-title">Warning</p>
 <p class="last">Red = Bad  You can&#8217;t continue the installation until a server environment issue is fixed.</p>
 </div>
-<p>(I am setting up this example instance of OpenCATS in a shared hosting service.  I do not have command line access and can not install the required modules to get rid of the yellow areas.  If you are running OpenCATS locally on your computer, or you have root access to a server, VPS, etc., you can install these extra modules and should see all green before continuing.)</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">(I am setting up this example instance of OpenCATS in a shared hosting service.  I do not have command line access and can not install the required modules to get rid of the yellow areas.  For this Windows installation tutorial, you should have all green here.)</p>
+</div>
 <p>I you see all green and/or yellow, click <code class="docutils literal"><span class="pre">Next</span></code></p>
 <img alt="_images/step1.png" src="_images/step1.png" />
 <p><strong>Step 2 Database connectivity</strong></p>
-<p>Enter your CATS SQL database name, SQL database username, SQL database password, and SQL database host address in these boxes.</p>
-<p><a href="#id1"><span class="problematic" id="id2">*</span></a>If you are running OpenCATS locally on your computer, or on some shared hosts, the host address will be localhost.  If your server, VPS (some shared hosting too), you will need to enter the specific address to access.</p>
+<p>When asked for database name, user, and password use database <strong>opencats</strong>, user <strong>root</strong>, and <strong>a blank password</strong>.</p>
 <p>Click <code class="docutils literal"><span class="pre">Test</span> <span class="pre">Database</span> <span class="pre">Connectivity</span></code></p>
 <p>If the SQL information is set up and entered correctly, you should have all green.  If you see red, something needs to be corrected or set up correctly.</p>
 <img alt="_images/step2.png" src="_images/step2.png" />
@@ -214,7 +218,7 @@ This step makes sure you have the required server environment set up correctly.<
 <p class="first admonition-title">Note</p>
 <p class="last">If you are running on a local machine, on a self-hosted server, VPS, or on a web host that will install packages for you, you can use this functionality.</p>
 </div>
-<p>Install the software packages listed (You will have to track them down on the internet, I will add links later).</p>
+<p>If you followed the steps above you may safely accept the default locations for Antiword, PDF2Text, HTML2Text and UnRTF.</p>
 <p>Click <code class="docutils literal"><span class="pre">Test</span> <span class="pre">configuration</span></code> or <code class="docutils literal"><span class="pre">skip</span> <span class="pre">this</span> <span class="pre">step</span></code>.  If it&#8217;s all green, proceed.</p>
 <img alt="_images/step4.png" src="_images/step4.png" />
 <p><strong>Step 5 Mail Settings</strong></p>
@@ -235,14 +239,13 @@ This step makes sure you have the required server environment set up correctly.<
 <p>Runs through the installation process.  You should see a box and some pretty bars moving.  It shouldn&#8217;t take long.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">The default username and password are: admin/admin (all lowercase)</p>
+<p class="last">The default username and password are: admin/admin  or admin/cats (all lowercase) depending on your OpenCATS version</p>
 </div>
 <p>Click <code class="docutils literal"><span class="pre">Start</span> <span class="pre">OpenCATS</span></code> for your login screen.</p>
 <img alt="_images/step7.png" src="_images/step7.png" />
 <p><strong>Success!!</strong></p>
 <p>Your brand new OpenCATS applicant System!</p>
 <img alt="_images/first-login.png" src="_images/first-login.png" />
-</div>
 </div>
 
 
@@ -252,10 +255,10 @@ This step makes sure you have the required server environment set up correctly.<
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="install-windows.html" class="btn btn-neutral float-right" title="Windows - OpenCATS Installation Instructions" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="useoc.html" class="btn btn-neutral float-right" title="4. Using OpenCATS-The building blocks: companies, contacts, job orders, and candidates" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="introduction.html" class="btn btn-neutral" title="2. Introduction" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="install.html" class="btn btn-neutral" title="3. How to install OpenCATS" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

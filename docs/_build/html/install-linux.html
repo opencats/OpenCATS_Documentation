@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>3. How to install OpenCATS &mdash; OpenCATS 0.9.3 documentation</title>
+  <title>Install on Linux &mdash; OpenCATS 0.9.3 documentation</title>
   
 
   
@@ -31,8 +31,8 @@
 
   
     <link rel="top" title="OpenCATS 0.9.3 documentation" href="index.html"/>
-        <link rel="next" title="Windows - OpenCATS Installation Instructions" href="install-windows.html"/>
-        <link rel="prev" title="2. Introduction" href="introduction.html"/> 
+        <link rel="next" title="4. Using OpenCATS-The building blocks: companies, contacts, job orders, and candidates" href="useoc.html"/>
+        <link rel="prev" title="Windows - OpenCATS Installation Instructions" href="install-windows.html"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -86,12 +86,13 @@
 <li class="toctree-l1"><a class="reference internal" href="toc.html">Contents</a></li>
 <li class="toctree-l1"><a class="reference internal" href="preface.html">1. Preface</a></li>
 <li class="toctree-l1"><a class="reference internal" href="introduction.html">2. Introduction</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">3. How to install OpenCATS</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#requirements">Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install.html">3. How to install OpenCATS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install-windows.html">Windows - OpenCATS Installation Instructions</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Install on Linux</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#installation-unix-linux-prerequisites">Installation-Unix/Linux Prerequisites</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#centos-7">CentOS 7</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="install-windows.html">Windows - OpenCATS Installation Instructions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="useoc.html">4. Using OpenCATS-The building blocks: companies, contacts, job orders, and candidates</a></li>
 </ul>
 
@@ -123,11 +124,11 @@
   <ul class="wy-breadcrumbs">
     <li><a href="index.html">Docs</a> &raquo;</li>
       
-    <li>3. How to install OpenCATS</li>
+    <li>Install on Linux</li>
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="_sources/install.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/install-linux.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -137,38 +138,142 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="how-to-install-opencats">
-<h1>3. How to install OpenCATS<a class="headerlink" href="#how-to-install-opencats" title="Permalink to this headline">¶</a></h1>
-<p>Installation options are a private server, VPS, local computer or shared hosting environment.  See related section for installation specifics.</p>
-<div class="section" id="requirements">
-<h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li>Operating System: GNU/Linux, FreeBSD or Windows</li>
-<li>LAMP-Linux Apache MySQL (or MariaDB) PHP server environment</li>
-<li>Antiword, PdfToText, html2text, UnRTF</li>
-<li>PHP Zip library</li>
-<li>PHP LDAP library</li>
-</ul>
-</div>
+  <div class="section" id="install-on-linux">
+<h1>Install on Linux<a class="headerlink" href="#install-on-linux" title="Permalink to this headline">¶</a></h1>
+<p>These instructions are for the (Windows) XAMPP environment only. Download and install the following software:</p>
 <div class="section" id="installation-unix-linux-prerequisites">
 <h2>Installation-Unix/Linux Prerequisites<a class="headerlink" href="#installation-unix-linux-prerequisites" title="Permalink to this headline">¶</a></h2>
-<p><strong>LAMP</strong></p>
-<p>CentOS 7: <a class="reference external" href="http://krizna.com/centos/install-lamp-server-centos-7">CentOS Install LAMP tutorial</a>, <a class="reference external" href="https://www.howtoforge.com/apache_php_mysql_on_centos_7_lamp">CentOS Install LAMP tutorial#2</a></p>
-<p>Debian 8:  <a class="reference external" href="http://www.unixmen.com/how-to-install-lamp-stack-on-debian-8/">Debian Install LAMP tutorial</a>, <a class="reference external" href="https://www.howtoforge.com/tutorial/install-apache-with-php-and-mysql-lamp-on-debian-jessie/">Debian Install LAMP tutorial#2</a></p>
-<p>Ubuntu 16.06: <a class="reference external" href="http://howtoubuntu.org/how-to-install-lamp-on-ubuntu">Ubuntu install LAMP tutorial</a></p>
-<p><strong>Windows</strong></p>
-<p>These instructions are for the WXAMPP environment only.  Download and install the following software:</p>
+<p>You must have LAMP server software installed and running.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">mysql and mariadb are basically the same software with different names.  You can use either, just change the commands to the appropriate name.</p>
+</div>
+</div>
+<div class="section" id="centos-7">
+<h2>CentOS 7<a class="headerlink" href="#centos-7" title="Permalink to this headline">¶</a></h2>
+<p><strong>Installing MySQL 5/Mariadb</strong></p>
 <ul class="simple">
-<li><a class="reference external" href="http://www.apachefriends.org/en/xampp-windows.html">XAMPP</a></li>
-<li><a class="reference external" href="http://downloads.opencats.org/setupResumeIndexingTools.exe">OpenCATS resume indexing tools</a></li>
-<li><a class="reference external" href="http://www.winfield.demon.nl/#Windows">Antiword</a></li>
-<li><a class="reference external" href="http://www.foolabs.com/xpdf/download.html">PdfToText</a></li>
-<li><a class="reference external" href="http://www.mbayer.de/html2text/">html2text</a></li>
-<li><a class="reference external" href="http://www.gnu.org/software/unrtf/unrtf.html">UnRTF</a></li>
+<li># yum check-update</li>
+<li># yum -y install mariadb-server mariadb</li>
+<li># systemctl start mariadb.service</li>
+<li># systemctl enable mariadb.service</li>
+<li># mysql_secure_installation</li>
 </ul>
-<p><strong>OpenCATS installation</strong></p>
-<p>Go to localhost/OpenCATS-opencats-0.9.3/</p>
-<p>(Or use the address of your server or VPS in place of &#8220;localhost&#8221;)</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">In order to log into MariaDB to secure it, we&#8217;ll need the current password for the root user.  If you&#8217;ve just installed MariaDB, and you haven&#8217;t set the root password yet, <strong>the password will be blank</strong>, so you should just press enter here.</p>
+</div>
+<ul class="simple">
+<li>Set root password? [Y/n] Y</li>
+<li>New password: &lt;&#8211;yourmariadbpassword  (Remember this or write it down!)</li>
+<li>Re-enter new password: &lt;&#8211;yourmariadbpassword (Remember this or write it down!)</li>
+<li>Password updated successfully!</li>
+<li>Reloading privilege tables..... Success!</li>
+<li>Remove anonymous users? [Y/n] Y</li>
+<li>Disallow root login remotely? [Y/n] Y</li>
+<li>Remove test database and access to it? [Y/n] Y</li>
+<li>Reload privilege tables now? [Y/n] Y</li>
+<li>All done!  If you&#8217;ve completed all of the above steps, your MariaDB,installation should now be secure.  Thanks for using MariaDB!</li>
+</ul>
+<p><strong>Installing Apache2</strong></p>
+<ul class="simple">
+<li># yum install httpd</li>
+<li># systemctl start httpd.service</li>
+<li># systemctl enable httpd.service</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">CentOS 7.0 uses Firewall-cmd, so we will customize it to allow external access to port 80 (http) and 443 (https).</p>
+</div>
+<ul class="simple">
+<li># firewall-cmd &#8211;permanent &#8211;zone=public &#8211;add-service=http</li>
+<li># firewall-cmd &#8211;permanent &#8211;zone=public &#8211;add-service=https</li>
+<li># firewall-cmd &#8211;reload</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">In this tutorial, we use the hostname server1.example.com with the IP address 192.168.0.100. These settings might differ for you, so you have to replace them where appropriate.</p>
+</div>
+<ul class="simple">
+<li>Now direct your browser to <a class="reference external" href="http://192.168.0.100">http://192.168.0.100</a>, and you should see the Apache2 placeholder page:</li>
+</ul>
+<img alt="_images/apache1.png" src="_images/apache1.png" />
+<p><strong>Installing PHP5</strong></p>
+<ul class="simple">
+<li># yum -y install php</li>
+<li># systemctl restart httpd.service</li>
+</ul>
+<p><strong>Testing PHP5 / Getting Details About Your PHP5 Installation</strong></p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The document root of the default website is /var/www/html. We will now create a small PHP file (info.php) in that directory and call it in a browser. The file will display lots of useful details about our PHP installation, such as the installed PHP version.</p>
+</div>
+<ul class="simple">
+<li>vi /var/www/html/info.php</li>
+<li>Type or paste the following into it and save:</li>
+</ul>
+<div class="highlight-php"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span class="cp">&lt;?php</span>
+<span class="nb">phpinfo</span><span class="p">();</span>
+<span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+</td></tr></table></div>
+<ul class="simple">
+<li>In your browser, go to <a class="reference external" href="http://192.168.0.100/info.php">http://192.168.0.100/info.php</a></li>
+</ul>
+<img alt="_images/infophp.png" src="_images/infophp.png" />
+<p>If you see this screen, everything is good.  Proceed.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If you get any PHP errors during the OpenCATS install, this screen can help you see what php modules are installed and loaded.</p>
+</div>
+<p><strong>Getting MySQL Support In PHP5</strong></p>
+<ul class="simple">
+<li># yum search php</li>
+<li>You will need php-mysql, php-gd and php-soap</li>
+<li># yum -y install php-mysql php-gd php-soap</li>
+<li># systemctl restart httpd.service</li>
+<li>Now reload <a class="reference external" href="http://192.168.0.100/info.php">http://192.168.0.100/info.php</a> in your browser and you should see the new php modules listed</li>
+</ul>
+<p><strong>Setting up your MySQL/MariaDB database</strong></p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This is the backend database that stores all your OpenCATS information.  You likely will NOT be messing with this much after installation unless you choose to.  The login/password you set up here will NOT be the same as your login/password for OpenCATS.</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Make sure you remember or write down your login/password.  You&#8217;ll need it in a new minutes.</p>
+</div>
+<ul class="simple">
+<li># mysql -u root -p (If that doesn&#8217;t work, try mysql -u root -yourmariadbpasswordfromearlier)</li>
+<li>You should see a prompt like this: <code class="docutils literal"><span class="pre">mysql&gt;</span></code></li>
+<li><code class="docutils literal"><span class="pre">mysql&gt;</span></code> CREATE USER <a class="reference external" href="mailto:'yourusername'&#37;&#52;&#48;'localhost">'yourusername'<span>&#64;</span>'localhost</a>&#8216; IDENTIFIED BY &#8216;yourmariadbpassword&#8217;;</li>
+<li><code class="docutils literal"><span class="pre">mysql&gt;</span></code> CREATE DATABASE cats;</li>
+<li><code class="docutils literal"><span class="pre">mysql&gt;</span></code> GRANT ALL PRIVILEGES ON <cite>cats</cite>.* TO <a class="reference external" href="mailto:'cats'&#37;&#52;&#48;'localhost">'cats'<span>&#64;</span>'localhost</a>&#8216; IDENTIFIED BY &#8216;yourmariadbpassword&#8217;;</li>
+<li><code class="docutils literal"><span class="pre">mysql&gt;</span></code> exit</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Make sure you don&#8217;t forget the ; on the end of every line!</p>
+</div>
+<p>Now we set up the permissions on the web server and OpenCATS directories.</p>
+<ul class="simple">
+<li># chown apache:apache cats</li>
+<li># chown -R apache:apache cats-x.x.x/</li>
+</ul>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">make sure this is set to <strong>EXACTLY</strong> the name of your OpenCATS directory, default for version 9.1a would be <code class="docutils literal"><span class="pre">opencats-0.9.1a/</span></code></p>
+</div>
+<ul class="simple">
+<li># chmod 770 cats/attachments</li>
+<li>In your browser, go to localhost/OpenCATS-opencats-0.9.3/  (Or use the address of your server or VPS in place of &#8220;localhost&#8221;).</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If you have already attempted to install OpenCATS and the installer doesn&#8217;t load, check to see if there is a file called &#8216;INSTALL_BLOCK&#8217; in the OpenCATS directory. Delete it to allow the installer to run.</p>
+</div>
 <p>Click: <code class="docutils literal"><span class="pre">Installation</span> <span class="pre">Wizard</span></code></p>
 <img alt="_images/installation-wizard.png" src="_images/installation-wizard.png" />
 <p><strong>Step 1 System Connectivity</strong>
@@ -189,10 +294,10 @@ This step makes sure you have the required server environment set up correctly.<
 <p>I you see all green and/or yellow, click <code class="docutils literal"><span class="pre">Next</span></code></p>
 <img alt="_images/step1.png" src="_images/step1.png" />
 <p><strong>Step 2 Database connectivity</strong></p>
-<p>Enter your CATS SQL database name, SQL database username, SQL database password, and SQL database host address in these boxes.</p>
+<p>Enter your CATS MySQL/MariaDB database name, MySQL/MariaDB database username, MySQL/MariaDB database password, and MySQL/MariaDB database host address in these boxes.</p>
 <p><a href="#id1"><span class="problematic" id="id2">*</span></a>If you are running OpenCATS locally on your computer, or on some shared hosts, the host address will be localhost.  If your server, VPS (some shared hosting too), you will need to enter the specific address to access.</p>
 <p>Click <code class="docutils literal"><span class="pre">Test</span> <span class="pre">Database</span> <span class="pre">Connectivity</span></code></p>
-<p>If the SQL information is set up and entered correctly, you should have all green.  If you see red, something needs to be corrected or set up correctly.</p>
+<p>If the MySQL/MariaDB information is set up and entered correctly, you should have all green.  If you see red, something needs to be corrected or set up correctly.</p>
 <img alt="_images/step2.png" src="_images/step2.png" />
 <p><strong>Step 3 Loading Data</strong></p>
 <p>For a new installation, select <code class="docutils literal"><span class="pre">New</span> <span class="pre">Installation</span></code>, then <code class="docutils literal"><span class="pre">next</span></code></p>
@@ -252,10 +357,10 @@ This step makes sure you have the required server environment set up correctly.<
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="install-windows.html" class="btn btn-neutral float-right" title="Windows - OpenCATS Installation Instructions" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="useoc.html" class="btn btn-neutral float-right" title="4. Using OpenCATS-The building blocks: companies, contacts, job orders, and candidates" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="introduction.html" class="btn btn-neutral" title="2. Introduction" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="install-windows.html" class="btn btn-neutral" title="Windows - OpenCATS Installation Instructions" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

@@ -28,17 +28,14 @@ Ubuntu 16.06: `Ubuntu install LAMP tutorial <http://howtoubuntu.org/how-to-insta
  
 **Windows**
 
-These instructions are for the WAMP environment only.  Download and install the following software:
+These instructions are for the WXAMPP environment only.  Download and install the following software:
 
-* WAMP [ http://www.wampserver.com/en/ ]
-* WinRAR [ http://www.rarlab.com/ ]
-* PHP GD2 [ http://www.boutell.com/gd/ ]  `Howto intstall GD2 on Windows? <http://stackoverflow.com/questions/7851011/how-do-i-install-gd-on-my-windows-server-version-of-php>`_
-* Resume Indexing Tools  http://downloads.opencats.org/setupResumeIndexingTools.exe
-* Antiword [ www.winfield.demon.nl/ ]
-* PdfToText [ http://www.foolabs.com/xpdf/ ]
-* html2text [ http://www.mbayer.de/html2text/ 
-* UnRTF [ http://www.gnu.org/software/unrtf/unrtf.html ]
-
+* `XAMPP <http://www.apachefriends.org/en/xampp-windows.html>`_
+* `OpenCATS resume indexing tools <http://downloads.opencats.org/setupResumeIndexingTools.exe>`_
+* `Antiword <http://www.winfield.demon.nl/#Windows>`_
+* `PdfToText <http://www.foolabs.com/xpdf/download.html>`_
+* `html2text <http://www.mbayer.de/html2text/>`_
+* `UnRTF <http://www.gnu.org/software/unrtf/unrtf.html>`_
 
 
 

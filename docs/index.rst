@@ -17,6 +17,7 @@ Contents:
    introduction
    install
    install-windows
+   install-linux
    useoc
 
 
