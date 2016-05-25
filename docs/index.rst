@@ -16,6 +16,7 @@ Contents:
    preface
    introduction
    install
+   install-windows
    useoc
 
 
