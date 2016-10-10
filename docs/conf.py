@@ -46,8 +46,8 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'OpenCATS'
-copyright = u'2016, Stacey Boyer'
-author = u'Stacey Boyer'
+copyright = u'2016, CC'
+author = u'OpenCATS'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -222,7 +222,7 @@ latex_elements = {
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
     (master_doc, 'OpenCATS.tex', u'OpenCATS Documentation',
-     u'Stacey Boyer', 'manual'),
+     u'OpenCATS', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
