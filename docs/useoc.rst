@@ -1,5 +1,5 @@
-4. Using OpenCATS-The building blocks: companies, contacts, job orders, and candidates
-======================================================================================
+Using OpenCATS-The building blocks: companies, contacts, job orders, and candidates
+===================================================================================
 
 .. image:: ../docs/_static/uoc1.png
 

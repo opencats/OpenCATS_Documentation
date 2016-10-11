@@ -1,5 +1,5 @@
-3. How to install OpenCATS
-==========================
+How to install OpenCATS
+=======================
 
 Installation options are a private server, VPS, local computer or shared hosting environment.  See related section for installation specifics.
 
@@ -71,7 +71,7 @@ I you see all green and/or yellow, click ``Next``
 
 Enter your CATS SQL database name, SQL database username, SQL database password, and SQL database host address in these boxes. 
  
-*If you are running OpenCATS locally on your computer, or on some shared hosts, the host address will be localhost.  If your server, VPS (some shared hosting too), you will need to enter the specific address to access.
+.. note:: If you are running OpenCATS locally on your computer, or on some shared hosts, the host address will be localhost.  If your server, VPS (some shared hosting too), you will need to enter the specific address to access.
 
 Click ``Test Database Connectivity``
 

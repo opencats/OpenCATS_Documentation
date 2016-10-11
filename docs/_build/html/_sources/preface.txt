@@ -1,17 +1,16 @@
-1. Preface
+Preface
 ==========
 
 What is this manual?
 --------------------
 This manual explains how to use OpenCATS, the free open-source applicant tracking system (ATS). 
-
 It describes how to install and configure OpenCATS, how recruiters can use it to manage their work, and how to customize and extend it.
 
 
 Release information
 -------------------
 
-Placeholder text
+The current OpenCATS release is 0.9.3.1 "Inferno".
 
 
 Legal information/License FAQ
@@ -33,9 +32,9 @@ If there was a need, the project name and/or logo could be changed. We have for 
 
 There are some 'unique' requirements in Exhibit B;
 
-* I) You may not use the Licensed Software to operate in or as a time-sharing, outsourcing, service bureau, application service provider or managed service provider environment.   
-* II) The following copyright notice must be retained and clearly legible at the bottom of every rendered HTML document: Copyright (C) 2005 - 2006 Cognizo Technologies, Inc. All rights reserved.                     
-* III) The "Powered by CATS" text or logo must be retained and clearly legible on every rendered HTML document. The logo, or the text "CATS", must be a hyperlink to the CATS Project website, currently http://www.catsone.com/.
+  #. You may not use the Licensed Software to operate in or as a time-sharing, outsourcing, service bureau, application service provider or managed service provider environment.   
+  #. The following copyright notice must be retained and clearly legible at the bottom of every rendered HTML document: Copyright (C) 2005 - 2006 Cognizo Technologies, Inc. All rights reserved.                     
+  #. The "Powered by CATS" text or logo must be retained and clearly legible on every rendered HTML document. The logo, or the text "CATS", must be a hyperlink to the CATS Project website, currently http://www.catsone.com/.
 
 **Is this an Open Source license?**
 
@@ -44,9 +43,7 @@ Sadly, Exhibit B I) restricts one of the freedoms required to be defined as Open
 **So is everything subject to the CPL?**
 
 Not entirely. A few examples;
-
 integration into Joomla! In this case, Joomla is a completely separate GPL project, and the CATS module simply polls the backend MySQL databases for CATS. Whilst it does fall logically into the OpenCATS project, the CATS module remains Open Source.
-
 Similarly, separate backend reporting packages could easily poll the same shared MySQL database.
 
 **Simplify this for me, what can I do and what can't I do?**

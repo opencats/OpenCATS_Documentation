@@ -1,8 +1,7 @@
-2. Introduction
-===============
+Introduction
+============
 
 OpenCATS is a free and open source, full-featured, web-based applicant tracking system, or ATS. 
-
 It helps you manage the complete recruitment life-cycle from business development through finalizing a placement. It manages a huge range of information for you, including:
 
 * candidate details, qualifications, resumes (C.V's), contact history
@@ -14,7 +13,8 @@ OpenCATS vs CATSOne vs "open source"
 
 OpenCATS is a free, open-source ATS. This means that there is no charge to install or to use it. 
 
-For software developers, this also means that you are free to modify or extend the OpenCATS software, and to participate as a member of its development community. This also means that there is no help desk that you can call for support.
+* For software developers, this also means that you are free to modify or extend the OpenCATS software, and to participate as a member of its development community. 
+* This also means that there is no help desk that you can call for support.
 
 The origins of OpenCATS are in a commercial open-source development effort called CATS, which split
 into two separate efforts:
