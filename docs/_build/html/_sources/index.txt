@@ -6,6 +6,8 @@
 Welcome to OpenCATS's documentation!
 ====================================
 
+.. image:: ../docs/_static/opencats-logo.png
+
 Contents:
 
 .. toctree::
