@@ -10,7 +10,7 @@ Contents:
 
 .. toctree::
    :maxdepth: 2
-
+   
    warning
    toc 
    preface
@@ -19,6 +19,7 @@ Contents:
    install-windows
    install-linux
    useoc
+   screens-in-depth
 
 
 
