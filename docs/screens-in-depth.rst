@@ -102,8 +102,8 @@ There are different options for candidates in the ``Action`` button at the botto
 Companies Screen
 ----------------
 
-The main Companies page is very similar to the Candidates page.  everything functions the same, and it has the same options.
+The main Companies page is very similar to the Candidates page.  Everything functions the same, and it has the same options.
 
-The only exception is that there are differe columns available to choose in the ``Show Columns`` button.  See image below.
+The only exception is that there are different columns available to choose in the ``Show Columns`` button.  See image below.
 
 .. image:: ../docs/_static/companies-indepth.png
