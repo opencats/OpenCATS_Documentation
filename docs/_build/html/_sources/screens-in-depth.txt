@@ -74,3 +74,27 @@ Add specified job orders to an OpenCATS Hot-list, or export them to a CSV:
    
 OR:
    * select ``action`` then ``add to list`` or ``export`` and select ``all`` to include the entire database (in this case, it would include ALL of the job orders in your OpenCATS system) in your hot-list or CSV export.
+   
+Candidates Screen
+-----------------
+
+.. image:: ../docs/_static/candidates_indepth.png
+
+The main Candidates screen is laid out similarly to the others.
+
+There are two checkboxes in upper right for filtering the result on this screen. ``Only My Candidates`` and ``Only Hot Candidates``.
+
+Again, there are additional options below that with the ``Rows Per Page`` dropdown and the ``Filter`` dropdown.
+
+As before, the columns can be moved right and left by dragging the column title word at the top, and columns can be added or removed by the Show Columns (Image of a grid) in the upper left corner of the main section of the candidates screen. See example below. 
+
+.. image:: ../docs/_static/ca-show-columns.png
+
+There are different options for candidates in the ``Action`` button at the bottom left. You can select specific candidates, the candidates showing on the screen, or all of the candidates in OpenCATS and ``Add to List``, ``Add To Pipeline``, ``Send E-Mail``, or ``Export``.
+
+.. image:: ../docs/_static/ca_screen_action.png
+
+* **Add to List:** Add to a hotlist 
+* **Add To Pipeline:** Add to a job order pipeline 
+* **Send E-Mail:** Means type your own email to candidate(s) or use an OpenCATS template. 
+* **Export:** Export selected candidates to a csv file.
