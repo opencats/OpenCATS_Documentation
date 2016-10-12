@@ -19,8 +19,8 @@ Contents:
    introduction
    install-windows
    install-linux
-   useoc
    screens-in-depth
+   useoc
 
 
 
