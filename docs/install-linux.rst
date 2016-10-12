@@ -13,27 +13,29 @@ You must have LAMP server software installed and running.
 
 .. note:: mysql and mariadb are basically the same software with different names.  You can use either, just change the commands to the appropriate name.
 
-**CentOS7-Installing MySQL 5/Mariadb**
---------------------------------------
+CentOS7-Installing MySQL 5/Mariadb
+----------------------------------
 
-* # yum check-update 
-* # yum -y install mariadb-server mariadb
-* # systemctl start mariadb.service
-* # systemctl enable mariadb.service
-* # mysql_secure_installation
-* Skip to "securing MySQL/MariaDB" section below.
+* ``# yum check-update``
+* ``# yum -y install mariadb-server mariadb``
+* ``# systemctl start mariadb.service``
+* ``# systemctl enable mariadb.service``
+* ``# mysql_secure_installation``
+* Skip to :ref:`Securing-MySQL-MariaDB` section below.
 
-**Debian8/Ubuntu16.04-Installing MySQL 5/Mariadb**
---------------------------------------------------
+Debian8/Ubuntu16.04-Installing MySQL 5/Mariadb
+----------------------------------------------
 
-* sudo apt-get update
-* sudo apt-get install mariadb-server mariadb-client
+* ``$ sudo apt-get update``
+* ``$ sudo apt-get install mariadb-server mariadb-client``
 
 .. note:: If you are asked to provide a MySQL/MariaDB password, enter it and write it down.  You'll need it later
 
-* sudo mysql_secure_installation
-* Skip to "Securing MySQL/MariaDB" section below.
+* ``$ mysql_secure_installation``
+* Skip to :ref:`Securing-MySQL-MariaDB` section below.
 
+
+.. _Securing-MySQL-MariaDB:
 
 Securing MySQL/MariaDB
 ----------------------
@@ -50,24 +52,26 @@ Securing MySQL/MariaDB
 * Reload privilege tables now? [Y/n] Y
 * All done!  If you've completed all of the above steps, your MariaDB,installation should now be secure.  Thanks for using MariaDB!
 
-**CentOS7-Installing Apache2**
-------------------------------
+CentOS7-Installing Apache2
+--------------------------
 
-* # yum install httpd
-* # systemctl start httpd.service
-* # systemctl enable httpd.service
+* ``# yum install httpd``
+* ``# systemctl start httpd.service``
+* ``# systemctl enable httpd.service``
 
 .. note:: CentOS 7.0 uses Firewall-cmd, so we will customize it to allow external access to port 80 (http) and 443 (https).
 
-* # firewall-cmd --permanent --zone=public --add-service=http 
-* # firewall-cmd --permanent --zone=public --add-service=https
-* # firewall-cmd --reload
-* Skip to "Check for success-Apache" Section.
+* ``# firewall-cmd --permanent --zone=public --add-service=http``
+* ``# firewall-cmd --permanent --zone=public --add-service=https``
+* ``# firewall-cmd --reload``
+* Skip to :ref:`Check-Success-Apache` Section.
 
-**Debian8/Ubuntu16.04-Installing Apache2**
-------------------------------------------
+Debian8/Ubuntu16.04-Installing Apache2
+--------------------------------------
 
-* sudo apt-get install apache2
+* ``$ sudo apt-get install apache2``
+
+.. _Check-Success-Apache:
 
 Check for success-Apache
 ------------------------
@@ -78,26 +82,27 @@ Check for success-Apache
 
 .. image:: ../docs/_static/apache1.png
 
-**CentOS7-Installing PHP5**
----------------------------
+CentOS7-Installing PHP5
+-----------------------
 
-* # yum -y install php
-* # systemctl restart httpd.service
-* Skip to "Testing PHP5 / Getting Details About Your PHP5 Installation" section
+* ``# yum -y install php``
+* ``# systemctl restart httpd.service``
+* Skip to :ref:`Testing-php5` section
 
-**Debian8/Ubuntu16.06-Installing PHP5**
----------------------------------------
+Debian8/Ubuntu16.06-Installing PHP5
+-----------------------------------
 
-* sudo apt-get install php5
-* sudo service apache2 restart
+* ``$ sudo apt-get install php5``
+* ``$ sudo service apache2 restart``
 
+.. _Testing-php5:
 
-**Testing PHP5 / Getting Details About Your PHP5 Installation**
----------------------------------------------------------------
+Testing PHP5 / Getting Details About Your PHP5 Installation
+-----------------------------------------------------------
 
 .. note:: The document root of the default website is /var/www/html. We will now create a small PHP file (info.php) in that directory and call it in a browser. The file will display lots of useful details about our PHP installation, such as the installed PHP version.
 
-* vi /var/www/html/info.php (you can also use nano instead of vi)
+* ``# vi /var/www/html/info.php`` (you can also use nano instead of vi)
 * Type or paste the following into it and save as info.php:
 
 .. literalinclude:: ../docs/_static/info.php
@@ -105,7 +110,7 @@ Check for success-Apache
     :language: php
     :lines: 1-5
 
-* (Debian/Ubuntu) ``sudo service apache2 restart``
+* (Debian/Ubuntu) ``$ sudo service apache2 restart``
 * (CentOS) ``# systemctl restart httpd.service``
 * In your browser, go to http://192.168.0.100/info.php
 
@@ -116,61 +121,68 @@ If you see this screen, everything is good.  Proceed.
 .. note:: If you get any PHP errors during the OpenCATS install, this screen can help you see what php modules are installed and loaded.
 
 
-**CentOS7-Getting MySQL Support In PHP5**
------------------------------------------
+CentOS7-Getting MySQL Support In PHP5
+-------------------------------------
 
-* # yum search php
+* ``# yum search php``
 * You will need php-mysql, php-gd and php-soap
-* # yum -y install php-mysql php-gd php-soap
-* # systemctl restart httpd.service
+* ``# yum -y install php-mysql php-gd php-soap``
+* ``# systemctl restart httpd.service``
 * Now reload http://192.168.0.100/info.php in your browser and you should see the new php modules listed
-* Skip to "Setting up your MySQL/MariaDB database" section
+* Skip to :ref:`Setting-up-mysql` section
 
-**Debian8/Ubuntu16.04-Getting MySQL Support In PHP5**
------------------------------------------------------
-* sudo apt-cache search php-
+Debian8/Ubuntu16.04-Getting MySQL Support In PHP5
+-------------------------------------------------
+* ``$sudo apt-cache search php-``
 * You will need php-mysql, php-gd and php-soap
-* sudo apt-get install php-mysql php-gd php-soap
-* sudo service apache2 restart
+* ``$ sudo apt-get install php-mysql php-gd php-soap``
+* ``$ sudo service apache2 restart``
 * Now reload http://192.168.0.100/info.php in your browser and you should see the new php modules listed
 
+.. _Setting-up-mysql:
 
-**Setting up your MySQL/MariaDB database**
-------------------------------------------
+Setting up your MySQL/MariaDB database
+--------------------------------------
 
 .. note:: This is the backend database that stores all your OpenCATS information.  You likely will NOT be messing with this much after installation unless you choose to.  The login/password you set up here will NOT be the same as your login/password for OpenCATS.
 
 .. note:: Make sure you remember or write down your login/password.  You'll need it in a new minutes.
 
-* # mysql -u root -p (If that doesn't work, try mysql -u root -yourmariadbpasswordfromearlier)
+* ``$ mysql -u root -p`` (If that doesn't work, try ``mysql -u root -yourmariadbpasswordfromearlier``)
 * You should see a prompt like this: ``mysql>``
 * ``mysql>`` CREATE USER 'yourusername'@'localhost' IDENTIFIED BY 'yourmariadbpassword';
 * ``mysql>`` CREATE DATABASE cats;
 * ``mysql>`` GRANT ALL PRIVILEGES ON `cats`.* TO 'cats'@'localhost' IDENTIFIED BY 'yourmariadbpassword';
-* ``mysql>`` exit
+* ``mysql>`` exit;
 
 .. note:: Make sure you don't forget the ; on the end of every line!
 
-**Server and Directory permissions**
-====================================
+Server and Directory permissions
+--------------------------------
 
 **CentOS**
-* # chown apache:apache cats
-* # chown -R apache:apache cats-x.x.x/ 
+
+* ``# chown apache:apache cats``
+* ``# chown -R apache:apache cats-x.x.x/``
+
 .. warning:: make sure this is set to **EXACTLY** the name of your OpenCATS directory, default for version 9.1a would be ``opencats-0.9.1a/``
-* # chmod 770 cats-x.x.x/attachments
+
+* ``# chmod 770 cats-x.x.x/attachments``
 
 **Debian/Ubuntu** 
-* sudo chown www-data:www-data cats-x.x.x/
+
+* ``$ sudo chown www-data:www-data cats-x.x.x/``
+
 .. warning:: make sure this is set to **EXACTLY** the name of your OpenCATS directory, default for version 9.1a would be ``opencats-0.9.1a/``
-* sudo chown -R www-data:www-data cats-x.x.x/ 
-* sudo chmod 770 cats-x.x.x/attachments
 
-**Install resume indexing tools**
-=================================
+* ``$ sudo chown -R www-data:www-data cats-x.x.x/``
+* ``$ sudo chmod 770 cats-x.x.x/attachments``
 
-**CentOS7**
------------
+Install resume indexing tools
+=============================
+
+CentOS7
+-------
 .. note:: Some of these may already be in your repositories.  Perform a ``yum search`` for the packages and install if they are there.  If not, install from the links below.
 
 * `Antiword <ftp://ftp.pbone.net/mirror/ftp5.gwdg.de/pub/opensuse/repositories/home:/Kenzy:/modified:/C7/CentOS_7/x86_64/antiword-0.37-20.1.x86_64.rpm>`_
@@ -179,19 +191,21 @@ If you see this screen, everything is good.  Proceed.
 * `UnRTF <https://pkgs.org/centos-7/epel-x86_64/unrtf-0.21.9-1.el7.x86_64.rpm.html>`_
 
 .. note:: These software packages may have dependancies.  If you get installation errors, go to the linked pages and research/install the dependancies.
-* Skip to "Install the OpenCATS software" section
+* Skip to :ref:`Install-Opencats-Software` section
 
-**Debian8/Ubuntu16.06**
------------------------
+Debian8/Ubuntu16.06
+-------------------
 
 .. note::All of these should (hopefully) be in your repositiories, if not, you'll have to search out sources online
 
-* sudo apt-get install antiword poppler-utils html2text unrtf
+* ``$ sudo apt-get install antiword poppler-utils html2text unrtf``
+
+.. _Install-Opencats-Software:
 
 Install the OpenCATS software
 =============================
 
-*  In your browser, go to localhost/OpenCATS-opencats-0.9.3/  (Or use the address of your server or VPS in place of "localhost").
+In your browser, go to localhost/OpenCATS-opencats-0.9.3/  (Or use the address of your server or VPS in place of "localhost").
 
 .. note::  If you have already attempted to install OpenCATS and the installer doesn't load, check to see if there is a file called 'INSTALL_BLOCK' in the OpenCATS directory. Delete it to allow the installer to run.
 
@@ -199,7 +213,8 @@ Click: ``Installation Wizard``
 
 .. image:: ../docs/_static/installation-wizard.png
 
-**Step 1 System Connectivity**
+**Step 1: System Connectivity**
+
 This step makes sure you have the required server environment set up correctly.  
 
 .. note:: Green = good.  
@@ -214,28 +229,26 @@ If you see all green and/or yellow, click ``Next``
 .. image:: ../docs/_static/step1.png
 
 
-**Step 2 Database connectivity**
+**Step 2: Database connectivity**
 
-Enter your CATS MySQL/MariaDB database name, MySQL/MariaDB database username, MySQL/MariaDB database password, and MySQL/MariaDB database host address in these boxes. 
+Enter your OpenCATS MySQL/MariaDB database name, MySQL/MariaDB database username, MySQL/MariaDB database password, and MySQL/MariaDB database host address in these boxes. 
  
-*If you are running OpenCATS locally on your computer, or on some shared hosts, the host address will be localhost.  If your server, VPS (some shared hosting too), you will need to enter the specific address to access.
+.. note:: If you are running OpenCATS locally on your computer, or on some shared hosts, the host address will be localhost.  If your server, VPS (some shared hosting too), you will need to enter the specific address to access.
 
 Click ``Test Database Connectivity``
 
 If the MySQL/MariaDB information is set up and entered correctly, you should have all green.  If you see red, something needs to be corrected or set up correctly.
 
-
-
 .. image:: ../docs/_static/step2.png
 
-**Step 3 Loading Data**
+**Step 3: Loading Data**
 
 
 For a new installation, select ``New Installation``, then ``next``
 
-.. note:: Demonstration Installation will autopopulate OpenCATS with general example clients, candidates, job orders, etc.  There's no reason to use this in my opinion.
+.. note:: ``Demonstration Installation`` will autopopulate OpenCATS with general example clients, candidates, job orders, etc.  There's no reason to use this in my opinion.
 
-.. note:: Restore installation from backup will be covered in a future tutorial
+.. note:: ``Restore installation from backup`` will be covered in a future tutorial
 
 .. image:: ../docs/_static/step3.png
 
@@ -247,6 +260,8 @@ For a new installation, select ``New Installation``, then ``next``
 Click ``Test configuration`` or ``skip this step``.  If it's all green, proceed.  If you did not install these packages earlier, skip this step.
 
 .. image:: ../docs/_static/step4.png
+
+.. note:: Make sure you change the path to executables paths to the correct path on your system!  Linux is usually /usr/bin/applicationname
 
 **Step 5 Mail Settings**
 
@@ -260,7 +275,7 @@ Choose an option from the Mail Support drop-down bar, fill the necessary informa
 
 Don't forget to set the time zone to your area!
 
-.. warning:: If you forget to set the time zone ALL of the timestamps on every note in OpenCATS will be wrong.  Set the time zone correctly.  You will thank us...
+.. warning:: If you forget to set the time zone ALL of the timestamps on every note in OpenCATS will be wrong.   Set the time zone correctly.  You will thank us...
 
 Choose the date format you like best
 

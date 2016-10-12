@@ -1,6 +1,0 @@
-What is this manual?
-====================
-
-This manual explains how to use OpenCATS, the free open-source applicant tracking system (ATS). 
-
-It describes how to install and configure OpenCATS, how recruiters can use it to manage their work, and how to customize and extend it.

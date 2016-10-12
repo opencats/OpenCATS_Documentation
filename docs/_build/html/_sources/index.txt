@@ -17,7 +17,6 @@ Contents:
    toc 
    preface
    introduction
-   install
    install-windows
    install-linux
    useoc

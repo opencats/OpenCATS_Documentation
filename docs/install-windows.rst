@@ -2,7 +2,7 @@ Windows - OpenCATS Installation Instructions
 ============================================
 
  
-**Windows**
+**Windows Prerequisites**
 
 These instructions are for the (Windows) XAMPP environment only.  Download and install the following software:
 
@@ -17,11 +17,11 @@ These instructions are for the (Windows) XAMPP environment only.  Download and i
 Installation instructions are given for the XAMPP default install environment only. And Prequisite Installation notes below.
 
 * Download and install XAMPP to c:\xampp by following the directions provided on the XAMPP website. Very easy.
-* Download the OpenCats Resume Indexing Tools. Run the executable and accept the default install locations.
-* Optionally download 7Zip and install. This will allow you to extract the tar ball and gz files later. If you already have an extractor then you may skip this step.
+* Download the `OpenCATS resume indexing tools <http://downloads.opencats.org/setupResumeIndexingTools.exe>`_. Install the executable (exe file) and accept the default install locations.
+* Optionally download `7-Zip or equivalent <http://www.7-zip.org/>`_ and install. This will allow you to extract the tar ball and gz files later. If you already have an extractor then you may skip this step.
 * Now you are ready to get OpenCats Download `OpenCATS.9.1a <http://downloads.opencats.org/opencats-0.9.1a.tar.gz>`_
 
-Open tarball (cats-0.9.1.tar.gz) using 7Zip and extract all files to C:\xampp\htdocs\opencats Verify that there is a readme.txt file in the directory C:\xampp\htdocs\opencats. If so you got it right :)
+Open tarball (cats-0.9.1.tar.gz) using 7Zip and extract all files to C:\xampp\htdocs\opencats Verify that there is a readme.txt file in the directory C:/xampp/htdocs/opencats. If so you got it right :)
 
 Launch phpMyAdmin. http://localhost/phpmyadmin/
 

@@ -4,9 +4,9 @@ Introduction
 OpenCATS is a free and open source, full-featured, web-based applicant tracking system, or ATS. 
 It helps you manage the complete recruitment life-cycle from business development through finalizing a placement. It manages a huge range of information for you, including:
 
-* candidate details, qualifications, resumes (C.V's), contact history
-* job orders details, associated contacts, and the candidate pipeline for each
-* multiple recruiters, sites, career portals, and much more
+* Candidate details, qualifications, resumes (C.V's), contact history
+* Job orders details, associated contacts, and the candidate pipeline for each
+* Multiple recruiters, sites, career portals, and much more
 
 OpenCATS vs CATSOne vs "open source"
 ------------------------------------
