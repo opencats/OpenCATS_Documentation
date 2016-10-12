@@ -82,7 +82,7 @@ Candidates Screen
 
 The main Candidates screen is laid out similarly to the others.
 
-There are two checkboxes in upper right for filtering the result on this screen. ``Only My Candidates`` and ``Only Hot Candidates``.
+There are two checkboxes in upper right for filtering the results on this screen. ``Only My Candidates`` and ``Only Hot Candidates``.
 
 Again, there are additional options below that with the ``Rows Per Page`` dropdown and the ``Filter`` dropdown.
 
@@ -98,3 +98,12 @@ There are different options for candidates in the ``Action`` button at the botto
 * **Add To Pipeline:** Add to a job order pipeline 
 * **Send E-Mail:** Means type your own email to candidate(s) or use an OpenCATS template. 
 * **Export:** Export selected candidates to a csv file.
+
+Companies Screen
+----------------
+
+The main Companies page is very similar to the Candidates page.  everything functions the same, and it has the same options.
+
+The only exception is that there are differe columns available to choose in the ``Show Columns`` button.  See image below.
+
+.. image:: ../docs/_static/companies-indepth.png

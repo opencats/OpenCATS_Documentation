@@ -98,3 +98,12 @@ There are different options for candidates in the ``Action`` button at the botto
 * **Add To Pipeline:** Add to a job order pipeline 
 * **Send E-Mail:** Means type your own email to candidate(s) or use an OpenCATS template. 
 * **Export:** Export selected candidates to a csv file.
+
+Companies Screen
+----------------
+
+The main Companies page is very similar to the Candidates page.  everything functions the same, and it has the same options.
+
+The only exception is that there are differe columns available to choose in the ``Show Columns`` button.  See image below.
+
+.. image:: ../docs/_static/companies-indepth.png
