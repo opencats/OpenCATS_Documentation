@@ -111,18 +111,18 @@ The only exception is that there are different columns available to choose in th
 Contacts Screen
 ---------------
 
-.. image:: ../docs/_static/Contacts.png
+The contacts screen is the main screen for dealing with contacts internally, from client companies, or leads in the sales process.  Contacts are people on the hiring side, not candidates looking for work.
 
-The contacts screen is the main screen for dealing with contacts internally, from client companies, or leads in the sales process.  People on the hiring side, not candidates looking for work.
+.. image:: ../docs/_static/Contacts.png
 
 This is similar to the other screens.  There are no features here that have not been covered already.  We will move along.
 
 Lists Screen
 ------------
 
-.. image:: ../docs/_static/Lists.png
-
 Hot lists, Lead Lists, tear sheets, call lists.  Whatever you call them, most recruiters have used them at some point.  OpenCATs has them here.
+
+.. image:: ../docs/_static/Lists.png
 
 The only new clickable button on the Lists screen is the ``Show Lists`` button in the upper right corner of the blue bar.
 
