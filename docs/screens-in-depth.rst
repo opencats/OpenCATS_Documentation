@@ -151,5 +151,27 @@ Red Arrows:
 .. note:: At this time, the OpenCATS calendar does not sync with outside calendars (Outlook, Google Calendar, etc.).  However, that functionality CAN be added if you know a little coding, or a developer willing to do it.
 
 
+Reports Screen
+--------------
 
+There are a few reporting options in OpenCATS.  The Reports screen provides reports on ``New Submissions`` and ``New Placements`` for a specified time period.
+
+.. image:: ../docs/_static/Reports.png
+
+Unfortunately the other options on the screen weren't built into the system and will (hopefully) be added in with time.
+
+There are additional reporting features within OpenCATS that will be explored later.
+
+Settings Screen
+---------------
+
+There isn't much to the settings screen.  
+
+.. image:: ../docs/_static/Settings.png
+
+In the upper left corner:
+
+* ``Administration`` If you are the OpenCATS system administrator, this will take you to the administration screen.
+* ``My Profile`` View your OpenCATS user profile or change your password.
+* ``Downloads`` For now, this page serves no purpose.  Disregard it completely.
 
