@@ -126,4 +126,28 @@ Hot lists, Lead Lists, tear sheets, call lists.  Whatever you call them, most re
 
 The only new clickable button on the Lists screen is the ``Show Lists`` button in the upper right corner of the blue bar.
 
+Calendar Screen
+---------------
+
+The Calendar is a central hub for your OpenCATS usage.  Every phone call and event, if scheduled through OpenCATS will appear here. The default Calendar screen will show a list of upcoming events in the left column and a Calendar overview on the right.
+
+.. image:: ../docs/_static/Calendar.png
+
+* ``My Upcoming Events:`` Shows all upcoming, scheduled events in the left column.
+* ``Add Event:`` Add a new event to your calendar
+* ``Goto Today:`` Shows you todays events
+* Calendar date views can be changed by clicking: ``Day``, ``Week``, or ``Month``.
+* The Green Arrows can be clicked to move you back or forward on the Calendar.
+
+Every Event box within the calendar is clickable for event information, which will appear in the left column.
+
+Red Arrows:
+
+* The first arrow points to a clickable icon that opens up the record of the Candidate included in the scheduled event.
+* The middle red arrow points to an icon that indicates this is a "Public" event, which means it is viewable by any OpenCATS user.
+* The third red arrow points to a clickable icon that opens up the record of the Contact included in the scheduled event.
+* Lastly, every date number on the Calendar can be clicked on to view that date's scheduled events.
+
+
+
 
