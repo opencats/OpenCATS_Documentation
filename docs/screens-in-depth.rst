@@ -148,6 +148,8 @@ Red Arrows:
 * The third red arrow points to a clickable icon that opens up the record of the Contact included in the scheduled event.
 * Lastly, every date number on the Calendar can be clicked on to view that date's scheduled events.
 
+.. note:: At this time, the OpenCATS calendar does not sync with outside calendars (Outlook, Google Calendar, etc.).  However, that functionality CAN be added if you know a little coding, or a developer willing to do it.
+
 
 
 
