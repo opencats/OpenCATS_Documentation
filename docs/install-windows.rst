@@ -13,6 +13,7 @@ These instructions are for the (Windows) XAMPP environment only.  Download and i
 * `html2text <http://www.mbayer.de/html2text/>`_
 * `UnRTF <http://www.gnu.org/software/unrtf/unrtf.html>`_
 * `7-Zip or equivalent <http://www.7-zip.org/>`_
+* `Composer <https://getcomposer.org/>`_
 
 Installation instructions are given for the XAMPP default install environment only. And Prequisite Installation notes below.
 
@@ -22,6 +23,8 @@ Installation instructions are given for the XAMPP default install environment on
 * Now you are ready to get OpenCats Download `OpenCATS.9.1a <http://downloads.opencats.org/opencats-0.9.1a.tar.gz>`_
 
 Open tarball (cats-0.9.1.tar.gz) using 7Zip and extract all files to C:\xampp\htdocs\opencats Verify that there is a readme.txt file in the directory C:/xampp/htdocs/opencats. If so you got it right :)
+
+Go to C:\xampp\htdocs\opencats and run `composer install`
 
 Launch phpMyAdmin. http://localhost/phpmyadmin/
 
