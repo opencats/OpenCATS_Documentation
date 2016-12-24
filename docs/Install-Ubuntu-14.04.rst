@@ -97,7 +97,7 @@ Setting up your MySQL/MariaDB database
 
 .. note:: This is the backend database that stores all your OpenCATS information.  You likely will NOT be messing with this much after installation unless you choose to.  The login/password you set up here will NOT be the same as your login/password for OpenCATS.
 
-.. note:: Make sure you remember or write down your login/password.  You'll need it in a new minutes.
+.. note:: Make sure you remember or write down your login/password.  You'll need it in a few minutes.
 
 * ``$ mysql -u root -p`` (If that doesn't work, try ``mysql -u root -yourmariadbpasswordfromearlier``)
 * You should see a prompt like this: ``mysql>``
@@ -145,7 +145,7 @@ Install resume indexing tools
 
 
 Install the OpenCATS software
-=============================
+-----------------------------
 
 In your browser, go to localhost/OpenCATS-0.9.3-3 (Or use the address of your server or VPS in place of "localhost").
 
