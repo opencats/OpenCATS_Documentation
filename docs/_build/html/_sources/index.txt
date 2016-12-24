@@ -20,6 +20,7 @@ Contents:
    install-windows
    install-linux
    Install-Ubuntu-14.04
+   Install-Ubuntu-16.04
    screens-in-depth
    useoc
 

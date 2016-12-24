@@ -1,0 +1,491 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Install on Ubuntu 16.04 &mdash; OpenCATS 0.9.3 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="OpenCATS 0.9.3 documentation" href="index.html"/>
+        <link rel="next" title="Screens In-Depth" href="screens-in-depth.html"/>
+        <link rel="prev" title="Install on Ubuntu 14.04" href="Install-Ubuntu-14.04.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> OpenCATS
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.9.3
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="warning.html">WARNING-READ FIRST</a></li>
+<li class="toctree-l1"><a class="reference internal" href="toc.html">Contents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="preface.html">Preface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install-windows.html">Windows - OpenCATS Installation Instructions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install-linux.html">Install on Linux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install-linux.html#install-resume-indexing-tools">Install resume indexing tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install-linux.html#install-the-opencats-software">Install the OpenCATS software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Install-Ubuntu-14.04.html">Install on Ubuntu 14.04</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Install-Ubuntu-14.04.html#install-the-opencats-software">Install the OpenCATS software</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Install on Ubuntu 16.04</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#ubuntu16-04-installing-mysql-5-mariadb">Ubuntu16.04-Installing MySQL 5/Mariadb</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#securing-mysql-mariadb">Securing-MySQL-MariaDB</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ubuntu16-04-installing-apache2">Ubuntu16.04-Installing Apache2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#check-for-success-apache">Check for success-Apache</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ubuntu16-04-installing-php5-6">Ubuntu16.04-Installing PHP5.6</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#testing-php5-6-getting-details-about-your-php5-installation">Testing PHP5.6 / Getting Details About Your PHP5 Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#setting-up-your-mysql-mariadb-database">Setting up your MySQL/MariaDB database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#download-the-opencats-files">Download the OpenCATS files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#composer">Composer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#server-and-directory-permissions">Server and Directory permissions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#install-resume-indexing-tools">Install resume indexing tools</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#install-the-opencats-software">Install the OpenCATS software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="screens-in-depth.html">Screens In-Depth</a></li>
+<li class="toctree-l1"><a class="reference internal" href="useoc.html">Using OpenCATS-The building blocks: companies, contacts, job orders, and candidates</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">OpenCATS</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>Install on Ubuntu 16.04</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/Install-Ubuntu-16.04.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="install-on-ubuntu-16-04">
+<h1>Install on Ubuntu 16.04<a class="headerlink" href="#install-on-ubuntu-16-04" title="Permalink to this headline">¶</a></h1>
+<p>These instructions will walk you through setting up LAMP (Linux Apache Mysql PHP) software and install OpenCATS on a Ubuntu 16.04 machine.  These instructions will work with a VPS, or a home/office machine.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If this is a production machine, that is accessible by people outside your network, this walk-through doesn&#8217;t address additional server security.  You would definitely want to make sure things are secured correctly.</p>
+</div>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">If you are running a different version of Ubuntu (other than 16.04) the default software versions will be different, which means the install process <strong>will be different</strong>.</p>
+</div>
+<div class="section" id="ubuntu16-04-installing-mysql-5-mariadb">
+<h2>Ubuntu16.04-Installing MySQL 5/Mariadb<a class="headerlink" href="#ubuntu16-04-installing-mysql-5-mariadb" title="Permalink to this headline">¶</a></h2>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">mysql and mariadb are basically the same software with different names.  You can use either, just change the commands to the appropriate name.</p>
+</div>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">apt-get</span> <span class="pre">update</span></code></li>
+<li><code class="docutils literal"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">apt-get</span> <span class="pre">install</span> <span class="pre">mariadb-server</span> <span class="pre">mariadb-client</span></code></li>
+<li><code class="docutils literal"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">mysql_secure_installation</span></code></li>
+</ul>
+</div>
+<div class="section" id="securing-mysql-mariadb">
+<h2>Securing-MySQL-MariaDB<a class="headerlink" href="#securing-mysql-mariadb" title="Permalink to this headline">¶</a></h2>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">In order to log into MariaDB to secure it, we&#8217;ll need the current password for the root user.  If you&#8217;ve just installed MariaDB, <strong>and you haven&#8217;t</strong> set up the root password yet, <strong>the password will be blank</strong>, so you should just press enter here.  If you <strong>have set up a MySQL/MariaDB root password already</strong> you will enter it here.</p>
+</div>
+<ul class="simple">
+<li>Set root password? [Y/n] Y</li>
+<li>New password: &lt;&#8211;yourmariadbpassword  (Remember this or write it down!)</li>
+<li>Re-enter new password: &lt;&#8211;yourmariadbpassword (Remember this or write it down!)</li>
+<li>Password updated successfully!</li>
+<li>Reloading privilege tables..... Success!</li>
+<li>Remove anonymous users? [Y/n] Y</li>
+<li>Disallow root login remotely? [Y/n] Y</li>
+<li>Remove test database and access to it? [Y/n] Y</li>
+<li>Reload privilege tables now? [Y/n] Y</li>
+<li>All done!  If you&#8217;ve completed all of the above steps, your MariaDB,installation should now be secure.  Thanks for using MariaDB!</li>
+</ul>
+</div>
+<div class="section" id="ubuntu16-04-installing-apache2">
+<h2>Ubuntu16.04-Installing Apache2<a class="headerlink" href="#ubuntu16-04-installing-apache2" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">apt-get</span> <span class="pre">install</span> <span class="pre">apache2</span></code></li>
+</ul>
+</div>
+<div class="section" id="check-for-success-apache">
+<h2>Check for success-Apache<a class="headerlink" href="#check-for-success-apache" title="Permalink to this headline">¶</a></h2>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">In this tutorial, we use localhost, if you&#8217;re running a vps, you may need to enter the correct IP Address. These settings might differ for you, so you have to replace them where appropriate.</p>
+</div>
+<ul class="simple">
+<li>Now direct your browser to localhost and you should see the Apache2 placeholder page:</li>
+</ul>
+<img alt="_images/apache1.png" src="_images/apache1.png" />
+</div>
+<div class="section" id="ubuntu16-04-installing-php5-6">
+<h2>Ubuntu16.04-Installing PHP5.6<a class="headerlink" href="#ubuntu16-04-installing-php5-6" title="Permalink to this headline">¶</a></h2>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Php7 is default in Ubuntu 16.04.  At this time, OpenCATS doesn&#8217;t support php7.  So we&#8217;ll need to install php5.6 to work with OpenCATS.  DO NOT install the default php (v7).  If you do, or already have it running, you&#8217;ll need to downgrade your Ubuntu system to php5.6.</p>
+</div>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">add-apt-repository</span> <span class="pre">ppa:ondrej/php</span></code></li>
+<li><code class="docutils literal"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">apt-get</span> <span class="pre">update</span></code></li>
+<li><code class="docutils literal"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">apt-get</span> <span class="pre">install</span> <span class="pre">php5.6</span> <span class="pre">php5.6-soap</span> <span class="pre">php5.6-ldap</span> <span class="pre">php5.6-mysql</span> <span class="pre">php5.6-gd</span> <span class="pre">php5.6-xml</span> <span class="pre">php5.6-curl</span> <span class="pre">php5.6-mbstring</span> <span class="pre">php5.6-zip</span></code></li>
+<li><code class="docutils literal"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">service</span> <span class="pre">apache2</span> <span class="pre">restart</span></code></li>
+</ul>
+</div>
+<div class="section" id="testing-php5-6-getting-details-about-your-php5-installation">
+<h2>Testing PHP5.6 / Getting Details About Your PHP5 Installation<a class="headerlink" href="#testing-php5-6-getting-details-about-your-php5-installation" title="Permalink to this headline">¶</a></h2>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The document root of the default website is /var/www/html. We will now create a small PHP file (info.php) in that directory and call it in a browser. The file will display lots of useful details about our PHP installation, such as the installed PHP version.</p>
+</div>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">nano</span> <span class="pre">/var/www/html/info.php</span></code></li>
+<li>Type or paste the following into it and save as info.php:</li>
+</ul>
+<div class="highlight-php"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span class="cp">&lt;?php</span>
+<span class="nb">phpinfo</span><span class="p">();</span>
+<span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+</td></tr></table></div>
+<ul class="simple">
+<li>Ctl-O then enter to save the file</li>
+<li>Ctl-X to exit nano</li>
+<li><code class="docutils literal"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">service</span> <span class="pre">apache2</span> <span class="pre">restart</span></code></li>
+<li>In your browser, go to localhost/info.php</li>
+</ul>
+<img alt="_images/infophp.png" src="_images/infophp.png" />
+<p>If you see this screen, everything is good.  Scroll down and check to make sure all the extensions are there, then proceed.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If you get any PHP errors during the OpenCATS install, this screen can help you see what php modules are installed and loaded.</p>
+</div>
+</div>
+<div class="section" id="setting-up-your-mysql-mariadb-database">
+<h2>Setting up your MySQL/MariaDB database<a class="headerlink" href="#setting-up-your-mysql-mariadb-database" title="Permalink to this headline">¶</a></h2>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This is the backend database that stores all your OpenCATS information.  You likely will NOT be messing with this much after installation unless you choose to.  The login/password you set up here will NOT be the same as your login/password for OpenCATS.</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Make sure you remember or write down your login/password.  You&#8217;ll need it in a new minutes.</p>
+</div>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">mysql</span> <span class="pre">-u</span> <span class="pre">root</span> <span class="pre">-p</span></code></li>
+</ul>
+<p>It will ask you for your Ubuntu Root password</p>
+<p>Then it will ask you for your mysql root password</p>
+<ul class="simple">
+<li>You should see a prompt like this: <code class="docutils literal"><span class="pre">mysql&gt;</span></code></li>
+<li><code class="docutils literal"><span class="pre">mysql&gt;</span></code> CREATE USER <a class="reference external" href="mailto:'opencats'&#37;&#52;&#48;'localhost">'opencats'<span>&#64;</span>'localhost</a>&#8216; IDENTIFIED BY &#8216;databasepassword&#8217;;</li>
+<li><code class="docutils literal"><span class="pre">mysql&gt;</span></code> CREATE DATABASE opencats;</li>
+<li><code class="docutils literal"><span class="pre">mysql&gt;</span></code> GRANT ALL PRIVILEGES ON <cite>opencats</cite>.* TO <a class="reference external" href="mailto:'opencats'&#37;&#52;&#48;'localhost">'opencats'<span>&#64;</span>'localhost</a>&#8216; IDENTIFIED BY &#8216;databasepassword&#8217;;</li>
+<li><code class="docutils literal"><span class="pre">mysql&gt;</span></code> exit;</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Make sure you don&#8217;t forget the ; on the end of every line!</p>
+</div>
+</div>
+<div class="section" id="download-the-opencats-files">
+<h2>Download the OpenCATS files<a class="headerlink" href="#download-the-opencats-files" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">cd</span> <span class="pre">/var/www/html</span></code></li>
+<li><code class="docutils literal"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">wget</span> <span class="pre">https://github.com/opencats/OpenCATS/archive/0.9.3-3.tar.gz</span></code></li>
+<li><code class="docutils literal"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">tar</span> <span class="pre">-xvzf</span> <span class="pre">0.9.3-3.tar.gz</span></code></li>
+<li><code class="docutils literal"><span class="pre">$</span> <span class="pre">cd</span> <span class="pre">OpenCATS-0.9.3-3</span></code></li>
+<li><code class="docutils literal"><span class="pre">$</span> <span class="pre">ls</span></code>  Now we should see all of the OpenCATS files in the OpenCATS directory</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">By default, this directory is named OpenCATS0.9.3-3.  You can name it whatever you want.  Just remember that all of the directory locations from here on must match the name of the directory you create, including capitol letters.</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If you have tried installing OpenCATS before, or for any reason see something called INSTALL_BLOCK in this directory, you MUST delete it.  This will prevent OpenCATS from installing.  The command for that would be <code class="docutils literal"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">rm</span> <span class="pre">INSTALL_BLOCK</span></code>.</p>
+</div>
+</div>
+<div class="section" id="composer">
+<h2>Composer<a class="headerlink" href="#composer" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">apt-get</span> <span class="pre">install</span> <span class="pre">composer</span></code></li>
+<li><code class="docutils literal"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">composer</span> <span class="pre">install</span></code></li>
+</ul>
+<p>If everything has gone correctly up to this point, composer will install a few things and get to the end with no errors.</p>
+</div>
+<div class="section" id="server-and-directory-permissions">
+<h2>Server and Directory permissions<a class="headerlink" href="#server-and-directory-permissions" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">$</span> <span class="pre">cd</span> <span class="pre">..</span></code> to go up one directory into the main html folder</li>
+<li><code class="docutils literal"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">chown</span> <span class="pre">www-data:www-data</span> <span class="pre">OpenCATS-0.9.3-3</span></code></li>
+</ul>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">make sure this is set to <strong>EXACTLY</strong> the name of your OpenCATS directory, default for version 0.9.3-3 would be <code class="docutils literal"><span class="pre">OpenCATS-0.9.3-3</span></code></p>
+</div>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">chown</span> <span class="pre">-R</span> <span class="pre">www-data:www-data</span> <span class="pre">OpenCATS-0.9.3-3</span></code></li>
+<li><code class="docutils literal"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">chmod</span> <span class="pre">770</span> <span class="pre">OpenCATS-0.9.3-3/attachments</span></code></li>
+<li><code class="docutils literal"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">chmod</span> <span class="pre">770</span> <span class="pre">OpenCATS-0.9.3-3/upload</span></code></li>
+</ul>
+</div>
+<div class="section" id="install-resume-indexing-tools">
+<h2>Install resume indexing tools<a class="headerlink" href="#install-resume-indexing-tools" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">apt-get</span> <span class="pre">install</span> <span class="pre">antiword</span> <span class="pre">poppler-utils</span> <span class="pre">html2text</span> <span class="pre">unrtf</span></code></li>
+</ul>
+</div>
+</div>
+<div class="section" id="install-the-opencats-software">
+<h1>Install the OpenCATS software<a class="headerlink" href="#install-the-opencats-software" title="Permalink to this headline">¶</a></h1>
+<p>In your browser, go to localhost/OpenCATS-0.9.3-3 (Or use the address of your server or VPS in place of &#8220;localhost&#8221;).</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If you have already attempted to install OpenCATS and the installer doesn&#8217;t load, check to see if there is a file called &#8216;INSTALL_BLOCK&#8217; in the OpenCATS directory. Delete it to allow the installer to run.</p>
+</div>
+<p>Click: <code class="docutils literal"><span class="pre">Installation</span> <span class="pre">Wizard</span></code></p>
+<img alt="_images/installation-wizard.png" src="_images/installation-wizard.png" />
+<p><strong>Step 1: System Connectivity</strong></p>
+<p>This step makes sure you have the required server environment set up correctly.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Green = good.</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Yellow = OpenCATS will work, but some functions may not.</p>
+</div>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Red = Bad  You can&#8217;t continue the installation until a server environment issue is fixed.</p>
+</div>
+<p>If you see all green and/or yellow, click <code class="docutils literal"><span class="pre">Next</span></code></p>
+<img alt="_images/step1.png" src="_images/step1.png" />
+<p><strong>Step 2: Database connectivity</strong></p>
+<p>Enter your OpenCATS MySQL/MariaDB database name, MySQL/MariaDB database username, MySQL/MariaDB database password, and MySQL/MariaDB database host address in these boxes.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If you are running OpenCATS locally on your computer, or on some shared hosts, the host address will be localhost.  If your server, VPS (some shared hosting too), you will need to enter the specific address to access.</p>
+</div>
+<p>Click <code class="docutils literal"><span class="pre">Test</span> <span class="pre">Database</span> <span class="pre">Connectivity</span></code></p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">I usually get red the first few tries after click the <code class="docutils literal"><span class="pre">test</span> <span class="pre">database</span> <span class="pre">connectivity</span></code> button.  If you try more than a couple times and it stays red, you have either entered your MySQL/Mariadb information incorrectly, or you have set your MySQL/MariaDB database up incorrectly.  It needs to be corrected before proceeding.</p>
+</div>
+<img alt="_images/step2.png" src="_images/step2.png" />
+<p><strong>Step 3: Loading Data</strong></p>
+<p>For a new installation, select <code class="docutils literal"><span class="pre">New</span> <span class="pre">Installation</span></code>, then <code class="docutils literal"><span class="pre">next</span></code></p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last"><code class="docutils literal"><span class="pre">Demonstration</span> <span class="pre">Installation</span></code> will autopopulate OpenCATS with general example clients, candidates, job orders, etc.  There&#8217;s no reason to use this in my opinion.</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last"><code class="docutils literal"><span class="pre">Restore</span> <span class="pre">installation</span> <span class="pre">from</span> <span class="pre">backup</span></code> will be covered in a future tutorial</p>
+</div>
+<img alt="_images/step3.png" src="_images/step3.png" />
+<p><strong>Step 4 Setup resume indexing</strong></p>
+<ul class="simple">
+<li>Change the paths to the executables to the correct paths.  They should be as follows:</li>
+<li>/usr/bin/antiword</li>
+<li>/usr/bin/pdftotext</li>
+<li>/usr/bin/html2text</li>
+<li>/usr/bin/unrtf</li>
+<li>Click <code class="docutils literal"><span class="pre">Test</span> <span class="pre">Configuration</span></code></li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Like earlier, I always get red the first couple clicks, then it will go green.  If you get green, proceed.  If it stays red after a few click, the system isn&#8217;t recognizing the executables.  There may be a path issue that needs corrected.</p>
+</div>
+<img alt="_images/step4.png" src="_images/step4.png" />
+<p><strong>Step 5 Mail Settings</strong></p>
+<p>OpenCATS can send emails.  If you don&#8217;t want to use it, you don&#8217;t have to.  OpenCATS works great either way!</p>
+<p>Choose an option from the Mail Support drop-down bar, fill the necessary information in (if you are using it) and click <code class="docutils literal"><span class="pre">Next</span></code></p>
+<img alt="_images/step5.png" src="_images/step5.png" />
+<p><strong>Step 6 Loading extras</strong></p>
+<p>Don&#8217;t forget to set the time zone to your area!</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">If you forget to set the time zone ALL of the timestamps on every note in OpenCATS will be wrong.   Set the time zone correctly.  You will thank us...</p>
+</div>
+<p>Choose the date format you like best</p>
+<p>(United States only) choose to install (if you want) zip code lookup</p>
+<p>Click <code class="docutils literal"><span class="pre">next</span></code></p>
+<img alt="_images/step6.png" src="_images/step6.png" />
+<p><strong>Step 7 Finishing installation</strong></p>
+<p>Runs through the installation process.  You should see a box and some pretty bars moving.  It shouldn&#8217;t take long.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The default username and password are: admin/admin (all lowercase)</p>
+</div>
+<p>Click <code class="docutils literal"><span class="pre">Start</span> <span class="pre">OpenCATS</span></code> for your login screen.</p>
+<img alt="_images/step7.png" src="_images/step7.png" />
+<p><strong>Success!!</strong></p>
+<p>Your brand new OpenCATS applicant System!</p>
+<img alt="_images/first-login.png" src="_images/first-login.png" />
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="screens-in-depth.html" class="btn btn-neutral float-right" title="Screens In-Depth" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Install-Ubuntu-14.04.html" class="btn btn-neutral" title="Install on Ubuntu 14.04" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, CC.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.9.3',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
