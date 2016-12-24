@@ -11,6 +11,8 @@ Installation-Unix/Linux Prerequisites
 
 You must have LAMP server software installed and running.
 
+You must install composer from https://getcomposer.org/.
+
 .. note:: mysql and mariadb are basically the same software with different names.  You can use either, just change the commands to the appropriate name.
 
 CentOS7-Installing MySQL 5/Mariadb
@@ -156,6 +158,12 @@ Setting up your MySQL/MariaDB database
 * ``mysql>`` exit;
 
 .. note:: Make sure you don't forget the ; on the end of every line!
+
+
+Run composer to get dependencies
+--------------------------------
+* ``# cd cats-x.x.x/``
+* ``# composer install``
 
 Server and Directory permissions
 --------------------------------

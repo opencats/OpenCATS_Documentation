@@ -19,6 +19,7 @@ Contents:
    introduction
    install-windows
    install-linux
+   Install-Ubuntu-14.04
    screens-in-depth
    useoc
 

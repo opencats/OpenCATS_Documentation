@@ -30,9 +30,6 @@
   
 
   
-        <link rel="index" title="Index"
-              href="genindex.html"/>
-        <link rel="search" title="Search" href="search.html"/>
     <link rel="top" title="OpenCATS 0.9.3 documentation" href="index.html"/>
         <link rel="next" title="Install on Linux" href="install-linux.html"/>
         <link rel="prev" title="Introduction" href="introduction.html"/> 
@@ -89,10 +86,12 @@
 <li class="toctree-l1"><a class="reference internal" href="toc.html">Contents</a></li>
 <li class="toctree-l1"><a class="reference internal" href="preface.html">Preface</a></li>
 <li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Windows - OpenCATS Installation Instructions</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Windows - OpenCATS Installation Instructions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="install-linux.html">Install on Linux</a></li>
 <li class="toctree-l1"><a class="reference internal" href="install-linux.html#install-resume-indexing-tools">Install resume indexing tools</a></li>
 <li class="toctree-l1"><a class="reference internal" href="install-linux.html#install-the-opencats-software">Install the OpenCATS software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Install-Ubuntu-14.04.html">Install on Ubuntu 14.04</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Install-Ubuntu-14.04.html#install-the-opencats-software">Install the OpenCATS software</a></li>
 <li class="toctree-l1"><a class="reference internal" href="screens-in-depth.html">Screens In-Depth</a></li>
 <li class="toctree-l1"><a class="reference internal" href="useoc.html">Using OpenCATS-The building blocks: companies, contacts, job orders, and candidates</a></li>
 </ul>
@@ -151,15 +150,17 @@
 <li><a class="reference external" href="http://www.mbayer.de/html2text/">html2text</a></li>
 <li><a class="reference external" href="http://www.gnu.org/software/unrtf/unrtf.html">UnRTF</a></li>
 <li><a class="reference external" href="http://www.7-zip.org/">7-Zip or equivalent</a></li>
+<li><a class="reference external" href="https://getcomposer.org/">Composer</a></li>
 </ul>
 <p>Installation instructions are given for the XAMPP default install environment only. And Prequisite Installation notes below.</p>
 <ul class="simple">
-<li>Download and install XAMPP to c:xampp by following the directions provided on the XAMPP website. Very easy.</li>
+<li>Download and install XAMPP with PHP version 5 (for example 5.5.38) to c:\xampp by following the directions provided on the XAMPP website. Very easy.</li>
 <li>Download the <a class="reference external" href="http://downloads.opencats.org/setupResumeIndexingTools.exe">OpenCATS resume indexing tools</a>. Install the executable (exe file) and accept the default install locations.</li>
 <li>Optionally download <a class="reference external" href="http://www.7-zip.org/">7-Zip or equivalent</a> and install. This will allow you to extract the tar ball and gz files later. If you already have an extractor then you may skip this step.</li>
-<li>Now you are ready to get OpenCats Download <a class="reference external" href="http://downloads.opencats.org/opencats-0.9.1a.tar.gz">OpenCATS.9.1a</a></li>
+<li>Now you are ready to get OpenCats Download <a class="reference external" href="https://github.com/opencats/OpenCATS/releases/tag/0.9.3-1">OpenCATS_0.9.3-1</a></li>
 </ul>
-<p>Open tarball (cats-0.9.1.tar.gz) using 7Zip and extract all files to C:xampphtdocsopencats Verify that there is a readme.txt file in the directory C:/xampp/htdocs/opencats. If so you got it right :)</p>
+<p>Open tarball (cats-0.9.1.tar.gz) using 7Zip and extract all files to C:\xampp\htdocs\opencats Verify that there is a readme.txt file in the directory C:/xampp/htdocs/opencats. If so you got it right :)</p>
+<p>In <cite>Search programs and files</cite> type cmd.exe, navigate to C:\xampp\htdocs\opencats and run <cite>composer install</cite></p>
 <p>Launch phpMyAdmin. <a class="reference external" href="http://localhost/phpmyadmin/">http://localhost/phpmyadmin/</a></p>
 <ul class="simple">
 <li>In the page that displays, type &#8216;opencats&#8217; into the textbox under Create new database and click the Create button.</li>

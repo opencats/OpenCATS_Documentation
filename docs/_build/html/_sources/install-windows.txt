@@ -13,15 +13,18 @@ These instructions are for the (Windows) XAMPP environment only.  Download and i
 * `html2text <http://www.mbayer.de/html2text/>`_
 * `UnRTF <http://www.gnu.org/software/unrtf/unrtf.html>`_
 * `7-Zip or equivalent <http://www.7-zip.org/>`_
+* `Composer <https://getcomposer.org/>`_
 
 Installation instructions are given for the XAMPP default install environment only. And Prequisite Installation notes below.
 
-* Download and install XAMPP to c:\xampp by following the directions provided on the XAMPP website. Very easy.
+* Download and install XAMPP with PHP version 5 (for example 5.5.38) to c:\\xampp by following the directions provided on the XAMPP website. Very easy.
 * Download the `OpenCATS resume indexing tools <http://downloads.opencats.org/setupResumeIndexingTools.exe>`_. Install the executable (exe file) and accept the default install locations.
 * Optionally download `7-Zip or equivalent <http://www.7-zip.org/>`_ and install. This will allow you to extract the tar ball and gz files later. If you already have an extractor then you may skip this step.
-* Now you are ready to get OpenCats Download `OpenCATS.9.1a <http://downloads.opencats.org/opencats-0.9.1a.tar.gz>`_
+* Now you are ready to get OpenCats Download `OpenCATS_0.9.3-1 <https://github.com/opencats/OpenCATS/releases/tag/0.9.3-1>`_
 
-Open tarball (cats-0.9.1.tar.gz) using 7Zip and extract all files to C:\xampp\htdocs\opencats Verify that there is a readme.txt file in the directory C:/xampp/htdocs/opencats. If so you got it right :)
+Open tarball (cats-0.9.1.tar.gz) using 7Zip and extract all files to C:\\xampp\\htdocs\\opencats Verify that there is a readme.txt file in the directory C:/xampp/htdocs/opencats. If so you got it right :)
+
+In `Search programs and files` type cmd.exe, navigate to C:\\xampp\\htdocs\\opencats and run `composer install`
 
 Launch phpMyAdmin. http://localhost/phpmyadmin/
 
