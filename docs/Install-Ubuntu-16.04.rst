@@ -59,12 +59,14 @@ Ubuntu16.04-Installing PHP5.6
 
 * ``$ sudo add-apt-repository ppa:ondrej/php``
 * ``$ sudo apt-get update``
-* ``$ sudo apt-get install php5.6 php5.6-soap php5.6-ldap php5.6-mysql php5.6-gd php5.6-xml php5.6-curl php5.6-mbstring php5.6-zip``
+* ``$ sudo apt-get install php5.6 php5.6-soap php5.6-ldap``
+* ``$ sudo apt-get install php5.6-mysql php5.6-gd php5.6-xml``
+* ``$ sudo apt-get install php5.6-curl php5.6-mbstring php5.6-zip``
 * ``$ sudo service apache2 restart``
 
 
 Testing PHP5.6 / Getting Details About Your PHP5 Installation
------------------------------------------------------------
+-------------------------------------------------------------
 
 .. note:: The document root of the default website is /var/www/html. We will now create a small PHP file (info.php) in that directory and call it in a browser. The file will display lots of useful details about our PHP installation, such as the installed PHP version.
 
@@ -127,6 +129,7 @@ Composer
 --------
 * ``$ sudo apt-get install composer``
 * ``$ sudo composer install``
+
 If everything has gone correctly up to this point, composer will install a few things and get to the end with no errors.
 
 Server and Directory permissions
