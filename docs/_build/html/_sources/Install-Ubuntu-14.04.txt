@@ -53,8 +53,8 @@ Check for success-Apache
 .. image:: ../docs/_static/apache1.png
 
 
-Debian8/Ubuntu16.06-Installing PHP5
------------------------------------
+Ubuntu14.04-Installing PHP5
+---------------------------
 
 * ``$ sudo apt-get install php5``
 * ``$ sudo service apache2 restart``
@@ -74,7 +74,7 @@ Testing PHP5 / Getting Details About Your PHP5 Installation
     :lines: 1-5
 
 * Ctl-O then enter to save the file
-* Ctl-X then enter to exit nano
+* Ctl-X to exit nano
 * ``$ sudo service apache2 restart``
 * In your browser, go to localhost/info.php
 
@@ -101,9 +101,9 @@ Setting up your MySQL/MariaDB database
 
 * ``$ mysql -u root -p`` (If that doesn't work, try ``mysql -u root -yourmariadbpasswordfromearlier``)
 * You should see a prompt like this: ``mysql>``
-* ``mysql>`` CREATE USER 'yourusername'@'localhost' IDENTIFIED BY 'yourmariadbpassword';
-* ``mysql>`` CREATE DATABASE cats;
-* ``mysql>`` GRANT ALL PRIVILEGES ON `cats`.* TO 'cats'@'localhost' IDENTIFIED BY 'yourmariadbpassword';
+* ``mysql>`` CREATE USER 'opencats'@'localhost' IDENTIFIED BY 'databasepassword';
+* ``mysql>`` CREATE DATABASE opencats;
+* ``mysql>`` GRANT ALL PRIVILEGES ON `opencats`.* TO 'opencats'@'localhost' IDENTIFIED BY 'databasepassword';
 * ``mysql>`` exit;
 
 .. note:: Make sure you don't forget the ; on the end of every line!

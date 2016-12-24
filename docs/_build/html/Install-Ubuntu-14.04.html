@@ -95,7 +95,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#securing-mysql-mariadb">Securing-MySQL-MariaDB</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#ubuntu14-04-installing-apache2">Ubuntu14.04-Installing Apache2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#check-for-success-apache">Check for success-Apache</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#debian8-ubuntu16-06-installing-php5">Debian8/Ubuntu16.06-Installing PHP5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ubuntu14-04-installing-php5">Ubuntu14.04-Installing PHP5</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#testing-php5-getting-details-about-your-php5-installation">Testing PHP5 / Getting Details About Your PHP5 Installation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#ubuntu14-04-getting-mysql-support-in-php5">Ubuntu14.04-Getting MySQL Support In PHP5</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#setting-up-your-mysql-mariadb-database">Setting up your MySQL/MariaDB database</a></li>
@@ -211,8 +211,8 @@
 </ul>
 <img alt="_images/apache1.png" src="_images/apache1.png" />
 </div>
-<div class="section" id="debian8-ubuntu16-06-installing-php5">
-<h2>Debian8/Ubuntu16.06-Installing PHP5<a class="headerlink" href="#debian8-ubuntu16-06-installing-php5" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="ubuntu14-04-installing-php5">
+<h2>Ubuntu14.04-Installing PHP5<a class="headerlink" href="#ubuntu14-04-installing-php5" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><code class="docutils literal"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">apt-get</span> <span class="pre">install</span> <span class="pre">php5</span></code></li>
 <li><code class="docutils literal"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">service</span> <span class="pre">apache2</span> <span class="pre">restart</span></code></li>
@@ -237,7 +237,7 @@
 </td></tr></table></div>
 <ul class="simple">
 <li>Ctl-O then enter to save the file</li>
-<li>Ctl-X then enter to exit nano</li>
+<li>Ctl-X to exit nano</li>
 <li><code class="docutils literal"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">service</span> <span class="pre">apache2</span> <span class="pre">restart</span></code></li>
 <li>In your browser, go to localhost/info.php</li>
 </ul>
@@ -269,9 +269,9 @@
 <ul class="simple">
 <li><code class="docutils literal"><span class="pre">$</span> <span class="pre">mysql</span> <span class="pre">-u</span> <span class="pre">root</span> <span class="pre">-p</span></code> (If that doesn&#8217;t work, try <code class="docutils literal"><span class="pre">mysql</span> <span class="pre">-u</span> <span class="pre">root</span> <span class="pre">-yourmariadbpasswordfromearlier</span></code>)</li>
 <li>You should see a prompt like this: <code class="docutils literal"><span class="pre">mysql&gt;</span></code></li>
-<li><code class="docutils literal"><span class="pre">mysql&gt;</span></code> CREATE USER <a class="reference external" href="mailto:'yourusername'&#37;&#52;&#48;'localhost">'yourusername'<span>&#64;</span>'localhost</a>&#8216; IDENTIFIED BY &#8216;yourmariadbpassword&#8217;;</li>
-<li><code class="docutils literal"><span class="pre">mysql&gt;</span></code> CREATE DATABASE cats;</li>
-<li><code class="docutils literal"><span class="pre">mysql&gt;</span></code> GRANT ALL PRIVILEGES ON <cite>cats</cite>.* TO <a class="reference external" href="mailto:'cats'&#37;&#52;&#48;'localhost">'cats'<span>&#64;</span>'localhost</a>&#8216; IDENTIFIED BY &#8216;yourmariadbpassword&#8217;;</li>
+<li><code class="docutils literal"><span class="pre">mysql&gt;</span></code> CREATE USER <a class="reference external" href="mailto:'opencats'&#37;&#52;&#48;'localhost">'opencats'<span>&#64;</span>'localhost</a>&#8216; IDENTIFIED BY &#8216;databasepassword&#8217;;</li>
+<li><code class="docutils literal"><span class="pre">mysql&gt;</span></code> CREATE DATABASE opencats;</li>
+<li><code class="docutils literal"><span class="pre">mysql&gt;</span></code> GRANT ALL PRIVILEGES ON <cite>opencats</cite>.* TO <a class="reference external" href="mailto:'opencats'&#37;&#52;&#48;'localhost">'opencats'<span>&#64;</span>'localhost</a>&#8216; IDENTIFIED BY &#8216;databasepassword&#8217;;</li>
 <li><code class="docutils literal"><span class="pre">mysql&gt;</span></code> exit;</li>
 </ul>
 <div class="admonition note">
