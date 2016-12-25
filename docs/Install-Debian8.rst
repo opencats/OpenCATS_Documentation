@@ -98,6 +98,7 @@ Then it will ask you for your mariadb/mysql root password
 
 * You should see a prompt like this: ``mysql>``
 * ``mysql>`` CREATE USER 'opencats'@'localhost' IDENTIFIED BY 'databasepassword';
+
 .. note:: the "databasepassword" is not the same as the mariadb/mysql root password, and it won't be the same as your OpenCATS password.  All three of these are separate things.  You can use whatever passwords you want.  Just write them down and differentiate which is which.
 
 * ``mysql>`` CREATE DATABASE opencats;
@@ -122,9 +123,9 @@ Download the OpenCATS files
 
 Composer
 --------
-* ``$ sudo apt-get install curl``
 * ``$ cd /usr/src``
 * ``$ curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer``
+* ``$ cd /var/www/html/OpenCATS-0.9.3-3``
 * ``$ sudo composer install``
 
 If everything has gone correctly up to this point, composer will install a few things and get to the end with no errors.
