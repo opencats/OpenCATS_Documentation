@@ -18,7 +18,6 @@ Contents:
    preface
    introduction
    install-windows
-   install-linux
    Install-Ubuntu-14.04
    Install-Ubuntu-16.04
    Install-CentOS7

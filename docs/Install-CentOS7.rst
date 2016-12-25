@@ -158,7 +158,7 @@ If you want to remove the files after you have installed them then do:
 
 
 Install the OpenCATS software
-=============================
+-----------------------------
 
 In your browser, go to localhost/OpenCATS-opencats-0.9.3/  (Or use the address of your server or VPS in place of "localhost").
 
