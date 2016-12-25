@@ -22,7 +22,7 @@ Debian 8-Installing MySQL/Mariadb
 
 Securing-MySQL/MariaDB
 ----------------------
-
+* Enter current password for root (enter for none): Enter
 * Set root password? [Y/n] n
 * New password: <--yourmariadbpassword  (Remember this or write it down!)
 * Re-enter new password: <--yourmariadbpassword (Remember this or write it down!)

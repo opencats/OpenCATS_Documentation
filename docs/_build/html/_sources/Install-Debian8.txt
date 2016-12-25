@@ -22,7 +22,7 @@ Debian 8-Installing MySQL/Mariadb
 
 Securing-MySQL/MariaDB
 ----------------------
-
+* Enter current password for root (enter for none): Enter
 * Set root password? [Y/n] n
 * New password: <--yourmariadbpassword  (Remember this or write it down!)
 * Re-enter new password: <--yourmariadbpassword (Remember this or write it down!)
@@ -98,6 +98,7 @@ Then it will ask you for your mariadb/mysql root password
 
 * You should see a prompt like this: ``mysql>``
 * ``mysql>`` CREATE USER 'opencats'@'localhost' IDENTIFIED BY 'databasepassword';
+
 .. note:: the "databasepassword" is not the same as the mariadb/mysql root password, and it won't be the same as your OpenCATS password.  All three of these are separate things.  You can use whatever passwords you want.  Just write them down and differentiate which is which.
 
 * ``mysql>`` CREATE DATABASE opencats;

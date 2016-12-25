@@ -120,9 +120,11 @@ Setting up your MySQL/MariaDB database
 
 Run composer to get dependencies
 --------------------------------
-* ``$ sudo yum install git``
 * ``$ sudo yum install composer``
-* ``$ cd /var/www/html/OpenCATS-0.9.3-3``
+* ``$ cd /var/www/html``
+* ``$ sudo wget https://github.com/opencats/OpenCATS/archive/0.9.3-3.tar.gz``
+* ``$ sudo tar -xvzf 0.9.3-3.tar.gz``
+* ``$ cd OpenCATS-0.9.3-3``
 * ``$ sudo composer install``
 
 .. note:: If everything is done correctly, there should be no composer errors.  If there are errors, take a close look at them to see what is missing.
