@@ -20,6 +20,7 @@ Contents:
    install-windows
    Install-Ubuntu-14.04
    Install-Ubuntu-16.04
+   Install-Debian8
    Install-CentOS7
    screens-in-depth
    useoc
