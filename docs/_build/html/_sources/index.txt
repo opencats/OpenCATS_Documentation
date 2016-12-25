@@ -21,6 +21,7 @@ Contents:
    install-linux
    Install-Ubuntu-14.04
    Install-Ubuntu-16.04
+   Install-CentOS7
    screens-in-depth
    useoc
 
