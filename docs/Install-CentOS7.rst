@@ -120,6 +120,7 @@ Setting up your MySQL/MariaDB database
 
 Run composer to get dependencies
 --------------------------------
+* ``$ sudo yum install git``
 * ``$ sudo yum install composer``
 * ``$ cd /var/www/html``
 * ``$ sudo wget https://github.com/opencats/OpenCATS/archive/0.9.3-3.tar.gz``
@@ -136,13 +137,12 @@ Server and Directory permissions
 .. note:: CentOS runs SElinux for additional security layers.  We need to do a few additional things on permissions.
 
 * ``$ cd ..`` Move back into the main html directory
-* ``$ sudo chown -R apache:apache OpenCATS-0.9.3-3``
+* ``$ sudo chown apache:apache -R OpenCATS-0.9.3-3``
 * ``$ cd OpenCATS-0.9.3-3`` move back into the OpenCATS Directory
 * ``$ sudo find . -type f -exec chmod 0644 {} \;``
 * ``$ sudo find . -type d -exec chmod 0770 {} \;``
-* ``$ sudo chcon -t httpd_sys_content_t /data/www/html/OpenCATS-0.9.3-3 -R``
-* ``$ sudo chcon -t httpd_sys_rw_content_t /data/www/html/OpenCATS-0.9.3-3/attachments -R``
-* ``$ sudo chcon -t httpd_sys_rw_content_t /data/www/html/upload -R``
+* ``$ sudo chcon -t httpd_sys_content_t /var/www/html/OpenCATS-0.9.3-3 -R``
+* ``$ sudo chcon -t httpd_sys_rw_content_t /var/www/html/OpenCATS-0.9.3-3 -R``
 
 .. warning:: make sure this is set to **EXACTLY** the name of your OpenCATS directory, default for OpenCATS version 0.9.3-3 would be ``OpenCATS-0.9.3-3``
 

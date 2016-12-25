@@ -296,6 +296,7 @@ Instructions are provided for CentOS7.</p>
 <div class="section" id="run-composer-to-get-dependencies">
 <h2>Run composer to get dependencies<a class="headerlink" href="#run-composer-to-get-dependencies" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
+<li><code class="docutils literal"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">yum</span> <span class="pre">install</span> <span class="pre">git</span></code></li>
 <li><code class="docutils literal"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">yum</span> <span class="pre">install</span> <span class="pre">composer</span></code></li>
 <li><code class="docutils literal"><span class="pre">$</span> <span class="pre">cd</span> <span class="pre">/var/www/html</span></code></li>
 <li><code class="docutils literal"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">wget</span> <span class="pre">https://github.com/opencats/OpenCATS/archive/0.9.3-3.tar.gz</span></code></li>
@@ -316,13 +317,12 @@ Instructions are provided for CentOS7.</p>
 </div>
 <ul class="simple">
 <li><code class="docutils literal"><span class="pre">$</span> <span class="pre">cd</span> <span class="pre">..</span></code> Move back into the main html directory</li>
-<li><code class="docutils literal"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">chown</span> <span class="pre">-R</span> <span class="pre">apache:apache</span> <span class="pre">OpenCATS-0.9.3-3</span></code></li>
+<li><code class="docutils literal"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">chown</span> <span class="pre">apache:apache</span> <span class="pre">-R</span> <span class="pre">OpenCATS-0.9.3-3</span></code></li>
 <li><code class="docutils literal"><span class="pre">$</span> <span class="pre">cd</span> <span class="pre">OpenCATS-0.9.3-3</span></code> move back into the OpenCATS Directory</li>
 <li><code class="docutils literal"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">find</span> <span class="pre">.</span> <span class="pre">-type</span> <span class="pre">f</span> <span class="pre">-exec</span> <span class="pre">chmod</span> <span class="pre">0644</span> <span class="pre">{}</span> <span class="pre">\;</span></code></li>
 <li><code class="docutils literal"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">find</span> <span class="pre">.</span> <span class="pre">-type</span> <span class="pre">d</span> <span class="pre">-exec</span> <span class="pre">chmod</span> <span class="pre">0770</span> <span class="pre">{}</span> <span class="pre">\;</span></code></li>
-<li><code class="docutils literal"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">chcon</span> <span class="pre">-t</span> <span class="pre">httpd_sys_content_t</span> <span class="pre">/data/www/html/OpenCATS-0.9.3-3</span> <span class="pre">-R</span></code></li>
-<li><code class="docutils literal"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">chcon</span> <span class="pre">-t</span> <span class="pre">httpd_sys_rw_content_t</span> <span class="pre">/data/www/html/OpenCATS-0.9.3-3/attachments</span> <span class="pre">-R</span></code></li>
-<li><code class="docutils literal"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">chcon</span> <span class="pre">-t</span> <span class="pre">httpd_sys_rw_content_t</span> <span class="pre">/data/www/html/upload</span> <span class="pre">-R</span></code></li>
+<li><code class="docutils literal"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">chcon</span> <span class="pre">-t</span> <span class="pre">httpd_sys_content_t</span> <span class="pre">/var/www/html/OpenCATS-0.9.3-3</span> <span class="pre">-R</span></code></li>
+<li><code class="docutils literal"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">chcon</span> <span class="pre">-t</span> <span class="pre">httpd_sys_rw_content_t</span> <span class="pre">/var/www/html/OpenCATS-0.9.3-3</span> <span class="pre">-R</span></code></li>
 </ul>
 <div class="admonition warning">
 <p class="first admonition-title">Warning</p>
