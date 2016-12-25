@@ -31,7 +31,7 @@
 
   
     <link rel="top" title="OpenCATS 0.9.3 documentation" href="index.html"/>
-        <link rel="next" title="Screens In-Depth" href="screens-in-depth.html"/>
+        <link rel="next" title="Install on Debian 8 Jessie" href="Install-Debian8.html"/>
         <link rel="prev" title="Install on Ubuntu 14.04" href="Install-Ubuntu-14.04.html"/> 
 
   
@@ -87,9 +87,6 @@
 <li class="toctree-l1"><a class="reference internal" href="preface.html">Preface</a></li>
 <li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="install-windows.html">Windows - OpenCATS Installation Instructions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="install-linux.html">Install on Linux</a></li>
-<li class="toctree-l1"><a class="reference internal" href="install-linux.html#install-resume-indexing-tools">Install resume indexing tools</a></li>
-<li class="toctree-l1"><a class="reference internal" href="install-linux.html#install-the-opencats-software">Install the OpenCATS software</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Install-Ubuntu-14.04.html">Install on Ubuntu 14.04</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="">Install on Ubuntu 16.04</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#ubuntu16-04-installing-mysql-5-mariadb">Ubuntu16.04-Installing MySQL 5/Mariadb</a></li>
@@ -106,6 +103,8 @@
 <li class="toctree-l2"><a class="reference internal" href="#install-the-opencats-software">Install the OpenCATS software</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="Install-Debian8.html">Install on Debian 8 Jessie</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Install-CentOS7.html">Install-CentOS 7</a></li>
 <li class="toctree-l1"><a class="reference internal" href="screens-in-depth.html">Screens In-Depth</a></li>
 <li class="toctree-l1"><a class="reference internal" href="useoc.html">Using OpenCATS-The building blocks: companies, contacts, job orders, and candidates</a></li>
 </ul>
@@ -275,7 +274,7 @@
 <li>You should see a prompt like this: <code class="docutils literal"><span class="pre">mysql&gt;</span></code></li>
 <li><code class="docutils literal"><span class="pre">mysql&gt;</span></code> CREATE USER <a class="reference external" href="mailto:'opencats'&#37;&#52;&#48;'localhost">'opencats'<span>&#64;</span>'localhost</a>&#8216; IDENTIFIED BY &#8216;databasepassword&#8217;;</li>
 <li><code class="docutils literal"><span class="pre">mysql&gt;</span></code> CREATE DATABASE opencats;</li>
-<li><code class="docutils literal"><span class="pre">mysql&gt;</span></code> GRANT ALL PRIVILEGES ON <cite>opencats</cite>.* TO <a class="reference external" href="mailto:'opencats'&#37;&#52;&#48;'localhost">'opencats'<span>&#64;</span>'localhost</a>&#8216; IDENTIFIED BY &#8216;databasepassword&#8217;;</li>
+<li><code class="docutils literal"><span class="pre">mysql&gt;</span></code> GRANT ALL PRIVILEGES ON &#8216;opencats&#8217;.* TO <a class="reference external" href="mailto:'opencats'&#37;&#52;&#48;'localhost">'opencats'<span>&#64;</span>'localhost</a>&#8216; IDENTIFIED BY &#8216;databasepassword&#8217;;</li>
 <li><code class="docutils literal"><span class="pre">mysql&gt;</span></code> exit;</li>
 </ul>
 <div class="admonition note">
@@ -428,7 +427,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="screens-in-depth.html" class="btn btn-neutral float-right" title="Screens In-Depth" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="Install-Debian8.html" class="btn btn-neutral float-right" title="Install on Debian 8 Jessie" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="Install-Ubuntu-14.04.html" class="btn btn-neutral" title="Install on Ubuntu 14.04" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>

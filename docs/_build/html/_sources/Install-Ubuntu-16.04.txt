@@ -106,7 +106,7 @@ Then it will ask you for your mysql root password
 * You should see a prompt like this: ``mysql>``
 * ``mysql>`` CREATE USER 'opencats'@'localhost' IDENTIFIED BY 'databasepassword';
 * ``mysql>`` CREATE DATABASE opencats;
-* ``mysql>`` GRANT ALL PRIVILEGES ON `opencats`.* TO 'opencats'@'localhost' IDENTIFIED BY 'databasepassword';
+* ``mysql>`` GRANT ALL PRIVILEGES ON 'opencats'.* TO 'opencats'@'localhost' IDENTIFIED BY 'databasepassword';
 * ``mysql>`` exit;
 
 .. note:: Make sure you don't forget the ; on the end of every line!

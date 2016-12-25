@@ -102,7 +102,7 @@ Then it will ask you for your mariadb/mysql root password
 .. note:: the "databasepassword" is not the same as the mariadb/mysql root password, and it won't be the same as your OpenCATS password.  All three of these are separate things.  You can use whatever passwords you want.  Just write them down and differentiate which is which.
 
 * ``mysql>`` CREATE DATABASE opencats;
-* ``mysql>`` GRANT ALL PRIVILEGES ON `opencats`.* TO 'opencats'@'localhost' IDENTIFIED BY 'databasepassword';
+* ``mysql>`` GRANT ALL PRIVILEGES ON 'opencats'.* TO 'opencats'@'localhost' IDENTIFIED BY 'databasepassword';
 * ``mysql>`` exit;
 
 .. note:: Make sure you don't forget the ; on the end of every line!

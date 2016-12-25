@@ -32,7 +32,7 @@
   
     <link rel="top" title="OpenCATS 0.9.3 documentation" href="index.html"/>
         <link rel="next" title="Install on Ubuntu 16.04" href="Install-Ubuntu-16.04.html"/>
-        <link rel="prev" title="Install on Linux" href="install-linux.html"/> 
+        <link rel="prev" title="Windows - OpenCATS Installation Instructions" href="install-windows.html"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -87,9 +87,6 @@
 <li class="toctree-l1"><a class="reference internal" href="preface.html">Preface</a></li>
 <li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="install-windows.html">Windows - OpenCATS Installation Instructions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="install-linux.html">Install on Linux</a></li>
-<li class="toctree-l1"><a class="reference internal" href="install-linux.html#install-resume-indexing-tools">Install resume indexing tools</a></li>
-<li class="toctree-l1"><a class="reference internal" href="install-linux.html#install-the-opencats-software">Install the OpenCATS software</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="">Install on Ubuntu 14.04</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#ubuntu14-04-installing-mysql-5-mariadb">Ubuntu14.04-Installing MySQL 5/Mariadb</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#securing-mysql-mariadb">Securing-MySQL-MariaDB</a></li>
@@ -106,6 +103,8 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="Install-Ubuntu-16.04.html">Install on Ubuntu 16.04</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Install-Debian8.html">Install on Debian 8 Jessie</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Install-CentOS7.html">Install-CentOS 7</a></li>
 <li class="toctree-l1"><a class="reference internal" href="screens-in-depth.html">Screens In-Depth</a></li>
 <li class="toctree-l1"><a class="reference internal" href="useoc.html">Using OpenCATS-The building blocks: companies, contacts, job orders, and candidates</a></li>
 </ul>
@@ -272,7 +271,7 @@
 <li>You should see a prompt like this: <code class="docutils literal"><span class="pre">mysql&gt;</span></code></li>
 <li><code class="docutils literal"><span class="pre">mysql&gt;</span></code> CREATE USER <a class="reference external" href="mailto:'opencats'&#37;&#52;&#48;'localhost">'opencats'<span>&#64;</span>'localhost</a>&#8216; IDENTIFIED BY &#8216;databasepassword&#8217;;</li>
 <li><code class="docutils literal"><span class="pre">mysql&gt;</span></code> CREATE DATABASE opencats;</li>
-<li><code class="docutils literal"><span class="pre">mysql&gt;</span></code> GRANT ALL PRIVILEGES ON <cite>opencats</cite>.* TO <a class="reference external" href="mailto:'opencats'&#37;&#52;&#48;'localhost">'opencats'<span>&#64;</span>'localhost</a>&#8216; IDENTIFIED BY &#8216;databasepassword&#8217;;</li>
+<li><code class="docutils literal"><span class="pre">mysql&gt;</span></code> GRANT ALL PRIVILEGES ON &#8216;opencats&#8217;.* TO <a class="reference external" href="mailto:'opencats'&#37;&#52;&#48;'localhost">'opencats'<span>&#64;</span>'localhost</a>&#8216; IDENTIFIED BY &#8216;databasepassword&#8217;;</li>
 <li><code class="docutils literal"><span class="pre">mysql&gt;</span></code> exit;</li>
 </ul>
 <div class="admonition note">
@@ -420,7 +419,7 @@
         <a href="Install-Ubuntu-16.04.html" class="btn btn-neutral float-right" title="Install on Ubuntu 16.04" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="install-linux.html" class="btn btn-neutral" title="Install on Linux" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="install-windows.html" class="btn btn-neutral" title="Windows - OpenCATS Installation Instructions" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
