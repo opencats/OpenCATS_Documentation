@@ -10,7 +10,7 @@ It describes how to install and configure OpenCATS, how recruiters can use it to
 Release information
 -------------------
 
-The current OpenCATS release is 0.9.3.1 "Inferno".
+The current OpenCATS release is 0.9.3.3-3 "Inferno".
 
 
 Legal information/License FAQ
@@ -18,11 +18,15 @@ Legal information/License FAQ
 
 **What license is OpenCATS distributed under?**
 
-This License is based on the Mozilla Public License. 
+ This application is available under two licenses.
+
+* OpenCATS code is under Mozilla Public License 2.0
+* Code from the original 'CATS Project' circa 2007 is under CATS Public License Version 1.1a (a modified Mozilla Public License)
 
 **Can we change this license?**
 
 No, the License remains as-is until the original developers change the license under which they released the code. Cognizo, who developed CATS are not changing the license - it will remain licensed under the CPL.
+
 
 **What CAN we change?**
 
@@ -48,7 +52,7 @@ Similarly, separate backend reporting packages could easily poll the same shared
 
 **Simplify this for me, what can I do and what can't I do?**
 
-Simply put, you can do anything you want with your OpenCATS system. The main thing you can NOT do is make money off of it.  You can not install it, host it, provide it as a service and get paid for it.  Don't make money off of it, that's a no-no.  The other things (cosmetic and linking) are specified in Section 2 and 3 above.
+Simply put, you can do anything you want with your OpenCATS system. The main thing you can NOT do is make money off of it. The other things (cosmetic and linking) are specified in Section 2 and 3 above.
 
 
 
