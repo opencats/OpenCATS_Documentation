@@ -1,0 +1,477 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Install on Shared-hosting (Bluehost, GoDaddy or similar) &mdash; OpenCATS 0.9.3 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="OpenCATS 0.9.3 documentation" href="index.html"/>
+        <link rel="next" title="Windows - OpenCATS Installation Instructions" href="install-windows.html"/>
+        <link rel="prev" title="Introduction" href="introduction.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> OpenCATS
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.9.3
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="warning.html">WARNING-READ FIRST</a></li>
+<li class="toctree-l1"><a class="reference internal" href="toc.html">Contents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="preface.html">Preface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Install on Shared-hosting (Bluehost, GoDaddy or similar)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#download-opencats-to-your-computer">Download OpenCATS to your computer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cpanel-file-manager">CPanel-File Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cpanel-php">CPanel-PHP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cpanel-mysql">CPanel-MySQL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cpanel-ssh">CPanel-SSH</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#install-composer-and-dependencies">Install Composer and dependencies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#install-the-opencats-software">Install the OpenCATS software</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="install-windows.html">Windows - OpenCATS Installation Instructions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Install-Ubuntu-14.04.html">Install on Ubuntu 14.04</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Install-Ubuntu-16.04.html">Install on Ubuntu 16.04</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Install-Debian8.html">Install on Debian 8 Jessie</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Install-CentOS7.html">Install-CentOS 7</a></li>
+<li class="toctree-l1"><a class="reference internal" href="screens-in-depth.html">Screens In-Depth</a></li>
+<li class="toctree-l1"><a class="reference internal" href="useoc.html">Using OpenCATS-The building blocks: companies, contacts, job orders, and candidates</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">OpenCATS</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>Install on Shared-hosting (Bluehost, GoDaddy or similar)</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/Install-SharedHosting.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="install-on-shared-hosting-bluehost-godaddy-or-similar">
+<h1>Install on Shared-hosting (Bluehost, GoDaddy or similar)<a class="headerlink" href="#install-on-shared-hosting-bluehost-godaddy-or-similar" title="Permalink to this headline">¶</a></h1>
+<p>You can install OpenCATS right to your shared hosting account!  This way OpenCATS will be web accessible from any computer and multiple users, without the hassle of setting up and running a server.</p>
+<p>These instructions will walk you through setting up OpenCATS on a Bluehost hosting account.  Major web-hosts should be a similar process, though you may have to search and make small tweaks.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">There are benefits and down-sides to running your OpenCATS system through a shared hosting account.  The main benefit is that OpenCATS will be web accessible to any user from any location, and not limited to your local machine.  You will however lose the resume-indexing tools with a shared-hosting environment.  Which means that resumes will NOT be keyword searchable.</p>
+</div>
+<div class="section" id="download-opencats-to-your-computer">
+<h2>Download OpenCATS to your computer<a class="headerlink" href="#download-opencats-to-your-computer" title="Permalink to this headline">¶</a></h2>
+<p>Click this link to download the OpenCATS files, we will need them later:</p>
+<p><a class="reference external" href="https://github.com/opencats/OpenCATS/archive/0.9.3-3.tar.gz">OpenCATS Files</a></p>
+</div>
+<div class="section" id="cpanel-file-manager">
+<h2>CPanel-File Manager<a class="headerlink" href="#cpanel-file-manager" title="Permalink to this headline">¶</a></h2>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">All images use Bluehost for an example.  If you have a different hosting provider, this will likely look a little different.</p>
+</div>
+<p>Log in to your shared hosting account and click <code class="docutils literal"><span class="pre">CPanel</span></code></p>
+<img alt="_images/shost1.png" src="_images/shost1.png" />
+<p>Scroll down to the &#8220;files&#8221; section and click &#8220;File Manager&#8221;.</p>
+<img alt="_images/shost2.png" src="_images/shost2.png" />
+<p>It will open up a new tab in your browser.</p>
+<img alt="_images/shost3.png" src="_images/shost3.png" />
+<p>Double click on your main web directory (mine is listed as public _html)</p>
+<img alt="_images/shost4.png" src="_images/shost4.png" />
+<p>Now we need to upload the OpenCATS tar file that we downloaded into this directory</p>
+<p>Click <code class="docutils literal"><span class="pre">Upload</span></code></p>
+<img alt="_images/shost4-2.png" src="_images/shost4-2.png" />
+<p>This should bring you to a file upload screen.</p>
+<img alt="_images/shost6.png" src="_images/shost6.png" />
+<ul class="simple">
+<li>Click <code class="docutils literal"><span class="pre">Choose</span> <span class="pre">File</span></code></li>
+<li>Find the <code class="docutils literal"><span class="pre">0.9.3-3.tar.gz</span></code> file that we downloaded and select it.</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Make sure you wait for the upload to complete before going back into the public _html folder</p>
+</div>
+<ul class="simple">
+<li>When the upload is finished, click the <code class="docutils literal"><span class="pre">Go</span> <span class="pre">Back</span> <span class="pre">to</span> <span class="pre">public</span> <span class="pre">_html</span></code></li>
+<li>Scroll down to the <code class="docutils literal"><span class="pre">0.9.3-3.tar.gz</span></code> we just uploaded and click it once to highlight it.</li>
+<li>Click on <code class="docutils literal"><span class="pre">Extract</span></code> at the top to extract the OpenCATS files from the Tar file.</li>
+</ul>
+<img alt="_images/extract.png" src="_images/extract.png" />
+<p>This should open a new screen:</p>
+<img alt="_images/shost6-2.png" src="_images/shost6-2.png" />
+<p>The default address should be fine, click <code class="docutils literal"><span class="pre">Extract</span> <span class="pre">File(s)</span></code></p>
+<p>Now you should see the extracted folder <code class="docutils literal"><span class="pre">OpenCATS-0.9.3-3</span></code> listed in your public _html directory.</p>
+<img alt="_images/shost6-3.png" src="_images/shost6-3.png" />
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If you want to rename the folder, that&#8217;s ok.  The folder name will be part of the web address you use to access your OpenCATS Installation.</p>
+</div>
+<ul class="simple">
+<li>Double click on the OpenCATS directory and check for any files named INSTALL_BLOCK.  If there is one there, delete it.  This file will prevent OpenCATS from installing on your system.</li>
+</ul>
+</div>
+<div class="section" id="cpanel-php">
+<h2>CPanel-PHP<a class="headerlink" href="#cpanel-php" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Return to the main CPanel screen.</li>
+</ul>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Changing PHP versions on hosting accounts MAY affect web sites or programs that are already installed.  You should back up any critical websites or programs BEFORE switching PHP versions.</p>
+</div>
+<ul class="simple">
+<li>Scroll down to the Programming section and click on &#8220;PHP Config&#8221;.</li>
+</ul>
+<img alt="_images/programming-php.png" src="_images/programming-php.png" />
+<p>This will open a screen to select what version of PHP your hosting is running.  OpenCATS should have PHP 5.6.  Select whatever PHP 5.6 option you prefer, I usually have the single ini option selected.</p>
+<img alt="_images/php56.png" src="_images/php56.png" />
+<ul class="simple">
+<li>Scroll down and click <code class="docutils literal"><span class="pre">save</span> <span class="pre">changes</span></code>, then go back to the main CPanel dashboard.</li>
+</ul>
+</div>
+<div class="section" id="cpanel-mysql">
+<h2>CPanel-MySQL<a class="headerlink" href="#cpanel-mysql" title="Permalink to this headline">¶</a></h2>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">You will need the MySQL database name, user name and password later.  Make sure you write it down as you create them.</p>
+</div>
+<ul class="simple">
+<li>Scroll down to the Database Tools section and click <code class="docutils literal"><span class="pre">MYSQL</span> <span class="pre">Wizard</span></code>.</li>
+</ul>
+<img alt="_images/cpanel-databases.png" src="_images/cpanel-databases.png" />
+<ul class="simple">
+<li>Type in a MySQL database name (whatever you want, for this I am doing &#8220;octest2&#8221;).</li>
+<li>Click next step.</li>
+</ul>
+<img alt="_images/dbwizard1.png" src="_images/dbwizard1.png" />
+<ul class="simple">
+<li>Enter a database username (whatever you want, for this I am doing &#8220;octest2&#8221;).</li>
+<li>Enter a password.  For shared hosting, it should be a strong password.</li>
+<li>Click <code class="docutils literal"><span class="pre">Create</span> <span class="pre">user</span></code>.</li>
+</ul>
+<img alt="_images/dbwizard2.png" src="_images/dbwizard2.png" />
+<ul class="simple">
+<li>Check <code class="docutils literal"><span class="pre">All</span> <span class="pre">privileges</span></code>.</li>
+<li>Click <code class="docutils literal"><span class="pre">Next</span> <span class="pre">step</span></code>.</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Some hosting services will add account specific things to MySQL usernames and database names.  Note the red box in the image below.  THESE will be the user names and database names we enter into our OpenCATS system.</p>
+</div>
+<img alt="_images/dbwizard3.png" src="_images/dbwizard3.png" />
+<ul class="simple">
+<li>Go back to the main CPanel dashboard screen.</li>
+</ul>
+</div>
+<div class="section" id="cpanel-ssh">
+<h2>CPanel-SSH<a class="headerlink" href="#cpanel-ssh" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>From the main CPanel screen, scroll down to the &#8220;security&#8221; section.</li>
+<li>Click ssh/shell access, this will open a new browser tab.</li>
+<li>Below that, you will see your SSH login information.  Write that down, you&#8217;ll need the hostname, username and password.</li>
+</ul>
+<img alt="_images/ssh4.png" src="_images/ssh4.png" />
+<ul class="simple">
+<li>Make sure SSH Access is enabled.  If it isn&#8217;t, click the &#8220;Manage SSH Access&#8221; and enable it.</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The password for ssh access will be your main shared-hosting account password (GoDaddy, Bluehost, etc.).</p>
+</div>
+</div>
+<div class="section" id="install-composer-and-dependencies">
+<h2>Install Composer and dependencies<a class="headerlink" href="#install-composer-and-dependencies" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Open a new browser tab and download a SSH client.  Putty works fine.  For Windows, download Putty <a class="reference external" href="https://the.earth.li/~sgtatham/putty/latest/x86/putty.exe">Here</a></li>
+<li>For Ubuntu it can be a simple <code class="docutils literal"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">apt-get</span> <span class="pre">install</span> <span class="pre">putty</span></code></li>
+<li>Open up Putty.</li>
+<li>Enter your hostname in the box towards the top and select SSH.</li>
+<li>Then click open.</li>
+</ul>
+<img alt="_images/putty1.png" src="_images/putty1.png" />
+<ul class="simple">
+<li>Enter your login name (username).  Hit enter.</li>
+</ul>
+<img alt="_images/putty2.png" src="_images/putty2.png" />
+<p>It will likely ask you to accept a key.  Type &#8220;yes&#8221; to accept that.</p>
+<ul class="simple">
+<li>Enter your account password, hit enter.</li>
+</ul>
+<p>Now you should just see a black screen with a <code class="docutils literal"><span class="pre">#</span></code>.  That means you are logged in to your shared hosting account through SSH!</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If you renamed the OpenCATS directory, make sure to replace OpenCATS-0.9.3-3 in these commands with whatever your OpenCATS directory is named.</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">These commands are specific to Bluehost.  The directory structure for other hosts may be different.</p>
+</div>
+<p>Type the following commands and hit enter after each one.</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">#</span> <span class="pre">cd</span> <span class="pre">/www/OpenCATS-0.9.3-3</span></code></li>
+<li><code class="docutils literal"><span class="pre">#</span> <span class="pre">curl</span> <span class="pre">-sS</span> <span class="pre">https://getcomposer.org/installer</span> <span class="pre">|</span> <span class="pre">php</span></code></li>
+<li><code class="docutils literal"><span class="pre">#</span> <span class="pre">php</span> <span class="pre">composer.phar</span> <span class="pre">install</span></code></li>
+<li><code class="docutils literal"><span class="pre">#</span> <span class="pre">exit</span></code></li>
+</ul>
+<p>If composer installed correctly, and it installed all the dependencies correctly you should see some scrolling text.  If you see red errors, you&#8217;ll need to let us know on the OpenCATS forums.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Make sure when you are done, to go back through CPanel and DISABLE the SSH access.  There is no reason to leave that enabled.</p>
+</div>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Seriously....disable your SSH when you are done.  You really don&#8217;t want to leave that open.</p>
+</div>
+</div>
+<div class="section" id="install-the-opencats-software">
+<h2>Install the OpenCATS software<a class="headerlink" href="#install-the-opencats-software" title="Permalink to this headline">¶</a></h2>
+<p>In your browser, go to yourdomainname.com/OpenCATS-0.9.3-3 (if you changed the main directory name, replace OpenCATS-0.9.3-3 with the new name).</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If you have already attempted to install OpenCATS and the installer doesn&#8217;t load, check to see if there is a file called &#8216;INSTALL_BLOCK&#8217; in the OpenCATS directory. Delete it to allow the installer to run.</p>
+</div>
+<p>Click: <code class="docutils literal"><span class="pre">Installation</span> <span class="pre">Wizard</span></code></p>
+<img alt="_images/installation-wizard.png" src="_images/installation-wizard.png" />
+<p><strong>Step 1: System Connectivity</strong></p>
+<p>This step makes sure you have the required server environment set up correctly.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Green = good.</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Yellow = OpenCATS will work, but some functions may not. Common yellow errors on shared hosting are for LDAP and SOAP extensions.  These extensions are not necessary and you do not lose any functionality.</p>
+</div>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Red = Bad  You can&#8217;t continue the installation until a server environment issue is fixed.</p>
+</div>
+<p>If you see all green and/or yellow, click <code class="docutils literal"><span class="pre">Next</span></code></p>
+<img alt="_images/step1.png" src="_images/step1.png" />
+<p><strong>Step 2: Database connectivity</strong></p>
+<p>Enter your OpenCATS MySQL/MariaDB database name, MySQL/MariaDB database username, MySQL/MariaDB database password, and MySQL/MariaDB database host address in these boxes.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If you are running OpenCATS locally on your computer, or on some shared hosts, the host address will be localhost.  If your server, VPS (some shared hosting too), you will need to enter the specific address to access.</p>
+</div>
+<p>Click <code class="docutils literal"><span class="pre">Test</span> <span class="pre">Database</span> <span class="pre">Connectivity</span></code></p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">I usually get red the first few tries after click the <code class="docutils literal"><span class="pre">test</span> <span class="pre">database</span> <span class="pre">connectivity</span></code> button.  If you try more than a couple times and it stays red, you have either entered your MySQL/Mariadb information incorrectly, or you have set your MySQL/MariaDB database up incorrectly.  It needs to be corrected before proceeding.</p>
+</div>
+<img alt="_images/step2.png" src="_images/step2.png" />
+<p><strong>Step 3: Loading Data</strong></p>
+<p>For a new installation, select <code class="docutils literal"><span class="pre">New</span> <span class="pre">Installation</span></code>, then <code class="docutils literal"><span class="pre">next</span></code></p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last"><code class="docutils literal"><span class="pre">Demonstration</span> <span class="pre">Installation</span></code> will auto-populate OpenCATS with general example clients, candidates, job orders, etc.  There&#8217;s no reason to use this in my opinion.</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last"><code class="docutils literal"><span class="pre">Restore</span> <span class="pre">installation</span> <span class="pre">from</span> <span class="pre">backup</span></code> will be covered in a future tutorial</p>
+</div>
+<img alt="_images/step3.png" src="_images/step3.png" />
+<p><strong>Step 4 Setup resume indexing</strong></p>
+<p>For a shared hosting environment, you can not use the resume indexing tools.  You need root access to install these programs and most shared hosts do not allow that.  Occasionally, with a smaller hosting company, you can contact them and request the programs be installed and they will do that.</p>
+<ul class="simple">
+<li>Click <code class="docutils literal"><span class="pre">Skip</span> <span class="pre">this</span> <span class="pre">step</span></code></li>
+</ul>
+<img alt="_images/step4.png" src="_images/step4.png" />
+<p><strong>Step 5 Mail Settings</strong></p>
+<p>OpenCATS can send emails.  If you don&#8217;t want to use it, you don&#8217;t have to.  OpenCATS works great either way!</p>
+<p>If you do not know what your settings are, or don&#8217;t want the mail functionality in OpenCATS, click the drop-down bar and select <code class="docutils literal"><span class="pre">None</span></code>.</p>
+<p>Choose an option from the Mail Support drop-down bar, fill the necessary information in (if you are using it) and click <code class="docutils literal"><span class="pre">Next</span></code></p>
+<img alt="_images/step5.png" src="_images/step5.png" />
+<p><strong>Step 6 Loading extras</strong></p>
+<p>Don&#8217;t forget to set the time zone to your area!</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">If you forget to set the time zone ALL of the timestamps on every note in OpenCATS will be wrong.   Set the time zone correctly.  You will thank us...</p>
+</div>
+<p>Choose the date format you like best</p>
+<p>(United States only) choose to install (if you want) zip code lookup</p>
+<p>Click <code class="docutils literal"><span class="pre">next</span></code></p>
+<img alt="_images/step6.png" src="_images/step6.png" />
+<p><strong>Step 7 Finishing installation</strong></p>
+<p>Runs through the installation process.  You should see a box and some pretty bars moving.  It shouldn&#8217;t take long.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The default username and password are: admin/admin (all lowercase)</p>
+</div>
+<p>Click <code class="docutils literal"><span class="pre">Start</span> <span class="pre">OpenCATS</span></code> for your login screen.</p>
+<img alt="_images/step7.png" src="_images/step7.png" />
+<p><strong>Success!!</strong></p>
+<p>Your brand new OpenCATS applicant System!</p>
+<img alt="_images/first-login.png" src="_images/first-login.png" />
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Now you have a shiny, new Applicant tracking system...change your admin password...RIGHT...NOW.  Click <code class="docutils literal"><span class="pre">Settings</span></code> then <code class="docutils literal"><span class="pre">change</span> <span class="pre">password</span></code>.  Do...it...right...now.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="install-windows.html" class="btn btn-neutral float-right" title="Windows - OpenCATS Installation Instructions" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="introduction.html" class="btn btn-neutral" title="Introduction" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, CC.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.9.3',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

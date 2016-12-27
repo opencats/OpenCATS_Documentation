@@ -17,6 +17,7 @@ Contents:
    toc 
    preface
    introduction
+   Install-SharedHosting
    install-windows
    Install-Ubuntu-14.04
    Install-Ubuntu-16.04
