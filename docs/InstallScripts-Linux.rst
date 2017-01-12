@@ -22,7 +22,7 @@ Ubuntu 16.04:
 Debian 8:
 ``$ wget https://raw.githubusercontent.com/cptr13/OpenCATS-Installation-Scripts/master/Debian8-OpenCATS-Install.sh``
 CentOS 7:
-``$ wget https://github.com/cptr13/OpenCATS-Installation-Scripts/blob/master/CentOS7-OpenCATS-install.sh``
+``$ wget https://raw.githubusercontent.com/cptr13/OpenCATS-Installation-Scripts/blob/master/CentOS7-OpenCATS-install.sh``
 
 List directory to see the file name: 
 ``ls``
