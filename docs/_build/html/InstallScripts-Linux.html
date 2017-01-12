@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>How to install OpenCATS &mdash; OpenCATS 0.9.3 documentation</title>
+  <title>Install Scripts-Linux &mdash; OpenCATS 0.9.3 documentation</title>
   
 
   
@@ -30,7 +30,9 @@
   
 
   
-    <link rel="top" title="OpenCATS 0.9.3 documentation" href="index.html"/> 
+    <link rel="top" title="OpenCATS 0.9.3 documentation" href="index.html"/>
+        <link rel="next" title="Install on Ubuntu 14.04" href="Install-Ubuntu-14.04.html"/>
+        <link rel="prev" title="Install on Shared-hosting (Bluehost, GoDaddy or similar)" href="Install-SharedHosting.html"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -79,13 +81,18 @@
           
             
             
-                <ul>
+                <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="warning.html">WARNING-READ FIRST</a></li>
 <li class="toctree-l1"><a class="reference internal" href="toc.html">Contents</a></li>
 <li class="toctree-l1"><a class="reference internal" href="preface.html">Preface</a></li>
 <li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Install-SharedHosting.html">Install on Shared-hosting (Bluehost, GoDaddy or similar)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="install-windows.html">Windows - OpenCATS Installation Instructions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Install-SharedHosting.html">Install on Shared-hosting (Bluehost, GoDaddy or similar)</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Install Scripts-Linux</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#get-the-correct-script-for-your-distribution">Get the correct script for your distribution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#install-the-opencats-software">Install the OpenCATS software</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="Install-Ubuntu-14.04.html">Install on Ubuntu 14.04</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Install-Ubuntu-16.04.html">Install on Ubuntu 16.04</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Install-Debian8.html">Install on Debian 8 Jessie</a></li>
@@ -122,11 +129,11 @@
   <ul class="wy-breadcrumbs">
     <li><a href="index.html">Docs</a> &raquo;</li>
       
-    <li>How to install OpenCATS</li>
+    <li>Install Scripts-Linux</li>
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="_sources/install.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/InstallScripts-Linux.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -136,42 +143,45 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="how-to-install-opencats">
-<h1>How to install OpenCATS<a class="headerlink" href="#how-to-install-opencats" title="Permalink to this headline">¶</a></h1>
-<p>Installation options are a private server, VPS, local computer or shared hosting environment.  See related section for installation specifics.</p>
-<div class="section" id="requirements">
-<h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li>Operating System: GNU/Linux, FreeBSD or Windows</li>
-<li>LAMP-Linux Apache MySQL (or MariaDB) PHP server environment</li>
-<li>Antiword, PdfToText, html2text, UnRTF</li>
-<li>PHP Zip library</li>
-<li>PHP LDAP library</li>
-</ul>
+  <div class="section" id="install-scripts-linux">
+<h1>Install Scripts-Linux<a class="headerlink" href="#install-scripts-linux" title="Permalink to this headline">¶</a></h1>
+<p>These install scripts will dramatically reduce the time and effort necessary for installing OpenCATS on a Linux system.  HOWEVER, there are some very specific requirements that must be met for using these scripts.  If you don&#8217;t meet these requirements, there is no telling what can happen to any web-software that you are running from the system you use this script on.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">These scripts are ONLY for Linux systems that do not have Apache, MySQL/MariaDB and PHP installed.  This will install a full lamp stack from scratch.  It will likely wipe out any existing settings that are in place. I can not stress this enough.</p>
 </div>
-<div class="section" id="installation-unix-linux-prerequisites">
-<h2>Installation-Unix/Linux Prerequisites<a class="headerlink" href="#installation-unix-linux-prerequisites" title="Permalink to this headline">¶</a></h2>
-<p><strong>LAMP</strong></p>
-<p>CentOS 7: <a class="reference external" href="http://krizna.com/centos/install-lamp-server-centos-7">CentOS Install LAMP tutorial</a>, <a class="reference external" href="https://www.howtoforge.com/apache_php_mysql_on_centos_7_lamp">CentOS Install LAMP tutorial#2</a></p>
-<p>Debian 8:  <a class="reference external" href="http://www.unixmen.com/how-to-install-lamp-stack-on-debian-8/">Debian Install LAMP tutorial</a>, <a class="reference external" href="https://www.howtoforge.com/tutorial/install-apache-with-php-and-mysql-lamp-on-debian-jessie/">Debian Install LAMP tutorial#2</a></p>
-<p>Ubuntu 16.06: <a class="reference external" href="http://howtoubuntu.org/how-to-install-lamp-on-ubuntu">Ubuntu install LAMP tutorial</a></p>
-<p><strong>Windows</strong></p>
-<p>These instructions are for the WXAMPP environment only.  Download and install the following software:</p>
-<ul class="simple">
-<li><a class="reference external" href="http://www.apachefriends.org/en/xampp-windows.html">XAMPP</a></li>
-<li><a class="reference external" href="http://downloads.opencats.org/setupResumeIndexingTools.exe">OpenCATS resume indexing tools</a></li>
-<li><a class="reference external" href="http://www.winfield.demon.nl/#Windows">Antiword</a></li>
-<li><a class="reference external" href="http://www.foolabs.com/xpdf/download.html">PdfToText</a></li>
-<li><a class="reference external" href="http://www.mbayer.de/html2text/">html2text</a></li>
-<li><a class="reference external" href="http://www.gnu.org/software/unrtf/unrtf.html">UnRTF</a></li>
-</ul>
-<p><strong>OpenCATS installation</strong></p>
-<p>Go to localhost/OpenCATS-opencats-0.9.3/</p>
-<p>(Or use the address of your server or VPS in place of &#8220;localhost&#8221;)</p>
+<p>Having gotten that out of the way, let&#8217;s proceed.</p>
+<p>Open a terminal</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If you get a wget error, install wget.  <code class="docutils literal"><span class="pre">sudo</span> <span class="pre">apt-get</span> <span class="pre">install</span> <span class="pre">wget</span></code> in Ubuntu and Debian, <code class="docutils literal"><span class="pre">sudo</span> <span class="pre">yum</span> <span class="pre">install</span> <span class="pre">wget</span></code> in CentOS.</p>
+</div>
+<div class="section" id="get-the-correct-script-for-your-distribution">
+<h2>Get the correct script for your distribution<a class="headerlink" href="#get-the-correct-script-for-your-distribution" title="Permalink to this headline">¶</a></h2>
+<p>Wget the install script for your Distro by typing/copy-paste the following into your terminal.
+Ubuntu 14.04:
+<code class="docutils literal"><span class="pre">$</span> <span class="pre">wget</span> <span class="pre">https://github.com/cptr13/OpenCATS-Installation-Scripts/blob/master/Ubuntu14.04-OpenCATS-Install.sh</span></code>
+Ubuntu 16.04:
+<code class="docutils literal"><span class="pre">$</span> <span class="pre">wget</span> <span class="pre">https://github.com/cptr13/OpenCATS-Installation-Scripts/blob/master/Ubuntu16.04-OpenCATS-Install.sh</span></code>
+Debian 8:
+<code class="docutils literal"><span class="pre">$</span> <span class="pre">wget</span> <span class="pre">https://github.com/cptr13/OpenCATS-Installation-Scripts/blob/master/Debian8-OpenCATS-Install.sh</span></code>
+CentOS 7:
+<code class="docutils literal"><span class="pre">$</span> <span class="pre">wget</span> <span class="pre">https://github.com/cptr13/OpenCATS-Installation-Scripts/blob/master/CentOS7-OpenCATS-install.sh</span></code></p>
+<p>List directory to see the file name:
+<code class="docutils literal"><span class="pre">ls</span></code></p>
+<p>Make the script executable:
+<code class="docutils literal"><span class="pre">sudo</span> <span class="pre">chmod</span> <span class="pre">+x</span> <span class="pre">script-name.sh</span></code></p>
+<p>Run the script:
+<code class="docutils literal"><span class="pre">sudo</span> <span class="pre">./script-name.sh</span></code></p>
+<p>Wait until it is finished.</p>
+</div>
+<div class="section" id="install-the-opencats-software">
+<h2>Install the OpenCATS software<a class="headerlink" href="#install-the-opencats-software" title="Permalink to this headline">¶</a></h2>
+<p>In your browser, go to <a class="reference external" href="http://localhost/opencats">http://localhost/opencats</a></p>
 <p>Click: <code class="docutils literal"><span class="pre">Installation</span> <span class="pre">Wizard</span></code></p>
 <img alt="_images/installation-wizard.png" src="_images/installation-wizard.png" />
-<p><strong>Step 1 System Connectivity</strong>
-This step makes sure you have the required server environment set up correctly.</p>
+<p><strong>Step 1: System Connectivity</strong></p>
+<p>This step makes sure you have the required server environment set up correctly.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">Green = good.</p>
@@ -184,40 +194,37 @@ This step makes sure you have the required server environment set up correctly.<
 <p class="first admonition-title">Warning</p>
 <p class="last">Red = Bad  You can&#8217;t continue the installation until a server environment issue is fixed.</p>
 </div>
-<p>(I am setting up this example instance of OpenCATS in a shared hosting service.  I do not have command line access and can not install the required modules to get rid of the yellow areas.  If you are running OpenCATS locally on your computer, or you have root access to a server, VPS, etc., you can install these extra modules and should see all green before continuing.)</p>
-<p>I you see all green and/or yellow, click <code class="docutils literal"><span class="pre">Next</span></code></p>
+<p>If there are no issues, it should be all green, click <code class="docutils literal"><span class="pre">Next</span></code></p>
 <img alt="_images/step1.png" src="_images/step1.png" />
-<p><strong>Step 2 Database connectivity</strong></p>
-<p>Enter your CATS SQL database name, SQL database username, SQL database password, and SQL database host address in these boxes.</p>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">If you are running OpenCATS locally on your computer, or on some shared hosts, the host address will be localhost.  If your server, VPS (some shared hosting too), you will need to enter the specific address to access.</p>
-</div>
+<p><strong>Step 2: Database connectivity</strong></p>
+<p>Do NOT change anything here. Use the default information.</p>
 <p>Click <code class="docutils literal"><span class="pre">Test</span> <span class="pre">Database</span> <span class="pre">Connectivity</span></code></p>
-<p>If the SQL information is set up and entered correctly, you should have all green.  If you see red, something needs to be corrected or set up correctly.</p>
 <img alt="_images/step2.png" src="_images/step2.png" />
-<p><strong>Step 3 Loading Data</strong></p>
+<p>If you see all green, click <code class="docutils literal"><span class="pre">next</span></code></p>
+<p><strong>Step 3: Loading Data</strong></p>
 <p>For a new installation, select <code class="docutils literal"><span class="pre">New</span> <span class="pre">Installation</span></code>, then <code class="docutils literal"><span class="pre">next</span></code></p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">Demonstration Installation will autopopulate OpenCATS with general example clients, candidates, job orders, etc.  There&#8217;s no reason to use this in my opinion.</p>
+<p class="last"><code class="docutils literal"><span class="pre">Demonstration</span> <span class="pre">Installation</span></code> will autopopulate OpenCATS with general example clients, candidates, job orders, etc.  There&#8217;s no reason to use this in my opinion.</p>
 </div>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">Restore installation from backup will be covered in a future tutorial</p>
+<p class="last"><code class="docutils literal"><span class="pre">Restore</span> <span class="pre">installation</span> <span class="pre">from</span> <span class="pre">backup</span></code> will be covered in a future tutorial</p>
 </div>
 <img alt="_images/step3.png" src="_images/step3.png" />
 <p><strong>Step 4 Setup resume indexing</strong></p>
+<ul class="simple">
+<li>Change the paths to the executables to the correct paths.  They should be as follows:</li>
+<li>/usr/bin/antiword</li>
+<li>/usr/bin/pdftotext</li>
+<li>/usr/bin/html2text</li>
+<li>/usr/bin/unrtf</li>
+<li>Click <code class="docutils literal"><span class="pre">Test</span> <span class="pre">Configuration</span></code></li>
+</ul>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">This is only is you have root/administrative access, or are in a REALLY flexible shared hosting environment.  Most major shared hosting companies will not install this software for you.  So if you do not have root/administrative access, just skip this step.</p>
+<p class="last">I always get red the first couple clicks, then it will go green.  If you get green, proceed.  If it stays red after a few click, the system isn&#8217;t recognizing the executables.  There may be a path issue that needs corrected.</p>
 </div>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">If you are running on a local machine, on a self-hosted server, VPS, or on a web host that will install packages for you, you can use this functionality.</p>
-</div>
-<p>Install the software packages listed (You will have to track them down on the internet, I will add links later).</p>
-<p>Click <code class="docutils literal"><span class="pre">Test</span> <span class="pre">configuration</span></code> or <code class="docutils literal"><span class="pre">skip</span> <span class="pre">this</span> <span class="pre">step</span></code>.  If it&#8217;s all green, proceed.</p>
 <img alt="_images/step4.png" src="_images/step4.png" />
 <p><strong>Step 5 Mail Settings</strong></p>
 <p>OpenCATS can send emails.  If you don&#8217;t want to use it, you don&#8217;t have to.  OpenCATS works great either way!</p>
@@ -227,7 +234,7 @@ This step makes sure you have the required server environment set up correctly.<
 <p>Don&#8217;t forget to set the time zone to your area!</p>
 <div class="admonition warning">
 <p class="first admonition-title">Warning</p>
-<p class="last">If you forget to set the time zone ALL of the timestamps on every note in OpenCATS will be wrong.  Set the time zone correctly.  You will thank us...</p>
+<p class="last">If you forget to set the time zone ALL of the timestamps on every note in OpenCATS will be wrong.   Set the time zone correctly.  You will thank us...</p>
 </div>
 <p>Choose the date format you like best</p>
 <p>(United States only) choose to install (if you want) zip code lookup</p>
@@ -251,6 +258,15 @@ This step makes sure you have the required server environment set up correctly.<
            </div>
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Install-Ubuntu-14.04.html" class="btn btn-neutral float-right" title="Install on Ubuntu 14.04" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Install-SharedHosting.html" class="btn btn-neutral" title="Install on Shared-hosting (Bluehost, GoDaddy or similar)" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>

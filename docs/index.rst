@@ -17,8 +17,9 @@ Contents:
    toc 
    preface
    introduction
-   Install-SharedHosting
    install-windows
+   Install-SharedHosting
+   InstallScripts-Linux
    Install-Ubuntu-14.04
    Install-Ubuntu-16.04
    Install-Debian8

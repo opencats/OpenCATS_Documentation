@@ -2,70 +2,140 @@ Windows - OpenCATS Installation Instructions
 ============================================
 
  
-**Windows Prerequisites**
+Windows Prerequisites
+---------------------
 
-These instructions are for the (Windows) XAMPP environment only.  Download and install the following software:
+Installation instructions are given for the XAMPP default install environment only.  WAMPP will also work if you prefer it.  The steps will be a little different.
+ 
+* Download - `XAMPP <https://www.apachefriends.org/xampp-files/5.6.28/xampp-win32-5.6.28-1-VC11-installer.exe>`_
+* Install XAMPP
+* Download  - `Composer <https://github.com/composer/windows-setup/releases/download/v4.5.0/Composer-Setup.4.5.0.exe>`_ 
+* Install Composer
+* Download - `OpenCATS_0.9.3-3 <https://github.com/opencats/OpenCATS/archive/0.9.3-3.zip>`_ .  You can not install this yet.
 
-* `XAMPP <http://www.apachefriends.org/en/xampp-windows.html>`_
-* `OpenCATS resume indexing tools <http://downloads.opencats.org/setupResumeIndexingTools.exe>`_
-* `Antiword <http://www.winfield.demon.nl/#Windows>`_
-* `PdfToText <http://www.foolabs.com/xpdf/download.html>`_
-* `html2text <http://www.mbayer.de/html2text/>`_
-* `UnRTF <http://www.gnu.org/software/unrtf/unrtf.html>`_
-* `7-Zip or equivalent <http://www.7-zip.org/>`_
-* `Composer <https://getcomposer.org/>`_
+* Go to the folder where the OpenCATS-0.9.3-3.zip file is located (usually the Downloads folder)
+* RIGHT-CLICK on the ``OpenCATS-0.9.3-3.zip`` file
+* Click ``Extract All``
+* Change the folder that the files will be extracted to, to the following:
+* ``C:\xampp\htdocs\``
+* Click ``extract``
 
-Installation instructions are given for the XAMPP default install environment only. And Prequisite Installation notes below.
+Start Xampp
+-----------
 
-* Download and install XAMPP with PHP version 5 (for example 5.5.38) to c:\\xampp by following the directions provided on the XAMPP website. Very easy.
-* Download the `OpenCATS resume indexing tools <http://downloads.opencats.org/setupResumeIndexingTools.exe>`_. Install the executable (exe file) and accept the default install locations.
-* Optionally download `7-Zip or equivalent <http://www.7-zip.org/>`_ and install. This will allow you to extract the tar ball and gz files later. If you already have an extractor then you may skip this step.
-* Now you are ready to get OpenCats Download `OpenCATS_0.9.3-1 <https://github.com/opencats/OpenCATS/releases/tag/0.9.3-1>`_
+* Click the Windows start button and type ``xampp``
+* Hit ``enter``. This will open the XAMPP control panel.
 
-Open tarball (cats-0.9.1.tar.gz) using 7Zip and extract all files to C:\\xampp\\htdocs\\opencats Verify that there is a readme.txt file in the directory C:/xampp/htdocs/opencats. If so you got it right :)
+.. image:: ../docs/_static/start-xampp.png
 
-In `Search programs and files` type cmd.exe, navigate to C:\\xampp\\htdocs\\opencats and run `composer install`
+* On the right side of Apache and MySQL, click ``start`` for each one.
 
-Launch phpMyAdmin. http://localhost/phpmyadmin/
+.. image:: ../docs/_static/start-services-xampp.png
 
-* In the page that displays, type 'opencats' into the textbox under Create new database and click the Create button.
-* Accept all the other defaults.
+Composer-Install dependencies
+-----------------------------
 
-In your Web Browser, visit http://localhost/opencats If OpenCATS has been configured correctly, you should see a page that looks like this: 
+* Click the Windows start button and type ``cmd.exe``, then hit ``enter``
+* This should open a windows command prompt.
+* Type the following:  ``cd C:\xampp\htdocs\OpenCATS-0.9.3-3``
 
-.. note:: * If you are running OpenCATS locally on your computer, the host address will be localhost.  
-.. note:: * If your server, VPS (some shared hosting too) has a specific address or IP, you will need to enter the specific address in place of localhost to access.
+.. image:: ../docs/_static/cmd.png
+
+* Hit enter
+* Type ``composer install``
+* After Composer is done installing the dependencies, close the command prompt window.
+* Stop the apache service (lower right corner, right click XAMPP, stop apache)
+* Start the apache service
+
+.. image:: ../docs/_static/xampp-quickstart.png
+
+Optional - Renaming your OpenCATS Applicant Tracking System directory.
+----------------------------------------------------------------------
+
+The current default directory name for the OpenCATS files is OpenCATS-0.9.3-3.  This will result in the web address in your browser being http://localhost/OpenCATS-0.9.3-3.
+
+If you want to rename the main OpenCATS directory to something else, you can. 
+
+* Simply navigate to C:\xampp\htdocs
+* Right click on OpenCATS-0.9.3-3
+* Click ``rename``
+* Rename the directory whatever you want (example: ATS)
+
+Now, to access it, your browser address will be http://localhost/ATS
+
+
+Launch phpMyAdmin
+-----------------
+
+* In your browser, go to:  http://localhost/phpmyadmin/
+
+.. note:: If phpmyadmin does not load in this screen, stop and start your apache service again per the instructions above.
+
+* On the left side, click ``new`` to create a new database
+
+.. image:: ../docs/_static/phpmyadmin-main.png
+
+* In the box labeled ``database name`` type ``opencats``.
+* Hit ``create``
+
+.. image:: ../docs/_static/phpmyadmin-newdb.png
+
+You should now see "opencats" listed among the databases on the left.
+
+* Click the opencats database
+* In the top row of tabs, on the right side of the screen, click ``privileges``
+* Click ``add user account``
+
+.. image:: ../docs/_static/phpmyadmin-newuser.png
+
+* User name, make sure ``use text field`` is selected, in the empty box next to it type ``opencats``
+* Host name: In the first box, select ``local`` from the drop-down options.  The second box should say ``localhost``
+* Type opencats for the database password twice
+* In the "database for user account section", confirm that the third checkbox ``Grant all privileges on database "opencats"`` is checked.
+* Scroll down to the bottom and click ``go``
+
+.. image:: ../docs/_static/phpmyadmin-newuser2.png
+
+Set up OpenCATS
+---------------
+
+In your Web Browser, visit http://localhost/OpenCATS-0.9.3-3 (adjust if you renamed the OpenCATS-0.9.3-3 directory).
+If OpenCATS has been configured correctly, you should see a page that looks like this: 
 
 .. image:: ../docs/_static/installation-wizard.png
 
 **Step 1 System Connectivity**
 This step makes sure you have the required server environment set up correctly.  
 
-.. note:: Green = good.  
-.. note:: Yellow = OpenCATS will work, but some functions may not.  
+.. note:: Disregard the yellow errors.  They are not necessary for this installation and you will not lose any OpenCATS functionality.
+
+If you see all green and/or yellow, click ``Next``
+
+.. image:: ../docs/_static/win-install-wizard.png
+
 .. warning:: Red = Bad  You can't continue the installation until a server environment issue is fixed.
-
-.. note:: (I am setting up this example instance of OpenCATS in a shared hosting service.  I do not have command line access and can not install the required modules to get rid of the yellow areas.  For this Windows installation tutorial, you should have all green here.)
-
-I you see all green and/or yellow, click ``Next``
-
-.. image:: ../docs/_static/step1.png
 
 **Step 2 Database connectivity**
 
-When asked for database name, user, and password use database **opencats**, user **root**, and **a blank password**.
+Enter the following information:
+Database Name: opencats
+Database User: opencats
+Database Password: opencats
+Database Host: localhost
+
 
 Click ``Test Database Connectivity``
 
 If the SQL information is set up and entered correctly, you should have all green.  If you see red, something needs to be corrected or set up correctly.
 
 .. image:: ../docs/_static/step2.png
+
 **Step 3 Loading Data**
 
 
 For a new installation, select ``New Installation``, then ``next``
 
-.. note:: Demonstration Installation will autopopulate OpenCATS with general example clients, candidates, job orders, etc.  There's no reason to use this in my opinion.
+.. note:: Demonstration Installation will auto-populate OpenCATS with general example clients, candidates, job orders, etc.  There's no reason to use this in my opinion.
 
 .. note:: Restore installation from backup will be covered in a future tutorial
 
@@ -75,15 +145,8 @@ For a new installation, select ``New Installation``, then ``next``
 
 **Step 4 Setup resume indexing**
 
-.. note:: This is only is you have root/administrative access, or are in a REALLY flexible shared hosting environment.  Most major shared hosting companies will not install this software for you.  So if you do not have root/administrative access, just skip this step.
-
-.. note:: If you are running on a local machine, on a self-hosted server, VPS, or on a web host that will install packages for you, you can use this functionality.  
-
-If you followed the steps above you may safely accept the default locations for Antiword, PDF2Text, HTML2Text and UnRTF.
-
-Click ``Test configuration`` or ``skip this step``.  If it's all green, proceed.
-
-.. image:: ../docs/_static/step4.png
+Unfortunately, for now, there is no resume indexing.  
+* Click ``Skip this Step``.
 
 **Step 5 Mail Settings**
 
@@ -124,7 +187,6 @@ Click ``Start OpenCATS`` for your login screen.
 Your brand new OpenCATS applicant System!
 
 .. image:: ../docs/_static/first-login.png
-
 
 
 
