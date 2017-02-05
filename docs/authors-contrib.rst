@@ -1,10 +1,10 @@
-Authors and Contributers
+Authors and Contributors
 ========================
 
 OpenCATS would not exist were it not for Asim Baig, the original Cognizo developers, and RussH. The OpenCATS community, myself included, are grateful for this.
 
  
-Original CATS/Cognizo developers and contributers listed
+Original CATS/Cognizo developers and contributors listed
 --------------------------------------------------------
 
 * Asim Baig
@@ -15,7 +15,7 @@ Original CATS/Cognizo developers and contributers listed
 * Austin Smith
 
 
-OpenCATS Developers and contributers
+OpenCATS Developers and contributors
 ------------------------------------
 
 * RussH
