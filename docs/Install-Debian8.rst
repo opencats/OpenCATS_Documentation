@@ -20,8 +20,6 @@ Debian 8-Installing MySQL/Mariadb
 * Enter in the MariaDB/MYSQL root password you want to use.  I am using mariadbpassword in this walkthrough
 * ``$ sudo mysql_secure_installation``
 
-Securing-MySQL/MariaDB
-----------------------
 * Enter current password for root (enter for none): Enter
 * Set root password? [Y/n] n
 * New password: <--yourmariadbpassword  (Remember this or write it down!)
@@ -41,15 +39,11 @@ Debian 8-Installing Apache2
 * ``$ sudo apt-get install apache2``
 
 
-Check for success-Apache
-------------------------
-
 .. note:: In this tutorial, we use localhost, if you're running a vps, you may need to enter the correct IP Address. These settings might differ for you, so you have to replace them where appropriate.
 
 * Now direct your browser to localhost and you should see the Apache2 placeholder page:
 
 .. image:: ../docs/_static/apache1.png
-
 
 Debian 8-Installing PHP5.6
 -----------------------------
@@ -58,10 +52,6 @@ Debian 8-Installing PHP5.6
 * ``$ sudo service apache2 restart``
 
 .. note:: If you are typing these commands, the soap extension does not have a "5" on php.  It's easy to overlook.
-
-
-Testing PHP5.6 / Getting Details About Your PHP5 Installation
--------------------------------------------------------------
 
 .. note:: The document root of the default website is /var/www/html. We will now create a small PHP file (info.php) in that directory and call it in a browser. The file will display lots of useful details about our PHP installation, such as the installed PHP version.
 

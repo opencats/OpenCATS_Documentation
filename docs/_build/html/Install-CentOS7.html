@@ -85,9 +85,10 @@
             
             
                 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="warning.html">WARNING-READ FIRST</a></li>
+<li class="toctree-l1"><a class="reference internal" href="warning.html">Gentle warning-read first</a></li>
 <li class="toctree-l1"><a class="reference internal" href="toc.html">Contents</a></li>
 <li class="toctree-l1"><a class="reference internal" href="preface.html">Preface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="authors-contrib.html">Authors and Contributors</a></li>
 <li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="install-windows.html">Windows - OpenCATS Installation Instructions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Install-SharedHosting.html">Install on Shared-hosting (Bluehost, GoDaddy or similar)</a></li>
@@ -96,13 +97,9 @@
 <li class="toctree-l1"><a class="reference internal" href="Install-Ubuntu-16.04.html">Install on Ubuntu 16.04</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Install-Debian8.html">Install on Debian 8 Jessie</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Install-CentOS 7</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#installation-unix-linux-prerequisites">Installation-Unix/Linux Prerequisites</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#centos7-installing-mysql-5-mariadb">CentOS7-Installing MySQL 5/Mariadb</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#securing-mysql-mariadb">Securing MySQL/MariaDB</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#centos7-installing-apache2">CentOS7-Installing Apache2</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#check-for-success-apache">Check for success-Apache</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#centos7-installing-php5">CentOS7-Installing PHP5</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#testing-php5-getting-details-about-your-php5-installation">Testing PHP5 / Getting Details About Your PHP5 Installation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#setting-up-your-mysql-mariadb-database">Setting up your MySQL/MariaDB database</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#run-composer-to-get-dependencies">Run composer to get dependencies</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#server-and-directory-permissions">Server and Directory permissions</a></li>
@@ -158,16 +155,6 @@
             
   <div class="section" id="install-centos-7">
 <h1>Install-CentOS 7<a class="headerlink" href="#install-centos-7" title="Permalink to this headline">¶</a></h1>
-<p>These instructions are for LAMP (Linux Apache MySQL/MariaDB Php) environment only.
-Instructions are provided for CentOS7.</p>
-<div class="section" id="installation-unix-linux-prerequisites">
-<h2>Installation-Unix/Linux Prerequisites<a class="headerlink" href="#installation-unix-linux-prerequisites" title="Permalink to this headline">¶</a></h2>
-<p>We will install LAMP server software and get it running.  Then install the OpenCATS ATS.</p>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">mysql and mariadb are basically the same software with different names.  You can use either, just change the commands to the appropriate name.</p>
-</div>
-</div>
 <div class="section" id="centos7-installing-mysql-5-mariadb">
 <h2>CentOS7-Installing MySQL 5/Mariadb<a class="headerlink" href="#centos7-installing-mysql-5-mariadb" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
@@ -184,9 +171,6 @@ Instructions are provided for CentOS7.</p>
 <ul class="simple">
 <li><code class="docutils literal"><span class="pre">$</span> <span class="pre">mysql_secure_installation</span></code></li>
 </ul>
-</div>
-<div class="section" id="securing-mysql-mariadb">
-<h2>Securing MySQL/MariaDB<a class="headerlink" href="#securing-mysql-mariadb" title="Permalink to this headline">¶</a></h2>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">In order to log into MariaDB to secure it, we&#8217;ll need the current password for the root user.  If you&#8217;ve just installed MariaDB, and you haven&#8217;t set the root password yet, <strong>the password will be blank</strong>, so you should just press enter here.</p>
@@ -220,9 +204,6 @@ Instructions are provided for CentOS7.</p>
 <li><code class="docutils literal"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">firewall-cmd</span> <span class="pre">--permanent</span> <span class="pre">--zone=public</span> <span class="pre">--add-service=https</span></code></li>
 <li><code class="docutils literal"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">firewall-cmd</span> <span class="pre">--reload</span></code></li>
 </ul>
-</div>
-<div class="section" id="check-for-success-apache">
-<h2>Check for success-Apache<a class="headerlink" href="#check-for-success-apache" title="Permalink to this headline">¶</a></h2>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">In this tutorial, we use localhost. These settings might differ for you, so you have to replace them where appropriate.</p>
@@ -244,9 +225,6 @@ Instructions are provided for CentOS7.</p>
 <li><code class="docutils literal"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">yum</span> <span class="pre">install</span> <span class="pre">php56w</span> <span class="pre">php56w-soap</span> <span class="pre">php56w-ldap</span> <span class="pre">php56w-gd</span> <span class="pre">php56w-mysql</span></code></li>
 <li><code class="docutils literal"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">systemctl</span> <span class="pre">restart</span> <span class="pre">httpd.service</span></code></li>
 </ul>
-</div>
-<div class="section" id="testing-php5-getting-details-about-your-php5-installation">
-<h2>Testing PHP5 / Getting Details About Your PHP5 Installation<a class="headerlink" href="#testing-php5-getting-details-about-your-php5-installation" title="Permalink to this headline">¶</a></h2>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">The document root of the default website is /var/www/html. We will now create a small PHP file (info.php) in that directory and call it in a browser. The file will display lots of useful details about our PHP installation, such as the installed PHP version.</p>

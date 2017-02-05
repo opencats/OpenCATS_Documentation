@@ -6,9 +6,15 @@ Windows Prerequisites
 ---------------------
 
 Installation instructions are given for the XAMPP default install environment only.  WAMPP will also work if you prefer it.  The steps will be a little different.
+
+Downloading software and preparing your system
+----------------------------------------------
  
 * Download - `XAMPP <https://www.apachefriends.org/xampp-files/5.6.28/xampp-win32-5.6.28-1-VC11-installer.exe>`_
 * Install XAMPP
+
+.. warning:: You MUST finish installing XAMPP before you install Composer.  
+
 * Download  - `Composer <https://github.com/composer/windows-setup/releases/download/v4.5.0/Composer-Setup.4.5.0.exe>`_ 
 * Install Composer
 * Download - `OpenCATS_0.9.3-3 <https://github.com/opencats/OpenCATS/archive/0.9.3-3.zip>`_ .  You can not install this yet.

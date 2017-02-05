@@ -85,9 +85,10 @@
             
             
                 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="warning.html">WARNING-READ FIRST</a></li>
+<li class="toctree-l1"><a class="reference internal" href="warning.html">Gentle warning-read first</a></li>
 <li class="toctree-l1"><a class="reference internal" href="toc.html">Contents</a></li>
 <li class="toctree-l1"><a class="reference internal" href="preface.html">Preface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="authors-contrib.html">Authors and Contributors</a></li>
 <li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="install-windows.html">Windows - OpenCATS Installation Instructions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Install-SharedHosting.html">Install on Shared-hosting (Bluehost, GoDaddy or similar)</a></li>
@@ -96,11 +97,8 @@
 <li class="toctree-l1"><a class="reference internal" href="Install-Ubuntu-16.04.html">Install on Ubuntu 16.04</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Install on Debian 8 Jessie</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#debian-8-installing-mysql-mariadb">Debian 8-Installing MySQL/Mariadb</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#securing-mysql-mariadb">Securing-MySQL/MariaDB</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#debian-8-installing-apache2">Debian 8-Installing Apache2</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#check-for-success-apache">Check for success-Apache</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#debian-8-installing-php5-6">Debian 8-Installing PHP5.6</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#testing-php5-6-getting-details-about-your-php5-installation">Testing PHP5.6 / Getting Details About Your PHP5 Installation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#setting-up-your-mysql-mariadb-database">Setting up your MySQL/MariaDB database</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#download-the-opencats-files">Download the OpenCATS files</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#composer">Composer</a></li>
@@ -178,11 +176,6 @@
 <li><code class="docutils literal"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">apt-get</span> <span class="pre">install</span> <span class="pre">mariadb-server</span> <span class="pre">mariadb-client</span></code></li>
 <li>Enter in the MariaDB/MYSQL root password you want to use.  I am using mariadbpassword in this walkthrough</li>
 <li><code class="docutils literal"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">mysql_secure_installation</span></code></li>
-</ul>
-</div>
-<div class="section" id="securing-mysql-mariadb">
-<h2>Securing-MySQL/MariaDB<a class="headerlink" href="#securing-mysql-mariadb" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
 <li>Enter current password for root (enter for none): Enter</li>
 <li>Set root password? [Y/n] n</li>
 <li>New password: &lt;&#8211;yourmariadbpassword  (Remember this or write it down!)</li>
@@ -201,9 +194,6 @@
 <ul class="simple">
 <li><code class="docutils literal"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">apt-get</span> <span class="pre">install</span> <span class="pre">apache2</span></code></li>
 </ul>
-</div>
-<div class="section" id="check-for-success-apache">
-<h2>Check for success-Apache<a class="headerlink" href="#check-for-success-apache" title="Permalink to this headline">¶</a></h2>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">In this tutorial, we use localhost, if you&#8217;re running a vps, you may need to enter the correct IP Address. These settings might differ for you, so you have to replace them where appropriate.</p>
@@ -223,9 +213,6 @@
 <p class="first admonition-title">Note</p>
 <p class="last">If you are typing these commands, the soap extension does not have a &#8220;5&#8221; on php.  It&#8217;s easy to overlook.</p>
 </div>
-</div>
-<div class="section" id="testing-php5-6-getting-details-about-your-php5-installation">
-<h2>Testing PHP5.6 / Getting Details About Your PHP5 Installation<a class="headerlink" href="#testing-php5-6-getting-details-about-your-php5-installation" title="Permalink to this headline">¶</a></h2>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">The document root of the default website is /var/www/html. We will now create a small PHP file (info.php) in that directory and call it in a browser. The file will display lots of useful details about our PHP installation, such as the installed PHP version.</p>

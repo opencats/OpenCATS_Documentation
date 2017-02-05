@@ -20,9 +20,6 @@ Ubuntu14.04-Installing MySQL 5/Mariadb
 * Enter a password for the MySQL/Mariadb root user.  Write it down... For this walk-through I am using mariadbpassword as the password.
 * ``$ mysql_secure_installation``
 
-Securing-MySQL-MariaDB
-----------------------
-
 .. note:: In order to log into MariaDB to secure it, we'll need the current password for the root user.  If you've just installed MariaDB, **and you haven't** set up the root password yet, **the password will be blank**, so you should just press enter here.  If you **have set up a MySQL/MariaDB root password already** you will enter it here.
 
 * Set root password? [Y/n] Y
@@ -42,10 +39,6 @@ Ubuntu14.04-Installing Apache2
 
 * ``$ sudo apt-get install apache2``
 
-
-Check for success-Apache
-------------------------
-
 .. note:: In this tutorial, we use localhost, if you're running a vps, you may need to enter the correct IP Address. These settings might differ for you, so you have to replace them where appropriate.
 
 * Now direct your browser to localhost and you should see the Apache2 placeholder page:
@@ -58,10 +51,6 @@ Ubuntu14.04-Installing PHP5
 
 * ``$ sudo apt-get install php5``
 * ``$ sudo service apache2 restart``
-
-
-Testing PHP5 / Getting Details About Your PHP5 Installation
------------------------------------------------------------
 
 .. note:: The document root of the default website is /var/www/html. We will now create a small PHP file (info.php) in that directory and call it in a browser. The file will display lots of useful details about our PHP installation, such as the installed PHP version.
 
@@ -84,13 +73,9 @@ If you see this screen, everything is good.  Proceed.
 
 .. note:: If you get any PHP errors during the OpenCATS install, this screen can help you see what php modules are installed and loaded.
 
-
-Ubuntu14.04-Getting MySQL Support In PHP5
--------------------------------------------------
 * ``$ sudo apt-get install php5-mysql php5-gd php-soap php5-ldap``
 * ``$ sudo service apache2 restart``
 * Now reload localhost/info.php in your browser and you should see the new php modules listed when you scroll down through the information.
-
 
 Setting up your MySQL/MariaDB database
 --------------------------------------

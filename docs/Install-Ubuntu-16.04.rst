@@ -19,9 +19,6 @@ Ubuntu16.04-Installing MySQL 5/Mariadb
 * ``$ sudo apt-get install mariadb-server mariadb-client``
 * ``$ sudo mysql_secure_installation``
 
-Securing-MySQL-MariaDB
-----------------------
-
 .. note:: In order to log into MariaDB to secure it, we'll need the current password for the root user.  If you've just installed MariaDB, **and you haven't** set up the root password yet, **the password will be blank**, so you should just press enter here.  If you **have set up a MySQL/MariaDB root password already** you will enter it here.
 
 * Set root password? [Y/n] Y
@@ -41,10 +38,6 @@ Ubuntu16.04-Installing Apache2
 
 * ``$ sudo apt-get install apache2``
 
-
-Check for success-Apache
-------------------------
-
 .. note:: In this tutorial, we use localhost, if you're running a vps, you may need to enter the correct IP Address. These settings might differ for you, so you have to replace them where appropriate.
 
 * Now direct your browser to localhost and you should see the Apache2 placeholder page:
@@ -63,10 +56,6 @@ Ubuntu16.04-Installing PHP5.6
 * ``$ sudo apt-get install php5.6-mysql php5.6-gd php5.6-xml``
 * ``$ sudo apt-get install php5.6-curl php5.6-mbstring php5.6-zip``
 * ``$ sudo service apache2 restart``
-
-
-Testing PHP5.6 / Getting Details About Your PHP5 Installation
--------------------------------------------------------------
 
 .. note:: The document root of the default website is /var/www/html. We will now create a small PHP file (info.php) in that directory and call it in a browser. The file will display lots of useful details about our PHP installation, such as the installed PHP version.
 
@@ -110,7 +99,6 @@ Then it will ask you for your mysql root password
 * ``mysql>`` exit;
 
 .. note:: Make sure you don't forget the ; on the end of every line!
-
 
 Download the OpenCATS files
 ---------------------------

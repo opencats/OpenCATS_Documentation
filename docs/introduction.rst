@@ -48,8 +48,8 @@ General Features
 **Reporting:** Generate reports on recruiting activity for a quick and accurate overview.
 
 
-Recruiting cycle
-----------------
+Recruiting cycle/Workflow
+-------------------------
 
 The basic agency recruiting cycle is this:
 
