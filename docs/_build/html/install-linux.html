@@ -30,6 +30,9 @@
   
 
   
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
     <link rel="top" title="OpenCATS 0.9.3 documentation" href="index.html"/> 
 
   
@@ -84,8 +87,9 @@
 <li class="toctree-l1"><a class="reference internal" href="toc.html">Contents</a></li>
 <li class="toctree-l1"><a class="reference internal" href="preface.html">Preface</a></li>
 <li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Install-SharedHosting.html">Install on Shared-hosting (Bluehost, GoDaddy or similar)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="install-windows.html">Windows - OpenCATS Installation Instructions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Install-SharedHosting.html">Install on Shared-hosting (Bluehost, GoDaddy or similar)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="InstallScripts-Linux.html">Install Scripts-Linux</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Install-Ubuntu-14.04.html">Install on Ubuntu 14.04</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Install-Ubuntu-16.04.html">Install on Ubuntu 16.04</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Install-Debian8.html">Install on Debian 8 Jessie</a></li>
@@ -126,7 +130,7 @@
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="_sources/install-linux.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/install-linux.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -157,7 +161,7 @@ Instructions are provided for CentOS7, Debian8, and Ubuntu 16.04.</p>
 <li><code class="docutils literal"><span class="pre">#</span> <span class="pre">systemctl</span> <span class="pre">start</span> <span class="pre">mariadb.service</span></code></li>
 <li><code class="docutils literal"><span class="pre">#</span> <span class="pre">systemctl</span> <span class="pre">enable</span> <span class="pre">mariadb.service</span></code></li>
 <li><code class="docutils literal"><span class="pre">#</span> <span class="pre">mysql_secure_installation</span></code></li>
-<li>Skip to <a class="reference internal" href="#securing-mysql-mariadb"><span>Securing MySQL/MariaDB</span></a> section below.</li>
+<li>Skip to <a class="reference internal" href="#securing-mysql-mariadb"><span class="std std-ref">Securing MySQL/MariaDB</span></a> section below.</li>
 </ul>
 </div>
 <div class="section" id="debian8-ubuntu16-04-installing-mysql-5-mariadb">
@@ -172,7 +176,7 @@ Instructions are provided for CentOS7, Debian8, and Ubuntu 16.04.</p>
 </div>
 <ul class="simple">
 <li><code class="docutils literal"><span class="pre">$</span> <span class="pre">mysql_secure_installation</span></code></li>
-<li>Skip to <a class="reference internal" href="#securing-mysql-mariadb"><span>Securing MySQL/MariaDB</span></a> section below.</li>
+<li>Skip to <a class="reference internal" href="#securing-mysql-mariadb"><span class="std std-ref">Securing MySQL/MariaDB</span></a> section below.</li>
 </ul>
 </div>
 <div class="section" id="securing-mysql-mariadb">
@@ -209,7 +213,7 @@ Instructions are provided for CentOS7, Debian8, and Ubuntu 16.04.</p>
 <li><code class="docutils literal"><span class="pre">#</span> <span class="pre">firewall-cmd</span> <span class="pre">--permanent</span> <span class="pre">--zone=public</span> <span class="pre">--add-service=http</span></code></li>
 <li><code class="docutils literal"><span class="pre">#</span> <span class="pre">firewall-cmd</span> <span class="pre">--permanent</span> <span class="pre">--zone=public</span> <span class="pre">--add-service=https</span></code></li>
 <li><code class="docutils literal"><span class="pre">#</span> <span class="pre">firewall-cmd</span> <span class="pre">--reload</span></code></li>
-<li>Skip to <a class="reference internal" href="#check-success-apache"><span>Check for success-Apache</span></a> Section.</li>
+<li>Skip to <a class="reference internal" href="#check-success-apache"><span class="std std-ref">Check for success-Apache</span></a> Section.</li>
 </ul>
 </div>
 <div class="section" id="debian8-ubuntu16-04-installing-apache2">
@@ -234,7 +238,7 @@ Instructions are provided for CentOS7, Debian8, and Ubuntu 16.04.</p>
 <ul class="simple">
 <li><code class="docutils literal"><span class="pre">#</span> <span class="pre">yum</span> <span class="pre">-y</span> <span class="pre">install</span> <span class="pre">php</span></code></li>
 <li><code class="docutils literal"><span class="pre">#</span> <span class="pre">systemctl</span> <span class="pre">restart</span> <span class="pre">httpd.service</span></code></li>
-<li>Skip to <a class="reference internal" href="#testing-php5"><span>Testing PHP5 / Getting Details About Your PHP5 Installation</span></a> section</li>
+<li>Skip to <a class="reference internal" href="#testing-php5"><span class="std std-ref">Testing PHP5 / Getting Details About Your PHP5 Installation</span></a> section</li>
 </ul>
 </div>
 <div class="section" id="debian8-ubuntu16-06-installing-php5">
@@ -256,7 +260,7 @@ Instructions are provided for CentOS7, Debian8, and Ubuntu 16.04.</p>
 </ul>
 <div class="highlight-php"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
-3</pre></div></td><td class="code"><div class="highlight"><pre><span class="cp">&lt;?php</span>
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="cp">&lt;?php</span>
 <span class="nb">phpinfo</span><span class="p">();</span>
 <span class="cp">?&gt;</span><span class="x"></span>
 </pre></div>
@@ -281,7 +285,7 @@ Instructions are provided for CentOS7, Debian8, and Ubuntu 16.04.</p>
 <li><code class="docutils literal"><span class="pre">#</span> <span class="pre">yum</span> <span class="pre">-y</span> <span class="pre">install</span> <span class="pre">php-mysql</span> <span class="pre">php-gd</span> <span class="pre">php-soap</span></code></li>
 <li><code class="docutils literal"><span class="pre">#</span> <span class="pre">systemctl</span> <span class="pre">restart</span> <span class="pre">httpd.service</span></code></li>
 <li>Now reload <a class="reference external" href="http://192.168.0.100/info.php">http://192.168.0.100/info.php</a> in your browser and you should see the new php modules listed</li>
-<li>Skip to <a class="reference internal" href="#setting-up-mysql"><span>Setting up your MySQL/MariaDB database</span></a> section</li>
+<li>Skip to <a class="reference internal" href="#setting-up-mysql"><span class="std std-ref">Setting up your MySQL/MariaDB database</span></a> section</li>
 </ul>
 </div>
 <div class="section" id="debian8-ubuntu16-04-getting-mysql-support-in-php5">
@@ -371,7 +375,7 @@ Instructions are provided for CentOS7, Debian8, and Ubuntu 16.04.</p>
 <p class="last">These software packages may have dependancies.  If you get installation errors, go to the linked pages and research/install the dependancies.</p>
 </div>
 <ul class="simple">
-<li>Skip to <a class="reference internal" href="#install-opencats-software"><span>Install the OpenCATS software</span></a> section</li>
+<li>Skip to <a class="reference internal" href="#install-opencats-software"><span class="std std-ref">Install the OpenCATS software</span></a> section</li>
 </ul>
 </div>
 <div class="section" id="debian8-ubuntu16-06">

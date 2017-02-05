@@ -16,6 +16,7 @@ Contents:
    warning
    toc 
    preface
+   authors-contrib
    introduction
    install-windows
    Install-SharedHosting
