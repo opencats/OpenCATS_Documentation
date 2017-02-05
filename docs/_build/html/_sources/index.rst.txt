@@ -28,6 +28,7 @@ Contents:
    screens-in-depth
    useoc
    shortdevguide
+   faq
 
 
 
