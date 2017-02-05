@@ -27,6 +27,7 @@ Contents:
    Install-CentOS7
    screens-in-depth
    useoc
+   shortdevguide
 
 
 

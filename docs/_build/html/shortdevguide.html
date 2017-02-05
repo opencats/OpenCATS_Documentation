@@ -1,0 +1,344 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Short overview of original OpenCATS Source code &mdash; OpenCATS 0.9.3 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="OpenCATS 0.9.3 documentation" href="index.html"/>
+        <link rel="prev" title="Using OpenCATS-The building blocks: companies, contacts, job orders, and candidates" href="useoc.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> OpenCATS
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.9.3
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="warning.html">Gentle warning-read first</a></li>
+<li class="toctree-l1"><a class="reference internal" href="toc.html">Contents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="preface.html">Preface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="authors-contrib.html">Authors and Contributors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install-windows.html">Windows - OpenCATS Installation Instructions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Install-SharedHosting.html">Install on Shared-hosting (Bluehost, GoDaddy or similar)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="InstallScripts-Linux.html">Install Scripts-Linux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Install-Ubuntu-14.04.html">Install on Ubuntu 14.04</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Install-Ubuntu-16.04.html">Install on Ubuntu 16.04</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Install-Debian8.html">Install on Debian 8 Jessie</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Install-CentOS7.html">Install-CentOS 7</a></li>
+<li class="toctree-l1"><a class="reference internal" href="screens-in-depth.html">Screens In-Depth</a></li>
+<li class="toctree-l1"><a class="reference internal" href="useoc.html">Using OpenCATS-The building blocks: companies, contacts, job orders, and candidates</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Short overview of original OpenCATS Source code</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">OpenCATS</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>Short overview of original OpenCATS Source code</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/shortdevguide.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="short-overview-of-original-opencats-source-code">
+<h1>Short overview of original OpenCATS Source code<a class="headerlink" href="#short-overview-of-original-opencats-source-code" title="Permalink to this headline">¶</a></h1>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This was written for the original source code.  It may not apply completely to the current OpenCATS version</p>
+</div>
+<p>We have not used any outside frameworks. The OpenCATS framework is very light and conceptually simple to understand. This allows for modifications to be isolated, preventing, for example, a small change to a template from affecting library code, or a major change in database structure from requiring a change to every single page.</p>
+<p>Let’s have a look at the layout of the code OpenCATS is roughly divided into three parts:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Modules</li>
+<li>Library Components</li>
+<li>Templates</li>
+</ul>
+</div></blockquote>
+<p><strong>Modules</strong></p>
+<p>A module is loosely related to the tabs you see in the GUI and consists of the user interface logic and one or more “templates” to render the HTML page. Some of the modules in OpenCATS are:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Home</li>
+<li>Candidates</li>
+<li>Contacts</li>
+<li>Calendar, etc.</li>
+</ul>
+</div></blockquote>
+<p>Browse the modules directory to see the all the current modules in OpenCATS. Each module has its own separate directory.</p>
+<p><strong>Library Components</strong></p>
+<p>Library components are PHP objects which encapsulate lower-level functionality, such as interfacing with a database, parsing addresses, sending e-mail, etc. For each module, there is a roughly corresponding library component (but not all libraries directly correspond to a module). Examples of some library components are:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Candidates</li>
+<li>Search</li>
+<li>Users</li>
+<li>VCard</li>
+<li>AddressParser</li>
+</ul>
+</div></blockquote>
+<p>Browse the lib/ directory to see the all different library components.</p>
+<p><strong>OpenCATS Page Request Flow</strong></p>
+<p>Every page request to OpenCATS goes through index.php, which acts as a “router” or delegator to the modules.</p>
+<blockquote>
+<div><ul class="simple">
+<li>A page request is sent to index.php</li>
+<li>index.php parses the URL and sends the request to the corresponding module (specified by m= in the URL) for further processing</li>
+<li>A module parses the “action” (specified by a= in the URL) and invokes the corresponding method within the module.</li>
+<li>The method processes the request, often using library components</li>
+<li>The function displays a template file, if necessary, and fills in the appropriate data and renders the HTML page</li>
+</ul>
+</div></blockquote>
+<p>Every OpenCATS page request goes more or less through the above 5 steps.</p>
+<p><strong>OpenCATS URLs</strong></p>
+<p>OpenCATS URLs are designed to be intuitive and easy to use for developers:</p>
+<p>E.g. <a class="reference external" href="HTTP://OpenCATS.org/index.php?m=clients&amp;a=show&amp;clientID=239">HTTP://OpenCATS.org/index.php?m=clients&amp;a=show&amp;clientID=239</a> means:</p>
+<blockquote>
+<div><ul class="simple">
+<li>m = clients</li>
+<li>a = show</li>
+<li>clientID = 329</li>
+</ul>
+</div></blockquote>
+<p>index.php sends the URL to the “clients” module. The clients module processes the action “show” for clientID 329. We want to display details of client 239.</p>
+<p>Here is the basic layout of a module:</p>
+<div class="highlight-php"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="x">/* mymodule/MyModuleUI.php: */</span>
+<span class="x">class MyModuleUI extends UserInterface</span>
+<span class="x">{</span>
+<span class="x">public function __construct()</span>
+<span class="x">{</span>
+<span class="x">parent::__construct();</span>
+<span class="x">$this-&gt;_moduleDirectory = ‘mymodule’;</span>
+<span class="x">}</span>
+<span class="x">public function handleRequest()</span>
+<span class="x">{</span>
+<span class="x">$action = $this-&gt;getAction();</span>
+<span class="x">switch ($action)</span>
+<span class="x">{</span>
+<span class="x">case ‘myAction’:</span>
+<span class="x">$this-&gt;myAction();</span>
+<span class="x">break;</span>
+<span class="x">…</span>
+<span class="x">}</span>
+<span class="x">}</span>
+</pre></div>
+</td></tr></table></div>
+<div class="highlight-php"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="x">public function myAction()</span>
+<span class="x">{</span>
+<span class="x">    …</span>
+<span class="x">}</span>
+</pre></div>
+</td></tr></table></div>
+<p><strong>Templates</strong></p>
+<p>Modules, as mentioned above, contain the necessary code to render the HTML pages in OpenCATS. HTML is separated from the rest of the code via “templates”. A page is displayed by a template by assigning variables to it using assign() and then call it’s display() method.</p>
+<div class="highlight-php"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="x">public function myAction()</span>
+<span class="x">{</span>
+<span class="x">…</span>
+
+<span class="x">$this-&gt;_template-&gt;assign(‘myVariable’, $myValue);</span>
+<span class="x">$this-&gt;_template-&gt;display(‘./modules/mymodule/MyTemplate.tpl’);</span>
+<span class="x">}</span>
+</pre></div>
+</td></tr></table></div>
+<p>To display a variable inside a template, use:</p>
+<p><code class="docutils literal"><span class="pre">_($this-&gt;myVariable);</span> <span class="pre">?&gt;</span></code></p>
+<p>Interfacing with the database is only done at the library level. This limits the effects that a change in the database structure can have on the upper layers of the code.</p>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="useoc.html" class="btn btn-neutral" title="Using OpenCATS-The building blocks: companies, contacts, job orders, and candidates" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, CC.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.9.3',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
