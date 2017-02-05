@@ -1,8 +1,6 @@
 Contents
 ========
 
-**Slight warning, more like a gentle nudge**
-
 **Preface**
   * What is this manual?
   * Release information
