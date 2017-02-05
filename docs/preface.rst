@@ -10,7 +10,9 @@ It describes how to install and configure OpenCATS, how recruiters can use it to
 Release information
 -------------------
 
-The current OpenCATS release is 0.9.3.3-3 "Inferno".
+The current OpenCATS release is 0.9.3.3-3 "Inferno". 
+
+See the changelog.MD file for details.
 
 
 Legal information/License FAQ
@@ -18,19 +20,21 @@ Legal information/License FAQ
 
 **What license is OpenCATS distributed under?**
 
- This application is available under two licenses.
+This application is available under two licenses.
 
 * OpenCATS code is under Mozilla Public License 2.0
 * Code from the original 'CATS Project' circa 2007 is under CATS Public License Version 1.1a (a modified Mozilla Public License)
 
 **Can we change this license?**
 
-No, the License remains as-is until the original developers change the license under which they released the code. Cognizo, who developed CATS are not changing the license - it will remain licensed under the CPL.
+For now, no.  The original code will continue to be licensed under the CPL.  The OpenCATS team is aggresively working towards moving away from the CPL to a full MPL release.
+
+The OpenCATS code is a combination of MPL and CPL code as of this writing.
 
 
 **What CAN we change?**
 
-If there was a need, the project name and/or logo could be changed. We have for example changed the Project name to OpenCATS
+You can change OpenCATS use OpenCATS in whatever way you choose. HOWEVER the items noted in the CPL can not be changed until OpenCATS moves to a full MPL release. See the next question for details.
 
 **What are the key features of this license?**
 
@@ -42,13 +46,8 @@ There are some 'unique' requirements in Exhibit B;
 
 **Is this an Open Source license?**
 
-Sadly, Exhibit B I) restricts one of the freedoms required to be defined as Open Source. This means that although OpenCATS is free (as in beer) and the source is 'Open', it is not officially Open Source. This project does not have the rights to strip the appendix.
+Sadly, Exhibit B: I) restricts one of the freedoms required to be defined as Open Source. This means that although OpenCATS is free (as in beer) and the source is 'Open', it is not officially Open Source. This project does not have the rights to strip the appendix.
 
-**So is everything subject to the CPL?**
-
-Not entirely. A few examples;
-integration into Joomla! In this case, Joomla is a completely separate GPL project, and the CATS module simply polls the backend MySQL databases for CATS. Whilst it does fall logically into the OpenCATS project, the CATS module remains Open Source.
-Similarly, separate backend reporting packages could easily poll the same shared MySQL database.
 
 **Simplify this for me, what can I do and what can't I do?**
 

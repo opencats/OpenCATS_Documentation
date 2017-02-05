@@ -14,7 +14,7 @@ OpenCATS vs CATSOne vs "open source"
 OpenCATS is a free, open-source ATS. This means that there is no charge to install or to use it. 
 
 * For software developers, this also means that you are free to modify or extend the OpenCATS software, and to participate as a member of its development community. 
-* This also means that there is no help desk that you can call for support.
+* This also means that there is no help desk that you can call for support, though we do have support forums and a community that helps.
 
 The origins of OpenCATS are in a commercial open-source development effort called CATS, which split
 into two separate efforts:
@@ -26,10 +26,12 @@ The commercial CATS product is a highly polished, professionally supported, host
 
 OpenCATS, on the other hand, has somewhat less functionality, is installed on your server(s), and is supported only by you -- with some help from the development community.
 
+The OpenCATS team and the CATSOne organization are not associated in any way.
+
 General Features
 ----------------
 
-**Free!:**  OpenCATS is open source software.  Which means it is free (no cost) to use, and you are free to modify it in (almost) any way you want.  Seriously, if you can do it, get down into the code and change absolutely anything!  
+**Free:**  OpenCATS is open source software.  Which means it is free (no cost) to use, and you are free to modify it in (almost) any way you want.  Seriously, if you can do it, get down into the code and change absolutely anything!  
 
 **Support:** It also means support may be hard to find.  We have a community of people that are willing to help as much as possible though.
 
@@ -51,7 +53,7 @@ General Features
 Recruiting cycle/Workflow
 -------------------------
 
-The basic agency recruiting cycle is this:
+The basic agency recruiting/workflow cycle is this:
 
 * Sales-Lead generation
 * Lead contact
