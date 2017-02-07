@@ -21,7 +21,7 @@ OpenCATS Developers and contributors
 ------------------------------------
 
 * RussH
-* mlespiau
+* Matias Lespiau
 * Kixy25
 * libregeek
 * skrchnavy
