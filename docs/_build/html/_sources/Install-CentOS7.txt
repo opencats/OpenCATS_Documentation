@@ -1,19 +1,6 @@
 Install-CentOS 7
 ================
 
-
-These instructions are for LAMP (Linux Apache MySQL/MariaDB Php) environment only. 
-Instructions are provided for CentOS7.
-
-
-Installation-Unix/Linux Prerequisites
--------------------------------------
-
-We will install LAMP server software and get it running.  Then install the OpenCATS ATS.
-
-
-.. note:: mysql and mariadb are basically the same software with different names.  You can use either, just change the commands to the appropriate name.
-
 CentOS7-Installing MySQL 5/Mariadb
 ----------------------------------
 
@@ -27,9 +14,6 @@ CentOS7-Installing MySQL 5/Mariadb
 
 * ``$ mysql_secure_installation``
 
-
-Securing MySQL/MariaDB
-----------------------
 .. note:: In order to log into MariaDB to secure it, we'll need the current password for the root user.  If you've just installed MariaDB, and you haven't set the root password yet, **the password will be blank**, so you should just press enter here.
 
 * Set root password? [Y/n] Y
@@ -56,10 +40,6 @@ CentOS7-Installing Apache2
 * ``$ sudo firewall-cmd --permanent --zone=public --add-service=https``
 * ``$ sudo firewall-cmd --reload``
 
-
-Check for success-Apache
-------------------------
-
 .. note:: In this tutorial, we use localhost. These settings might differ for you, so you have to replace them where appropriate.
 
 * Now direct your browser to localhost in the address bar, and you should see the Apache2 placeholder page (it may look different than this image):
@@ -75,9 +55,6 @@ CentOS7-Installing PHP5
 * ``$ sudo rpm -Uvh https://mirror.webtatic.com/yum/el7/webtatic-release.rpm``
 * ``$ sudo yum install php56w php56w-soap php56w-ldap php56w-gd php56w-mysql``
 * ``$ sudo systemctl restart httpd.service``
-
-Testing PHP5 / Getting Details About Your PHP5 Installation
------------------------------------------------------------
 
 .. note:: The document root of the default website is /var/www/html. We will now create a small PHP file (info.php) in that directory and call it in a browser. The file will display lots of useful details about our PHP installation, such as the installed PHP version.
 

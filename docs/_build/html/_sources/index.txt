@@ -16,6 +16,7 @@ Contents:
    warning
    toc 
    preface
+   authors-contrib
    introduction
    install-windows
    Install-SharedHosting
@@ -26,6 +27,8 @@ Contents:
    Install-CentOS7
    screens-in-depth
    useoc
+   shortdevguide
+   faq
 
 
 
