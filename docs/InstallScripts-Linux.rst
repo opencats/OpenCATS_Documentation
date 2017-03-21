@@ -16,13 +16,13 @@ Get the correct script for your distribution
 
 Wget the install script for your Distro by typing/copy-paste the following into your terminal.
 Ubuntu 14.04:
-``$ wget https://raw.githubusercontent.com/cptr13/OpenCATS-Installation-Scripts/blob/master/Ubuntu14.04-OpenCATS-Install.sh``
+``$ wget https://raw.githubusercontent.com/opencats/OpenCATS-Installation-Scripts/master/Ubuntu14.04-OpenCATS-Install.sh``
 Ubuntu 16.04:
-``$ wget https://raw.githubusercontent.com/cptr13/OpenCATS-Installation-Scripts/blob/master/Ubuntu16.04-OpenCATS-Install.sh``
+``$ wget https://raw.githubusercontent.com/opencats/OpenCATS-Installation-Scripts/blob/master/Ubuntu16.04-OpenCATS-Install.sh``
 Debian 8:
-``$ wget https://raw.githubusercontent.com/cptr13/OpenCATS-Installation-Scripts/master/Debian8-OpenCATS-Install.sh``
+``$ wget https://raw.githubusercontent.com/opencats/OpenCATS-Installation-Scripts/master/Debian8-OpenCATS-Install.sh``
 CentOS 7:
-``$ wget https://raw.githubusercontent.com/cptr13/OpenCATS-Installation-Scripts/blob/master/CentOS7-OpenCATS-install.sh``
+``$ wget https://raw.githubusercontent.com/opencats/OpenCATS-Installation-Scripts/master/CentOS7-OpenCATS-install.sh``
 
 List directory to see the file name: 
 ``ls``
