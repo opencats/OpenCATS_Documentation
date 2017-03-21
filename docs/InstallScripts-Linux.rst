@@ -18,7 +18,7 @@ Wget the install script for your Distro by typing/copy-paste the following into 
 Ubuntu 14.04:
 ``$ wget https://raw.githubusercontent.com/opencats/OpenCATS-Installation-Scripts/master/Ubuntu14.04-OpenCATS-Install.sh``
 Ubuntu 16.04:
-``$ wget https://raw.githubusercontent.com/opencats/OpenCATS-Installation-Scripts/blob/master/Ubuntu16.04-OpenCATS-Install.sh``
+``$ wget https://raw.githubusercontent.com/opencats/OpenCATS-Installation-Scripts/master/Ubuntu16.04-OpenCATS-Install.sh``
 Debian 8:
 ``$ wget https://raw.githubusercontent.com/opencats/OpenCATS-Installation-Scripts/master/Debian8-OpenCATS-Install.sh``
 CentOS 7:
