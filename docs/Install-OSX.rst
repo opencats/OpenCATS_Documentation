@@ -41,12 +41,12 @@ Start MAMP (`Frist steps <http://documentation.mamp.info/en/MAMP-Mac/First-Steps
 - on your MAMP click on ``Preferences...``
 - Configure MAMP based on 'instractions <http://documentation.mamp.info/en/MAMP-Mac/Preferences/>`
 - Configure Web Server
-  - Go to Web Server tab
-  - Select Apache or Nginx (what is preferred)
-  - Select Document root  - choose location where is openCATS extracted
+ - Go to Web Server tab
+ - Select Apache or Nginx (what is preferred)
+ - Select Document root  - choose location where is openCATS extracted
 - Setup PHP version
-  - Got to php tab
-  - select php version 5.6.X
+ - Got to php tab
+ - select php version 5.6.X
 
 .. note:: if php 5.6.X is not in the options (free version supports only 2 php versions), it is necessary to define 'latest' versions.
 
