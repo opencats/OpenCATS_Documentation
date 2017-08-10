@@ -36,6 +36,8 @@ Start Xampp
 
 * On the right side of Apache and MySQL, click ``start`` for each one.
 
+.. note:: ONLY start the Apache and MySql services.  You do NOT need any of the other services.
+
 .. image:: ../docs/_static/start-services-xampp.png
 
 Composer-Install dependencies

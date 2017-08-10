@@ -30,9 +30,6 @@
   
 
   
-        <link rel="index" title="Index"
-              href="genindex.html"/>
-        <link rel="search" title="Search" href="search.html"/>
     <link rel="top" title="OpenCATS 0.9.3 documentation" href="index.html"/>
         <link rel="next" title="Install on Ubuntu 14.04" href="Install-Ubuntu-14.04.html"/>
         <link rel="prev" title="Install on Shared-hosting (Bluehost, GoDaddy or similar)" href="Install-SharedHosting.html"/> 
@@ -89,10 +86,10 @@
 <li class="toctree-l1"><a class="reference internal" href="toc.html">Contents</a></li>
 <li class="toctree-l1"><a class="reference internal" href="preface.html">Preface</a></li>
 <li class="toctree-l1"><a class="reference internal" href="authors-contrib.html">Authors and Contributors</a></li>
-<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction and Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="install-windows.html">Windows - OpenCATS Installation Instructions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Install-SharedHosting.html">Install on Shared-hosting (Bluehost, GoDaddy or similar)</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Install Scripts-Linux</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Install Scripts-Linux</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#get-the-correct-script-for-your-distribution">Get the correct script for your distribution</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#install-the-opencats-software">Install the OpenCATS software</a></li>
 </ul>
@@ -103,6 +100,7 @@
 <li class="toctree-l1"><a class="reference internal" href="Install-CentOS7.html">Install-CentOS 7</a></li>
 <li class="toctree-l1"><a class="reference internal" href="screens-in-depth.html">Screens In-Depth</a></li>
 <li class="toctree-l1"><a class="reference internal" href="useoc.html">Using OpenCATS-The building blocks: companies, contacts, job orders, and candidates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="backup-restore.html">OpenCATS Backup/Restore and Upgrade Instructions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="shortdevguide.html">Short overview of original OpenCATS Source code</a></li>
 <li class="toctree-l1"><a class="reference internal" href="faq.html">F.A.Q. for OpenCATS applicant tracking system</a></li>
 </ul>
@@ -166,13 +164,13 @@
 <h2>Get the correct script for your distribution<a class="headerlink" href="#get-the-correct-script-for-your-distribution" title="Permalink to this headline">¶</a></h2>
 <p>Wget the install script for your Distro by typing/copy-paste the following into your terminal.
 Ubuntu 14.04:
-<code class="docutils literal"><span class="pre">$</span> <span class="pre">wget</span> <span class="pre">https://raw.githubusercontent.com/cptr13/OpenCATS-Installation-Scripts/blob/master/Ubuntu14.04-OpenCATS-Install.sh</span></code>
+<code class="docutils literal"><span class="pre">$</span> <span class="pre">wget</span> <span class="pre">https://raw.githubusercontent.com/opencats/OpenCATS-Installation-Scripts/master/Ubuntu14.04-OpenCATS-Install.sh</span></code>
 Ubuntu 16.04:
-<code class="docutils literal"><span class="pre">$</span> <span class="pre">wget</span> <span class="pre">https://raw.githubusercontent.com/cptr13/OpenCATS-Installation-Scripts/blob/master/Ubuntu16.04-OpenCATS-Install.sh</span></code>
+<code class="docutils literal"><span class="pre">$</span> <span class="pre">wget</span> <span class="pre">https://raw.githubusercontent.com/opencats/OpenCATS-Installation-Scripts/master/Ubuntu16.04-OpenCATS-Install.sh</span></code>
 Debian 8:
-<code class="docutils literal"><span class="pre">$</span> <span class="pre">wget</span> <span class="pre">https://raw.githubusercontent.com/cptr13/OpenCATS-Installation-Scripts/master/Debian8-OpenCATS-Install.sh</span></code>
+<code class="docutils literal"><span class="pre">$</span> <span class="pre">wget</span> <span class="pre">https://raw.githubusercontent.com/opencats/OpenCATS-Installation-Scripts/master/Debian8-OpenCATS-Install.sh</span></code>
 CentOS 7:
-<code class="docutils literal"><span class="pre">$</span> <span class="pre">wget</span> <span class="pre">https://raw.githubusercontent.com/cptr13/OpenCATS-Installation-Scripts/blob/master/CentOS7-OpenCATS-install.sh</span></code></p>
+<code class="docutils literal"><span class="pre">$</span> <span class="pre">wget</span> <span class="pre">https://raw.githubusercontent.com/opencats/OpenCATS-Installation-Scripts/master/CentOS7-OpenCATS-install.sh</span></code></p>
 <p>List directory to see the file name:
 <code class="docutils literal"><span class="pre">ls</span></code></p>
 <p>Make the script executable:
