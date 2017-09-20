@@ -93,8 +93,6 @@
 <li class="toctree-l2"><a class="reference internal" href="#cpanel-file-manager">CPanel-File Manager</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#cpanel-php">CPanel-PHP</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#cpanel-mysql">CPanel-MySQL</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#cpanel-ssh">CPanel-SSH</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#install-composer-and-dependencies">Install Composer and dependencies</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#install-the-opencats-software">Install the OpenCATS software</a></li>
 </ul>
 </li>
@@ -105,7 +103,7 @@
 <li class="toctree-l1"><a class="reference internal" href="Install-CentOS7.html">Install-CentOS 7</a></li>
 <li class="toctree-l1"><a class="reference internal" href="screens-in-depth.html">Screens In-Depth</a></li>
 <li class="toctree-l1"><a class="reference internal" href="useoc.html">Using OpenCATS-The building blocks: companies, contacts, job orders, and candidates</a></li>
-<li class="toctree-l1"><a class="reference internal" href="backup-restore.html">OpenCATS Backup/Restore and Upgrade Instructions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="backup-restore.html">OpenCATS Backup/Restore and Upgrade Instructions-THIS SECTION INCOMPLETE!</a></li>
 <li class="toctree-l1"><a class="reference internal" href="shortdevguide.html">Short overview of original OpenCATS Source code</a></li>
 <li class="toctree-l1"><a class="reference internal" href="faq.html">F.A.Q. for OpenCATS applicant tracking system</a></li>
 </ul>
@@ -160,10 +158,14 @@
 <p class="first admonition-title">Note</p>
 <p class="last">There are benefits and down-sides to running your OpenCATS system through a shared hosting account.  The main benefit is that OpenCATS will be web accessible to any user from any location, and not limited to your local machine.  You will however lose the resume-indexing tools with a shared-hosting environment.  Which means that resumes will NOT be keyword searchable.</p>
 </div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">As this documentation gets updated, the OpenCATS version in the images may not match the OpenCATS versions discussed in the documentation.</p>
+</div>
 <div class="section" id="download-opencats-to-your-computer">
 <h2>Download OpenCATS to your computer<a class="headerlink" href="#download-opencats-to-your-computer" title="Permalink to this headline">¶</a></h2>
 <p>Click this link to download the OpenCATS files, we will need them later:</p>
-<p><a class="reference external" href="https://github.com/opencats/OpenCATS/archive/0.9.3-3.tar.gz">OpenCATS Files</a></p>
+<p><a class="reference external" href="https://github.com/opencats/OpenCATS/releases/download/0.9.4/opencats-0.9.4-full.zip">OpenCATS Files</a></p>
 </div>
 <div class="section" id="cpanel-file-manager">
 <h2>CPanel-File Manager<a class="headerlink" href="#cpanel-file-manager" title="Permalink to this headline">¶</a></h2>
@@ -179,14 +181,14 @@
 <img alt="_images/shost3.png" src="_images/shost3.png" />
 <p>Double click on your main web directory (mine is listed as public _html)</p>
 <img alt="_images/shost4.png" src="_images/shost4.png" />
-<p>Now we need to upload the OpenCATS tar file that we downloaded into this directory</p>
+<p>Now we need to upload the OpenCATS zip file that we downloaded into this directory</p>
 <p>Click <code class="docutils literal"><span class="pre">Upload</span></code></p>
 <img alt="_images/shost4-2.png" src="_images/shost4-2.png" />
 <p>This should bring you to a file upload screen.</p>
 <img alt="_images/shost6.png" src="_images/shost6.png" />
 <ul class="simple">
 <li>Click <code class="docutils literal"><span class="pre">Choose</span> <span class="pre">File</span></code></li>
-<li>Find the <code class="docutils literal"><span class="pre">0.9.3-3.tar.gz</span></code> file that we downloaded and select it.</li>
+<li>Find the <code class="docutils literal"><span class="pre">opencats-0.9.4-full.zip</span></code> file that we downloaded and select it.</li>
 </ul>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
@@ -194,21 +196,28 @@
 </div>
 <ul class="simple">
 <li>When the upload is finished, click the <code class="docutils literal"><span class="pre">Go</span> <span class="pre">Back</span> <span class="pre">to</span> <span class="pre">public</span> <span class="pre">_html</span></code></li>
-<li>Scroll down to the <code class="docutils literal"><span class="pre">0.9.3-3.tar.gz</span></code> we just uploaded and click it once to highlight it.</li>
+<li>Scroll down to the <code class="docutils literal"><span class="pre">opencats-0.9.4-full.zip</span></code> we just uploaded and click it once to highlight it.</li>
 <li>Click on <code class="docutils literal"><span class="pre">Extract</span></code> at the top to extract the OpenCATS files from the Tar file.</li>
 </ul>
 <img alt="_images/extract.png" src="_images/extract.png" />
 <p>This should open a new screen:</p>
 <img alt="_images/shost6-2.png" src="_images/shost6-2.png" />
 <p>The default address should be fine, click <code class="docutils literal"><span class="pre">Extract</span> <span class="pre">File(s)</span></code></p>
-<p>Now you should see the extracted folder <code class="docutils literal"><span class="pre">OpenCATS-0.9.3-3</span></code> listed in your public _html directory.</p>
+<p>Now you should see the extracted folder <code class="docutils literal"><span class="pre">home</span></code> listed in your public _html directory.</p>
 <img alt="_images/shost6-3.png" src="_images/shost6-3.png" />
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Currently, the directory in the above image should say <code class="docutils literal"><span class="pre">home</span></code>.</p>
+</div>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">If you want to rename the folder, that&#8217;s ok.  The folder name will be part of the web address you use to access your OpenCATS Installation.</p>
 </div>
 <ul class="simple">
-<li>Double click on the OpenCATS directory and check for any files named INSTALL_BLOCK.  If there is one there, delete it.  This file will prevent OpenCATS from installing on your system.</li>
+<li>Double click on the <code class="docutils literal"><span class="pre">home</span></code> directory, then click <code class="docutils literal"><span class="pre">travis</span></code>, then click <code class="docutils literal"><span class="pre">build</span></code>, then click <code class="docutils literal"><span class="pre">opencats</span></code>.  Now you should see the final <code class="docutils literal"><span class="pre">OpenCATS</span></code> directory.</li>
+<li>Right click on the <code class="docutils literal"><span class="pre">OpenCATS</span></code> directory, click <code class="docutils literal"><span class="pre">cut</span></code> (or <code class="docutils literal"><span class="pre">move</span></code>), and place the file in your main html directory (called public_html or something similar).</li>
+<li>Go back into your main html directory (public_html or something similar), right click and delete the <code class="docutils literal"><span class="pre">home</span></code> folder (NOT the home.html file if you have one there).</li>
+<li>Double click on the OpenCATS directory and find folder named INSTALL_BLOCK, right click and delete it.  The INSTALL_BLOCK file, or directory will prevent OpenCATS from installing on your system.</li>
 </ul>
 </div>
 <div class="section" id="cpanel-php">
@@ -260,73 +269,14 @@
 <p class="last">Some hosting services will add account specific things to MySQL usernames and database names.  Note the red box in the image below.  THESE will be the user names and database names we enter into our OpenCATS system.</p>
 </div>
 <img alt="_images/dbwizard3.png" src="_images/dbwizard3.png" />
+<p>If everything has been done correctly, you should be done in your web hosting account.</p>
 <ul class="simple">
-<li>Go back to the main CPanel dashboard screen.</li>
+<li>Open your web browser</li>
 </ul>
-</div>
-<div class="section" id="cpanel-ssh">
-<h2>CPanel-SSH<a class="headerlink" href="#cpanel-ssh" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li>From the main CPanel screen, scroll down to the &#8220;security&#8221; section.</li>
-<li>Click ssh/shell access, this will open a new browser tab.</li>
-<li>Below that, you will see your SSH login information.  Write that down, you&#8217;ll need the hostname, username and password.</li>
-</ul>
-<img alt="_images/ssh4.png" src="_images/ssh4.png" />
-<ul class="simple">
-<li>Make sure SSH Access is enabled.  If it isn&#8217;t, click the &#8220;Manage SSH Access&#8221; and enable it.</li>
-</ul>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">The password for ssh access will be your main shared-hosting account password (GoDaddy, Bluehost, etc.).</p>
-</div>
-</div>
-<div class="section" id="install-composer-and-dependencies">
-<h2>Install Composer and dependencies<a class="headerlink" href="#install-composer-and-dependencies" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li>Open a new browser tab and download a SSH client.  Putty works fine.  For Windows, download Putty <a class="reference external" href="https://the.earth.li/~sgtatham/putty/latest/x86/putty.exe">Here</a></li>
-<li>For Ubuntu it can be a simple <code class="docutils literal"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">apt-get</span> <span class="pre">install</span> <span class="pre">putty</span></code></li>
-<li>Open up Putty.</li>
-<li>Enter your hostname in the box towards the top and select SSH.</li>
-<li>Then click open.</li>
-</ul>
-<img alt="_images/putty1.png" src="_images/putty1.png" />
-<ul class="simple">
-<li>Enter your login name (username).  Hit enter.</li>
-</ul>
-<img alt="_images/putty2.png" src="_images/putty2.png" />
-<p>It will likely ask you to accept a key.  Type &#8220;yes&#8221; to accept that.</p>
-<ul class="simple">
-<li>Enter your account password, hit enter.</li>
-</ul>
-<p>Now you should just see a black screen with a <code class="docutils literal"><span class="pre">#</span></code>.  That means you are logged in to your shared hosting account through SSH!</p>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">If you renamed the OpenCATS directory, make sure to replace OpenCATS-0.9.3-3 in these commands with whatever your OpenCATS directory is named.</p>
-</div>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">These commands are specific to Bluehost.  The directory structure for other hosts may be different.</p>
-</div>
-<p>Type the following commands and hit enter after each one.</p>
-<ul class="simple">
-<li><code class="docutils literal"><span class="pre">#</span> <span class="pre">cd</span> <span class="pre">/www/OpenCATS-0.9.3-3</span></code></li>
-<li><code class="docutils literal"><span class="pre">#</span> <span class="pre">curl</span> <span class="pre">-sS</span> <span class="pre">https://getcomposer.org/installer</span> <span class="pre">|</span> <span class="pre">php</span></code></li>
-<li><code class="docutils literal"><span class="pre">#</span> <span class="pre">php</span> <span class="pre">composer.phar</span> <span class="pre">install</span></code></li>
-<li><code class="docutils literal"><span class="pre">#</span> <span class="pre">exit</span></code></li>
-</ul>
-<p>If composer installed correctly, and it installed all the dependencies correctly you should see some scrolling text.  If you see red errors, you&#8217;ll need to let us know on the OpenCATS forums.</p>
-<div class="admonition warning">
-<p class="first admonition-title">Warning</p>
-<p class="last">Make sure when you are done, to go back through CPanel and DISABLE the SSH access.  There is no reason to leave that enabled.</p>
-</div>
-<div class="admonition warning">
-<p class="first admonition-title">Warning</p>
-<p class="last">Seriously....disable your SSH when you are done.  You really don&#8217;t want to leave that open.</p>
-</div>
 </div>
 <div class="section" id="install-the-opencats-software">
 <h2>Install the OpenCATS software<a class="headerlink" href="#install-the-opencats-software" title="Permalink to this headline">¶</a></h2>
-<p>In your browser, go to yourdomainname.com/OpenCATS-0.9.3-3 (if you changed the main directory name, replace OpenCATS-0.9.3-3 with the new name).</p>
+<p>In your browser, go to yourdomainname.com/OpenCATS (if you changed the main directory name, replace OpenCATS with the new name).</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">If you have already attempted to install OpenCATS and the installer doesn&#8217;t load, check to see if there is a file called &#8216;INSTALL_BLOCK&#8217; in the OpenCATS directory. Delete it to allow the installer to run.</p>

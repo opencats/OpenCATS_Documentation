@@ -53,7 +53,7 @@ CentOS7-Installing PHP5
 
 * ``$ sudo rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm``
 * ``$ sudo rpm -Uvh https://mirror.webtatic.com/yum/el7/webtatic-release.rpm``
-* ``$ sudo yum install php56w php56w-soap php56w-ldap php56w-gd php56w-mysql``
+* ``$ sudo yum install php56w php56w-soap php56w-ldap php56w-gd php56w-mysql unzip``
 * ``$ sudo systemctl restart httpd.service``
 
 .. note:: The document root of the default website is /var/www/html. We will now create a small PHP file (info.php) in that directory and call it in a browser. The file will display lots of useful details about our PHP installation, such as the installed PHP version.
@@ -89,21 +89,20 @@ Setting up your MySQL/MariaDB database
 * You should see a prompt like this: ``mysql>``
 * ``mysql>`` CREATE USER 'opencats'@'localhost' IDENTIFIED BY 'databasepassword';
 * ``mysql>`` CREATE DATABASE opencats;
-* ``mysql>`` GRANT ALL PRIVILEGES ON 'opencats'.* TO 'opencats'@'localhost' IDENTIFIED BY 'databasepassword';
+* ``mysql>`` GRANT ALL PRIVILEGES ON opencats.* TO 'opencats'@'localhost' IDENTIFIED BY 'databasepassword';
 * ``mysql>`` exit;
 
 .. note:: Make sure you don't forget the ; on the end of every line!
 
 
-Run composer to get dependencies
+Download OpenCATS Files
 --------------------------------
-* ``$ sudo yum install git``
-* ``$ sudo yum install composer``
 * ``$ cd /var/www/html``
-* ``$ sudo wget https://github.com/opencats/OpenCATS/archive/0.9.3-3.tar.gz``
-* ``$ sudo tar -xvzf 0.9.3-3.tar.gz``
-* ``$ cd OpenCATS-0.9.3-3``
-* ``$ sudo composer install``
+* ``$ sudo wget https://github.com/opencats/OpenCATS/releases/download/0.9.4/opencats-0.9.4-full.zip``
+* ``$ sudo unzip opencats-0.9.4-full.zip``
+* ``$ sudo mv /var/www/html/home/travis/build/opencats/OpenCATS opencats``
+* ``$ sudo rm -Rf /var/www/html/home /var/www/html/opencats/INSTALL_BLOCK``
+
 
 .. note:: If everything is done correctly, there should be no composer errors.  If there are errors, take a close look at them to see what is missing.
 
@@ -113,15 +112,13 @@ Server and Directory permissions
 
 .. note:: CentOS runs SElinux for additional security layers.  We need to do a few additional things on permissions.
 
-* ``$ cd ..`` Move back into the main html directory
-* ``$ sudo chown apache:apache -R OpenCATS-0.9.3-3``
-* ``$ cd OpenCATS-0.9.3-3`` move back into the OpenCATS Directory
+* ``$ sudo chown apache:apache -R opencats``
 * ``$ sudo find . -type f -exec chmod 0644 {} \;``
 * ``$ sudo find . -type d -exec chmod 0770 {} \;``
-* ``$ sudo chcon -t httpd_sys_content_t /var/www/html/OpenCATS-0.9.3-3 -R``
-* ``$ sudo chcon -t httpd_sys_rw_content_t /var/www/html/OpenCATS-0.9.3-3 -R``
+* ``$ sudo chcon -t httpd_sys_content_t /var/www/html/opencats -R``
+* ``$ sudo chcon -t httpd_sys_rw_content_t /var/www/html/opencats -R``
 
-.. warning:: make sure this is set to **EXACTLY** the name of your OpenCATS directory, default for OpenCATS version 0.9.3-3 would be ``OpenCATS-0.9.3-3``
+.. warning:: make sure this is set to **EXACTLY** the name of your OpenCATS directory, default in this documentation for OpenCATS version 0.9.4 would be ``opencats``
 
 
 Install resume indexing tools

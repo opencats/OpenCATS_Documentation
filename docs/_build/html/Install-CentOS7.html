@@ -98,7 +98,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#centos7-installing-apache2">CentOS7-Installing Apache2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#centos7-installing-php5">CentOS7-Installing PHP5</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#setting-up-your-mysql-mariadb-database">Setting up your MySQL/MariaDB database</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#run-composer-to-get-dependencies">Run composer to get dependencies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#download-opencats-files">Download OpenCATS Files</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#server-and-directory-permissions">Server and Directory permissions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#install-resume-indexing-tools">Install resume indexing tools</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#install-the-opencats-software">Install the OpenCATS software</a></li>
@@ -106,7 +106,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="screens-in-depth.html">Screens In-Depth</a></li>
 <li class="toctree-l1"><a class="reference internal" href="useoc.html">Using OpenCATS-The building blocks: companies, contacts, job orders, and candidates</a></li>
-<li class="toctree-l1"><a class="reference internal" href="backup-restore.html">OpenCATS Backup/Restore and Upgrade Instructions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="backup-restore.html">OpenCATS Backup/Restore and Upgrade Instructions-THIS SECTION INCOMPLETE!</a></li>
 <li class="toctree-l1"><a class="reference internal" href="shortdevguide.html">Short overview of original OpenCATS Source code</a></li>
 <li class="toctree-l1"><a class="reference internal" href="faq.html">F.A.Q. for OpenCATS applicant tracking system</a></li>
 </ul>
@@ -222,7 +222,7 @@
 <ul class="simple">
 <li><code class="docutils literal"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">rpm</span> <span class="pre">-Uvh</span> <span class="pre">https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm</span></code></li>
 <li><code class="docutils literal"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">rpm</span> <span class="pre">-Uvh</span> <span class="pre">https://mirror.webtatic.com/yum/el7/webtatic-release.rpm</span></code></li>
-<li><code class="docutils literal"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">yum</span> <span class="pre">install</span> <span class="pre">php56w</span> <span class="pre">php56w-soap</span> <span class="pre">php56w-ldap</span> <span class="pre">php56w-gd</span> <span class="pre">php56w-mysql</span></code></li>
+<li><code class="docutils literal"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">yum</span> <span class="pre">install</span> <span class="pre">php56w</span> <span class="pre">php56w-soap</span> <span class="pre">php56w-ldap</span> <span class="pre">php56w-gd</span> <span class="pre">php56w-mysql</span> <span class="pre">unzip</span></code></li>
 <li><code class="docutils literal"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">systemctl</span> <span class="pre">restart</span> <span class="pre">httpd.service</span></code></li>
 </ul>
 <div class="admonition note">
@@ -268,7 +268,7 @@
 <li>You should see a prompt like this: <code class="docutils literal"><span class="pre">mysql&gt;</span></code></li>
 <li><code class="docutils literal"><span class="pre">mysql&gt;</span></code> CREATE USER <a class="reference external" href="mailto:'opencats'&#37;&#52;&#48;'localhost">'opencats'<span>&#64;</span>'localhost</a>&#8216; IDENTIFIED BY &#8216;databasepassword&#8217;;</li>
 <li><code class="docutils literal"><span class="pre">mysql&gt;</span></code> CREATE DATABASE opencats;</li>
-<li><code class="docutils literal"><span class="pre">mysql&gt;</span></code> GRANT ALL PRIVILEGES ON &#8216;opencats&#8217;.* TO <a class="reference external" href="mailto:'opencats'&#37;&#52;&#48;'localhost">'opencats'<span>&#64;</span>'localhost</a>&#8216; IDENTIFIED BY &#8216;databasepassword&#8217;;</li>
+<li><code class="docutils literal"><span class="pre">mysql&gt;</span></code> GRANT ALL PRIVILEGES ON opencats.* TO <a class="reference external" href="mailto:'opencats'&#37;&#52;&#48;'localhost">'opencats'<span>&#64;</span>'localhost</a>&#8216; IDENTIFIED BY &#8216;databasepassword&#8217;;</li>
 <li><code class="docutils literal"><span class="pre">mysql&gt;</span></code> exit;</li>
 </ul>
 <div class="admonition note">
@@ -276,16 +276,14 @@
 <p class="last">Make sure you don&#8217;t forget the ; on the end of every line!</p>
 </div>
 </div>
-<div class="section" id="run-composer-to-get-dependencies">
-<h2>Run composer to get dependencies<a class="headerlink" href="#run-composer-to-get-dependencies" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="download-opencats-files">
+<h2>Download OpenCATS Files<a class="headerlink" href="#download-opencats-files" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><code class="docutils literal"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">yum</span> <span class="pre">install</span> <span class="pre">git</span></code></li>
-<li><code class="docutils literal"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">yum</span> <span class="pre">install</span> <span class="pre">composer</span></code></li>
 <li><code class="docutils literal"><span class="pre">$</span> <span class="pre">cd</span> <span class="pre">/var/www/html</span></code></li>
-<li><code class="docutils literal"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">wget</span> <span class="pre">https://github.com/opencats/OpenCATS/archive/0.9.3-3.tar.gz</span></code></li>
-<li><code class="docutils literal"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">tar</span> <span class="pre">-xvzf</span> <span class="pre">0.9.3-3.tar.gz</span></code></li>
-<li><code class="docutils literal"><span class="pre">$</span> <span class="pre">cd</span> <span class="pre">OpenCATS-0.9.3-3</span></code></li>
-<li><code class="docutils literal"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">composer</span> <span class="pre">install</span></code></li>
+<li><code class="docutils literal"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">wget</span> <span class="pre">https://github.com/opencats/OpenCATS/releases/download/0.9.4/opencats-0.9.4-full.zip</span></code></li>
+<li><code class="docutils literal"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">unzip</span> <span class="pre">opencats-0.9.4-full.zip</span></code></li>
+<li><code class="docutils literal"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">mv</span> <span class="pre">/var/www/html/home/travis/build/opencats/OpenCATS</span> <span class="pre">opencats</span></code></li>
+<li><code class="docutils literal"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">rm</span> <span class="pre">-Rf</span> <span class="pre">/var/www/html/home</span> <span class="pre">/var/www/html/opencats/INSTALL_BLOCK</span></code></li>
 </ul>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
@@ -299,17 +297,15 @@
 <p class="last">CentOS runs SElinux for additional security layers.  We need to do a few additional things on permissions.</p>
 </div>
 <ul class="simple">
-<li><code class="docutils literal"><span class="pre">$</span> <span class="pre">cd</span> <span class="pre">..</span></code> Move back into the main html directory</li>
-<li><code class="docutils literal"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">chown</span> <span class="pre">apache:apache</span> <span class="pre">-R</span> <span class="pre">OpenCATS-0.9.3-3</span></code></li>
-<li><code class="docutils literal"><span class="pre">$</span> <span class="pre">cd</span> <span class="pre">OpenCATS-0.9.3-3</span></code> move back into the OpenCATS Directory</li>
+<li><code class="docutils literal"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">chown</span> <span class="pre">apache:apache</span> <span class="pre">-R</span> <span class="pre">opencats</span></code></li>
 <li><code class="docutils literal"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">find</span> <span class="pre">.</span> <span class="pre">-type</span> <span class="pre">f</span> <span class="pre">-exec</span> <span class="pre">chmod</span> <span class="pre">0644</span> <span class="pre">{}</span> <span class="pre">\;</span></code></li>
 <li><code class="docutils literal"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">find</span> <span class="pre">.</span> <span class="pre">-type</span> <span class="pre">d</span> <span class="pre">-exec</span> <span class="pre">chmod</span> <span class="pre">0770</span> <span class="pre">{}</span> <span class="pre">\;</span></code></li>
-<li><code class="docutils literal"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">chcon</span> <span class="pre">-t</span> <span class="pre">httpd_sys_content_t</span> <span class="pre">/var/www/html/OpenCATS-0.9.3-3</span> <span class="pre">-R</span></code></li>
-<li><code class="docutils literal"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">chcon</span> <span class="pre">-t</span> <span class="pre">httpd_sys_rw_content_t</span> <span class="pre">/var/www/html/OpenCATS-0.9.3-3</span> <span class="pre">-R</span></code></li>
+<li><code class="docutils literal"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">chcon</span> <span class="pre">-t</span> <span class="pre">httpd_sys_content_t</span> <span class="pre">/var/www/html/opencats</span> <span class="pre">-R</span></code></li>
+<li><code class="docutils literal"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">chcon</span> <span class="pre">-t</span> <span class="pre">httpd_sys_rw_content_t</span> <span class="pre">/var/www/html/opencats</span> <span class="pre">-R</span></code></li>
 </ul>
 <div class="admonition warning">
 <p class="first admonition-title">Warning</p>
-<p class="last">make sure this is set to <strong>EXACTLY</strong> the name of your OpenCATS directory, default for OpenCATS version 0.9.3-3 would be <code class="docutils literal"><span class="pre">OpenCATS-0.9.3-3</span></code></p>
+<p class="last">make sure this is set to <strong>EXACTLY</strong> the name of your OpenCATS directory, default in this documentation for OpenCATS version 0.9.4 would be <code class="docutils literal"><span class="pre">opencats</span></code></p>
 </div>
 </div>
 <div class="section" id="install-resume-indexing-tools">

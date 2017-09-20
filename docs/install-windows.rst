@@ -12,15 +12,9 @@ Downloading software and preparing your system
  
 * Download - `XAMPP <https://www.apachefriends.org/xampp-files/5.6.28/xampp-win32-5.6.28-1-VC11-installer.exe>`_
 * Install XAMPP
-
-.. warning:: You MUST finish installing XAMPP before you install Composer.  
-
-* Download  - `Composer <https://github.com/composer/windows-setup/releases/download/v4.5.0/Composer-Setup.4.5.0.exe>`_ 
-* Install Composer
-* Download - `OpenCATS_0.9.3-3 <https://github.com/opencats/OpenCATS/archive/0.9.3-3.zip>`_ .  You can not install this yet.
-
-* Go to the folder where the OpenCATS-0.9.3-3.zip file is located (usually the Downloads folder)
-* RIGHT-CLICK on the ``OpenCATS-0.9.3-3.zip`` file
+* Download - `OpenCATS-0.9.4-full <https://github.com/opencats/OpenCATS/releases/download/0.9.4-full/opencats-0.9.4-full.zip>`_ .  You can not install this yet.
+* Go to the folder where the OpenCATS-0.9.4-full.zip file is located (usually the Downloads folder)
+* RIGHT-CLICK on the ``OpenCATS-0.9.4-full.zip`` file
 * Click ``Extract All``
 * Change the folder that the files will be extracted to, to the following:
 * ``C:\xampp\htdocs\``
@@ -40,32 +34,33 @@ Start Xampp
 
 .. image:: ../docs/_static/start-services-xampp.png
 
-Composer-Install dependencies
------------------------------
-
-* Click the Windows start button and type ``cmd.exe``, then hit ``enter``
-* This should open a windows command prompt.
-* Type the following:  ``cd C:\xampp\htdocs\OpenCATS-0.9.3-3``
-
-.. image:: ../docs/_static/cmd.png
-
-* Hit enter
-* Type ``composer install``
-* After Composer is done installing the dependencies, close the command prompt window.
 * Stop the apache service (lower right corner, right click XAMPP, stop apache)
 * Start the apache service
 
 .. image:: ../docs/_static/xampp-quickstart.png
 
-Optional - Renaming your OpenCATS Applicant Tracking System directory.
-----------------------------------------------------------------------
+Moving your OpenCATS Applicant Tracking System directory.
+---------------------------------------------------------
 
-The current default directory name for the OpenCATS files is OpenCATS-0.9.3-3.  This will result in the web address in your browser being http://localhost/OpenCATS-0.9.3-3.
+The current default directory name for the OpenCATS files is ``C:\xampp\htdocs\home``. 
+
+* Go to: ``C:\xampp\htdocs\home\travis\build\opencats``
+* Right click on the OpenCATS directory, select ``cut``.
+* Go to: ``C:\xampp\htdocs``, right click and select ``paste``.  We have moved the main OpenCATS directory into the htdocs directory.
+* Right click on the ``home`` directory and delete it.  We don't need it anymore.
+* Double click on the OpenCATS directory to go into it.
+* Right click on the ``INSTALL_Block`` directory and delete it.  The INSTALL_BLOCK file or folder will prevent OpenCATS from being installed on your system.
+
+
+OPTIONAL - Renaming your OpenCATS directory
+-------------------------------------------
+
+The current default directory name for the OpenCATS files is OpenCATS. This will result in the web address in your browser being http://localhost/OpenCATS
 
 If you want to rename the main OpenCATS directory to something else, you can. 
 
 * Simply navigate to C:\xampp\htdocs
-* Right click on OpenCATS-0.9.3-3
+* Right click on the OpenCATS directory
 * Click ``rename``
 * Rename the directory whatever you want (example: ATS)
 
@@ -107,7 +102,7 @@ You should now see "opencats" listed among the databases on the left.
 Set up OpenCATS
 ---------------
 
-In your Web Browser, visit http://localhost/OpenCATS-0.9.3-3 (adjust if you renamed the OpenCATS-0.9.3-3 directory).
+In your Web Browser, visit http://localhost/OpenCATS (adjust if you renamed the OpenCATS directory).
 If OpenCATS has been configured correctly, you should see a page that looks like this: 
 
 .. image:: ../docs/_static/installation-wizard.png
@@ -151,7 +146,7 @@ For a new installation, select ``New Installation``, then ``next``
 
 
 
-**Step 4 Setup resume indexing**
+**Step.4-full Setup resume indexing**
 
 Unfortunately, for now, there is no resume indexing.  
 * Click ``Skip this Step``.

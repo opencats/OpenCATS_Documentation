@@ -8,11 +8,13 @@ These instructions will walk you through setting up OpenCATS on a Bluehost hosti
  
 .. note:: There are benefits and down-sides to running your OpenCATS system through a shared hosting account.  The main benefit is that OpenCATS will be web accessible to any user from any location, and not limited to your local machine.  You will however lose the resume-indexing tools with a shared-hosting environment.  Which means that resumes will NOT be keyword searchable.
 
+.. note:: As this documentation gets updated, the OpenCATS version in the images may not match the OpenCATS versions discussed in the documentation.  
+
 Download OpenCATS to your computer
 ----------------------------------
 Click this link to download the OpenCATS files, we will need them later:
 
-`OpenCATS Files <https://github.com/opencats/OpenCATS/archive/0.9.3-3.tar.gz>`_
+`OpenCATS Files <https://github.com/opencats/OpenCATS/releases/download/0.9.4/opencats-0.9.4-full.zip>`_
 
 
 
@@ -40,7 +42,7 @@ Double click on your main web directory (mine is listed as public _html)
 
 .. image:: ../docs/_static/shost4.png
 
-Now we need to upload the OpenCATS tar file that we downloaded into this directory
+Now we need to upload the OpenCATS zip file that we downloaded into this directory
 
 Click ``Upload``
 
@@ -51,13 +53,13 @@ This should bring you to a file upload screen.
 .. image:: ../docs/_static/shost6.png
  
 * Click ``Choose File``
-* Find the ``0.9.3-3.tar.gz`` file that we downloaded and select it.
+* Find the ``opencats-0.9.4-full.zip`` file that we downloaded and select it.
 
 .. note:: Make sure you wait for the upload to complete before going back into the public _html folder
 
 * When the upload is finished, click the ``Go Back to public _html``
 
-* Scroll down to the ``0.9.3-3.tar.gz`` we just uploaded and click it once to highlight it.
+* Scroll down to the ``opencats-0.9.4-full.zip`` we just uploaded and click it once to highlight it.
 
 * Click on ``Extract`` at the top to extract the OpenCATS files from the Tar file.
 
@@ -69,13 +71,21 @@ This should open a new screen:
 
 The default address should be fine, click ``Extract File(s)``
 
-Now you should see the extracted folder ``OpenCATS-0.9.3-3`` listed in your public _html directory.
+Now you should see the extracted folder ``home`` listed in your public _html directory.
 
 .. image:: ../docs/_static/shost6-3.png
 
-.. note:: If you want to rename the folder, that's ok.  The folder name will be part of the web address you use to access your OpenCATS Installation.  
+.. note:: Currently, the directory in the above image should say ``home``.
 
-* Double click on the OpenCATS directory and check for any files named INSTALL_BLOCK.  If there is one there, delete it.  This file will prevent OpenCATS from installing on your system.
+.. note:: If you want to rename the folder, that's ok.  The folder name will be part of the web address you use to access your OpenCATS Installation. 
+
+* Double click on the ``home`` directory, then click ``travis``, then click ``build``, then click ``opencats``.  Now you should see the final ``OpenCATS`` directory.
+
+* Right click on the ``OpenCATS`` directory, click ``cut`` (or ``move``), and place the file in your main html directory (called public_html or something similar).
+
+* Go back into your main html directory (public_html or something similar), right click and delete the ``home`` folder (NOT the home.html file if you have one there).
+
+* Double click on the OpenCATS directory and find folder named INSTALL_BLOCK, right click and delete it.  The INSTALL_BLOCK file, or directory will prevent OpenCATS from installing on your system.
 
 CPanel-PHP
 ----------
@@ -121,64 +131,17 @@ CPanel-MySQL
 
 .. image:: ../docs/_static/dbwizard3.png
 
-* Go back to the main CPanel dashboard screen.
 
-CPanel-SSH
-----------
+If everything has been done correctly, you should be done in your web hosting account.
 
-* From the main CPanel screen, scroll down to the "security" section.
-* Click ssh/shell access, this will open a new browser tab.
-* Below that, you will see your SSH login information.  Write that down, you'll need the hostname, username and password. 
+* Open your web browser
 
-.. image:: ../docs/_static/ssh4.png
-
-* Make sure SSH Access is enabled.  If it isn't, click the "Manage SSH Access" and enable it.
-
-.. note:: The password for ssh access will be your main shared-hosting account password (GoDaddy, Bluehost, etc.).
-
-Install Composer and dependencies
----------------------------------
-
-* Open a new browser tab and download a SSH client.  Putty works fine.  For Windows, download Putty `Here <https://the.earth.li/~sgtatham/putty/latest/x86/putty.exe>`_
-* For Ubuntu it can be a simple ``$ sudo apt-get install putty``
-* Open up Putty.
-* Enter your hostname in the box towards the top and select SSH.
-* Then click open.
-
-.. image:: ../docs/_static/putty1.png
-
-* Enter your login name (username).  Hit enter.
-
-.. image:: ../docs/_static/putty2.png
-
-It will likely ask you to accept a key.  Type "yes" to accept that.
-
-* Enter your account password, hit enter.
-
-Now you should just see a black screen with a ``#``.  That means you are logged in to your shared hosting account through SSH!  
-
-.. note:: If you renamed the OpenCATS directory, make sure to replace OpenCATS-0.9.3-3 in these commands with whatever your OpenCATS directory is named.
-
-.. note:: These commands are specific to Bluehost.  The directory structure for other hosts may be different.
-
-Type the following commands and hit enter after each one.
-
-* ``# cd /www/OpenCATS-0.9.3-3``
-* ``# curl -sS https://getcomposer.org/installer | php``
-* ``# php composer.phar install``
-* ``# exit``
-
-If composer installed correctly, and it installed all the dependencies correctly you should see some scrolling text.  If you see red errors, you'll need to let us know on the OpenCATS forums.
-
-.. warning:: Make sure when you are done, to go back through CPanel and DISABLE the SSH access.  There is no reason to leave that enabled.
-
-.. warning:: Seriously....disable your SSH when you are done.  You really don't want to leave that open.  
 
 Install the OpenCATS software
 -----------------------------
 
 
-In your browser, go to yourdomainname.com/OpenCATS-0.9.3-3 (if you changed the main directory name, replace OpenCATS-0.9.3-3 with the new name).
+In your browser, go to yourdomainname.com/OpenCATS (if you changed the main directory name, replace OpenCATS with the new name).
 
 .. note::  If you have already attempted to install OpenCATS and the installer doesn't load, check to see if there is a file called 'INSTALL_BLOCK' in the OpenCATS directory. Delete it to allow the installer to run.
 

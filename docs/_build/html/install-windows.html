@@ -91,8 +91,8 @@
 <li class="toctree-l2"><a class="reference internal" href="#windows-prerequisites">Windows Prerequisites</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#downloading-software-and-preparing-your-system">Downloading software and preparing your system</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#start-xampp">Start Xampp</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#composer-install-dependencies">Composer-Install dependencies</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#optional-renaming-your-opencats-applicant-tracking-system-directory">Optional - Renaming your OpenCATS Applicant Tracking System directory.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#moving-your-opencats-applicant-tracking-system-directory">Moving your OpenCATS Applicant Tracking System directory.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#optional-renaming-your-opencats-directory">OPTIONAL - Renaming your OpenCATS directory</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#launch-phpmyadmin">Launch phpMyAdmin</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#set-up-opencats">Set up OpenCATS</a></li>
 </ul>
@@ -105,7 +105,7 @@
 <li class="toctree-l1"><a class="reference internal" href="Install-CentOS7.html">Install-CentOS 7</a></li>
 <li class="toctree-l1"><a class="reference internal" href="screens-in-depth.html">Screens In-Depth</a></li>
 <li class="toctree-l1"><a class="reference internal" href="useoc.html">Using OpenCATS-The building blocks: companies, contacts, job orders, and candidates</a></li>
-<li class="toctree-l1"><a class="reference internal" href="backup-restore.html">OpenCATS Backup/Restore and Upgrade Instructions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="backup-restore.html">OpenCATS Backup/Restore and Upgrade Instructions-THIS SECTION INCOMPLETE!</a></li>
 <li class="toctree-l1"><a class="reference internal" href="shortdevguide.html">Short overview of original OpenCATS Source code</a></li>
 <li class="toctree-l1"><a class="reference internal" href="faq.html">F.A.Q. for OpenCATS applicant tracking system</a></li>
 </ul>
@@ -163,17 +163,9 @@
 <ul class="simple">
 <li>Download - <a class="reference external" href="https://www.apachefriends.org/xampp-files/5.6.28/xampp-win32-5.6.28-1-VC11-installer.exe">XAMPP</a></li>
 <li>Install XAMPP</li>
-</ul>
-<div class="admonition warning">
-<p class="first admonition-title">Warning</p>
-<p class="last">You MUST finish installing XAMPP before you install Composer.</p>
-</div>
-<ul class="simple">
-<li>Download  - <a class="reference external" href="https://github.com/composer/windows-setup/releases/download/v4.5.0/Composer-Setup.4.5.0.exe">Composer</a></li>
-<li>Install Composer</li>
-<li>Download - <a class="reference external" href="https://github.com/opencats/OpenCATS/archive/0.9.3-3.zip">OpenCATS_0.9.3-3</a> .  You can not install this yet.</li>
-<li>Go to the folder where the OpenCATS-0.9.3-3.zip file is located (usually the Downloads folder)</li>
-<li>RIGHT-CLICK on the <code class="docutils literal"><span class="pre">OpenCATS-0.9.3-3.zip</span></code> file</li>
+<li>Download - <a class="reference external" href="https://github.com/opencats/OpenCATS/releases/download/0.9.4-full/opencats-0.9.4-full.zip">OpenCATS-0.9.4-full</a> .  You can not install this yet.</li>
+<li>Go to the folder where the OpenCATS-0.9.4-full.zip file is located (usually the Downloads folder)</li>
+<li>RIGHT-CLICK on the <code class="docutils literal"><span class="pre">OpenCATS-0.9.4-full.zip</span></code> file</li>
 <li>Click <code class="docutils literal"><span class="pre">Extract</span> <span class="pre">All</span></code></li>
 <li>Change the folder that the files will be extracted to, to the following:</li>
 <li><code class="docutils literal"><span class="pre">C:\xampp\htdocs\</span></code></li>
@@ -195,31 +187,31 @@
 <p class="last">ONLY start the Apache and MySql services.  You do NOT need any of the other services.</p>
 </div>
 <img alt="_images/start-services-xampp.png" src="_images/start-services-xampp.png" />
-</div>
-<div class="section" id="composer-install-dependencies">
-<h2>Composer-Install dependencies<a class="headerlink" href="#composer-install-dependencies" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Click the Windows start button and type <code class="docutils literal"><span class="pre">cmd.exe</span></code>, then hit <code class="docutils literal"><span class="pre">enter</span></code></li>
-<li>This should open a windows command prompt.</li>
-<li>Type the following:  <code class="docutils literal"><span class="pre">cd</span> <span class="pre">C:\xampp\htdocs\OpenCATS-0.9.3-3</span></code></li>
-</ul>
-<img alt="_images/cmd.png" src="_images/cmd.png" />
-<ul class="simple">
-<li>Hit enter</li>
-<li>Type <code class="docutils literal"><span class="pre">composer</span> <span class="pre">install</span></code></li>
-<li>After Composer is done installing the dependencies, close the command prompt window.</li>
 <li>Stop the apache service (lower right corner, right click XAMPP, stop apache)</li>
 <li>Start the apache service</li>
 </ul>
 <img alt="_images/xampp-quickstart.png" src="_images/xampp-quickstart.png" />
 </div>
-<div class="section" id="optional-renaming-your-opencats-applicant-tracking-system-directory">
-<h2>Optional - Renaming your OpenCATS Applicant Tracking System directory.<a class="headerlink" href="#optional-renaming-your-opencats-applicant-tracking-system-directory" title="Permalink to this headline">¶</a></h2>
-<p>The current default directory name for the OpenCATS files is OpenCATS-0.9.3-3.  This will result in the web address in your browser being <a class="reference external" href="http://localhost/OpenCATS-0.9.3-3">http://localhost/OpenCATS-0.9.3-3</a>.</p>
+<div class="section" id="moving-your-opencats-applicant-tracking-system-directory">
+<h2>Moving your OpenCATS Applicant Tracking System directory.<a class="headerlink" href="#moving-your-opencats-applicant-tracking-system-directory" title="Permalink to this headline">¶</a></h2>
+<p>The current default directory name for the OpenCATS files is <code class="docutils literal"><span class="pre">C:\xampp\htdocs\home</span></code>.</p>
+<ul class="simple">
+<li>Go to: <code class="docutils literal"><span class="pre">C:\xampp\htdocs\home\travis\build\opencats</span></code></li>
+<li>Right click on the OpenCATS directory, select <code class="docutils literal"><span class="pre">cut</span></code>.</li>
+<li>Go to: <code class="docutils literal"><span class="pre">C:\xampp\htdocs</span></code>, right click and select <code class="docutils literal"><span class="pre">paste</span></code>.  We have moved the main OpenCATS directory into the htdocs directory.</li>
+<li>Right click on the <code class="docutils literal"><span class="pre">home</span></code> directory and delete it.  We don&#8217;t need it anymore.</li>
+<li>Double click on the OpenCATS directory to go into it.</li>
+<li>Right click on the <code class="docutils literal"><span class="pre">INSTALL_Block</span></code> directory and delete it.  The INSTALL_BLOCK file or folder will prevent OpenCATS from being installed on your system.</li>
+</ul>
+</div>
+<div class="section" id="optional-renaming-your-opencats-directory">
+<h2>OPTIONAL - Renaming your OpenCATS directory<a class="headerlink" href="#optional-renaming-your-opencats-directory" title="Permalink to this headline">¶</a></h2>
+<p>The current default directory name for the OpenCATS files is OpenCATS. This will result in the web address in your browser being <a class="reference external" href="http://localhost/OpenCATS">http://localhost/OpenCATS</a></p>
 <p>If you want to rename the main OpenCATS directory to something else, you can.</p>
 <ul class="simple">
 <li>Simply navigate to C:xampphtdocs</li>
-<li>Right click on OpenCATS-0.9.3-3</li>
+<li>Right click on the OpenCATS directory</li>
 <li>Click <code class="docutils literal"><span class="pre">rename</span></code></li>
 <li>Rename the directory whatever you want (example: ATS)</li>
 </ul>
@@ -261,7 +253,7 @@
 </div>
 <div class="section" id="set-up-opencats">
 <h2>Set up OpenCATS<a class="headerlink" href="#set-up-opencats" title="Permalink to this headline">¶</a></h2>
-<p>In your Web Browser, visit <a class="reference external" href="http://localhost/OpenCATS-0.9.3-3">http://localhost/OpenCATS-0.9.3-3</a> (adjust if you renamed the OpenCATS-0.9.3-3 directory).
+<p>In your Web Browser, visit <a class="reference external" href="http://localhost/OpenCATS">http://localhost/OpenCATS</a> (adjust if you renamed the OpenCATS directory).
 If OpenCATS has been configured correctly, you should see a page that looks like this:</p>
 <img alt="_images/installation-wizard.png" src="_images/installation-wizard.png" />
 <p><strong>Step 1 System Connectivity</strong>
@@ -296,7 +288,7 @@ Database Host: localhost</p>
 <p class="last">Restore installation from backup will be covered in a future tutorial</p>
 </div>
 <img alt="_images/step3.png" src="_images/step3.png" />
-<p><strong>Step 4 Setup resume indexing</strong></p>
+<p><strong>Step.4-full Setup resume indexing</strong></p>
 <p>Unfortunately, for now, there is no resume indexing.
 * Click <code class="docutils literal"><span class="pre">Skip</span> <span class="pre">this</span> <span class="pre">Step</span></code>.</p>
 <p><strong>Step 5 Mail Settings</strong></p>
