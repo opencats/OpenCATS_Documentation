@@ -97,7 +97,6 @@
 <li class="toctree-l2"><a class="reference internal" href="#ubuntu16-04-installing-php5-6">Ubuntu16.04-Installing PHP5.6</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#setting-up-your-mysql-mariadb-database">Setting up your MySQL/MariaDB database</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#download-the-opencats-files">Download the OpenCATS files</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#composer">Composer</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#server-and-directory-permissions">Server and Directory permissions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#install-resume-indexing-tools">Install resume indexing tools</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#install-the-opencats-software">Install the OpenCATS software</a></li>
@@ -279,43 +278,34 @@
 <div class="section" id="download-the-opencats-files">
 <h2>Download the OpenCATS files<a class="headerlink" href="#download-the-opencats-files" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><code class="docutils literal"><span class="pre">cd</span> <span class="pre">/var/www/html</span></code></li>
-<li><code class="docutils literal"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">wget</span> <span class="pre">https://github.com/opencats/OpenCATS/archive/0.9.3-3.tar.gz</span></code></li>
-<li><code class="docutils literal"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">tar</span> <span class="pre">-xvzf</span> <span class="pre">0.9.3-3.tar.gz</span></code></li>
-<li><code class="docutils literal"><span class="pre">$</span> <span class="pre">cd</span> <span class="pre">OpenCATS-0.9.3-3</span></code></li>
-<li><code class="docutils literal"><span class="pre">$</span> <span class="pre">ls</span></code>  Now we should see all of the OpenCATS files in the OpenCATS directory</li>
+<li><code class="docutils literal"><span class="pre">$</span> <span class="pre">cd</span> <span class="pre">/var/www/html</span></code></li>
+<li><code class="docutils literal"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">wget</span> <span class="pre">https://github.com/opencats/OpenCATS/releases/download/0.9.4/opencats-0.9.4-full.zip</span></code></li>
+<li><code class="docutils literal"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">unzip</span> <span class="pre">opencats-0.9.4-full.zip</span></code></li>
+<li><code class="docutils literal"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">mv</span> <span class="pre">/var/www/html/home/travis/build/opencats/OpenCATS</span> <span class="pre">opencats</span></code></li>
+<li><code class="docutils literal"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">rm</span> <span class="pre">-Rf</span> <span class="pre">/var/www/html/home</span> <span class="pre">/var/www/html/opencats/INSTALL_BLOCK</span></code></li>
 </ul>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">By default, this directory is named OpenCATS0.9.3-3.  You can name it whatever you want.  Just remember that all of the directory locations from here on must match the name of the directory you create, including capitol letters.</p>
+<p class="last">By default in this documentation for OpenCATS version 0.9.4 the directory would be <code class="docutils literal"><span class="pre">opencats</span></code>.  You can name it whatever you want.  Just remember that all of the directory locations from here on must match the name of the directory you create, including capitol letters.</p>
 </div>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">If you have tried installing OpenCATS before, or for any reason see something called INSTALL_BLOCK in this directory, you MUST delete it.  This will prevent OpenCATS from installing.  The command for that would be <code class="docutils literal"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">rm</span> <span class="pre">INSTALL_BLOCK</span></code>.</p>
 </div>
 </div>
-<div class="section" id="composer">
-<h2>Composer<a class="headerlink" href="#composer" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><code class="docutils literal"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">apt-get</span> <span class="pre">install</span> <span class="pre">composer</span></code></li>
-<li><code class="docutils literal"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">composer</span> <span class="pre">install</span></code></li>
-</ul>
-<p>If everything has gone correctly up to this point, composer will install a few things and get to the end with no errors.</p>
-</div>
 <div class="section" id="server-and-directory-permissions">
 <h2>Server and Directory permissions<a class="headerlink" href="#server-and-directory-permissions" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><code class="docutils literal"><span class="pre">$</span> <span class="pre">cd</span> <span class="pre">..</span></code> to go up one directory into the main html folder</li>
-<li><code class="docutils literal"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">chown</span> <span class="pre">www-data:www-data</span> <span class="pre">OpenCATS-0.9.3-3</span></code></li>
+<li><code class="docutils literal"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">chown</span> <span class="pre">www-data:www-data</span> <span class="pre">opencats</span></code></li>
 </ul>
 <div class="admonition warning">
 <p class="first admonition-title">Warning</p>
-<p class="last">make sure this is set to <strong>EXACTLY</strong> the name of your OpenCATS directory, default for version 0.9.3-3 would be <code class="docutils literal"><span class="pre">OpenCATS-0.9.3-3</span></code></p>
+<p class="last">make sure this is set to <strong>EXACTLY</strong> the name of your OpenCATS directory, default for version 0.9.4 would be <code class="docutils literal"><span class="pre">OpenCATS-0.9.4</span></code></p>
 </div>
 <ul class="simple">
-<li><code class="docutils literal"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">chown</span> <span class="pre">-R</span> <span class="pre">www-data:www-data</span> <span class="pre">OpenCATS-0.9.3-3</span></code></li>
-<li><code class="docutils literal"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">chmod</span> <span class="pre">770</span> <span class="pre">OpenCATS-0.9.3-3/attachments</span></code></li>
-<li><code class="docutils literal"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">chmod</span> <span class="pre">770</span> <span class="pre">OpenCATS-0.9.3-3/upload</span></code></li>
+<li><code class="docutils literal"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">chown</span> <span class="pre">-R</span> <span class="pre">www-data:www-data</span> <span class="pre">opencats</span></code></li>
+<li><code class="docutils literal"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">chmod</span> <span class="pre">770</span> <span class="pre">opencats/attachments</span></code></li>
+<li><code class="docutils literal"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">chmod</span> <span class="pre">770</span> <span class="pre">opencats/upload</span></code></li>
 </ul>
 </div>
 <div class="section" id="install-resume-indexing-tools">
@@ -326,7 +316,7 @@
 </div>
 <div class="section" id="install-the-opencats-software">
 <h2>Install the OpenCATS software<a class="headerlink" href="#install-the-opencats-software" title="Permalink to this headline">¶</a></h2>
-<p>In your browser, go to localhost/OpenCATS-0.9.3-3 (Or use the address of your server or VPS in place of &#8220;localhost&#8221;).</p>
+<p>In your browser, go to localhost/opencats (Or use the address of your server or VPS in place of &#8220;localhost&#8221;).</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">If you have already attempted to install OpenCATS and the installer doesn&#8217;t load, check to see if there is a file called &#8216;INSTALL_BLOCK&#8217; in the OpenCATS directory. Delete it to allow the installer to run.</p>

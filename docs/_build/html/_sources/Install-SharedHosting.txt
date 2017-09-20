@@ -85,7 +85,7 @@ Now you should see the extracted folder ``home`` listed in your public _html dir
 
 * Go back into your main html directory (public_html or something similar), right click and delete the ``home`` folder (NOT the home.html file if you have one there).
 
-* Double click on the OpenCATS directory and find folder named INSTALL_BLOCK, right click and delete it.  The INSTALL_BLOCK file, or directory will prevent OpenCATS from installing on your system.
+* Double click on the OpenCATS directory and find folder named ``INSTALL_BLOCK``, right click and delete it.  The ``INSTALL_BLOCK`` file or directory will prevent OpenCATS from installing on your system.
 
 CPanel-PHP
 ----------

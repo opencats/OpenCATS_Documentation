@@ -5,6 +5,8 @@ These install scripts will dramatically reduce the time and effort necessary for
 
 .. warning:: These scripts are ONLY for Linux systems that do not have Apache, MySQL/MariaDB and PHP installed.  This will install a full lamp stack from scratch.  It will likely wipe out any existing settings that are in place. I can not stress this enough.
 
+All scripts are updated for OpenCATS-0.9.4 using the Travis build (no more composer steps).
+
 Having gotten that out of the way, let's proceed.
 
 Open a terminal

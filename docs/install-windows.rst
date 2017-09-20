@@ -55,7 +55,7 @@ The current default directory name for the OpenCATS files is ``C:\xampp\htdocs\h
 OPTIONAL - Renaming your OpenCATS directory
 -------------------------------------------
 
-The current default directory name for the OpenCATS files is OpenCATS. This will result in the web address in your browser being http://localhost/OpenCATS
+The current default directory name for the OpenCATS files is opencats. This will result in the web address in your browser being http://localhost/opencats
 
 If you want to rename the main OpenCATS directory to something else, you can. 
 
@@ -102,7 +102,7 @@ You should now see "opencats" listed among the databases on the left.
 Set up OpenCATS
 ---------------
 
-In your Web Browser, visit http://localhost/OpenCATS (adjust if you renamed the OpenCATS directory).
+In your Web Browser, visit http://localhost/opencats (adjust if you renamed the OpenCATS directory).
 If OpenCATS has been configured correctly, you should see a page that looks like this: 
 
 .. image:: ../docs/_static/installation-wizard.png

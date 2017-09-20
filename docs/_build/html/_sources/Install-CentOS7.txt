@@ -104,12 +104,9 @@ Download OpenCATS Files
 * ``$ sudo rm -Rf /var/www/html/home /var/www/html/opencats/INSTALL_BLOCK``
 
 
-.. note:: If everything is done correctly, there should be no composer errors.  If there are errors, take a close look at them to see what is missing.
-
 
 Server and Directory permissions
 --------------------------------
-
 .. note:: CentOS runs SElinux for additional security layers.  We need to do a few additional things on permissions.
 
 * ``$ sudo chown apache:apache -R opencats``
@@ -136,7 +133,7 @@ If you want to remove the files after you have installed them then do:
 Install the OpenCATS software
 -----------------------------
 
-In your browser, go to localhost/OpenCATS-opencats-0.9.3/  (Or use the address of your server or VPS in place of "localhost").
+In your browser, go to localhost/opencats/  (Or use the address of your server or VPS in place of "localhost").
 
 .. note::  If you have already attempted to install OpenCATS and the installer doesn't load, check to see if there is a file called 'INSTALL_BLOCK' in the OpenCATS directory. Delete it to allow the installer to run.
 

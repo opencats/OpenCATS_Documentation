@@ -1,5 +1,8 @@
 Contents
 ========
+**Gentle Warning**
+
+**Table of Contents**
 
 **Preface**
   * What is this manual?
@@ -10,16 +13,20 @@ Contents
   * Original CATS/Cognizo developers and contributors listed
   * OpenCATS Developers and contributors
 
-**Introduction**
-  * OpenCATS vs CATSOne vs "open source"
-  * General features
-  * Recruiting cycle/Workflow
+**Introduction and Overview**
+  * What is an Applicant tracking system (ATS)?
+  * How is it free and what is Open Source software?
+  * OpenCATS vs CATSOne vs “open source”
+  * What can OpenCATS be used for?
+  * How does OpenCATS compare to other free software and paid Applicant Tracking Systems?
+  * OpenCATS General Features
+
 
 **Windows-OpenCATS Installation instructions**
   * Windows Prerequisites
   * Downloading software and preparing your system
   * Start Xampp
-  * Composer-Install dependencies
+  * Moving your OpenCATS Applicant Tracking System directory
   * Optional-Renaming your OpenCATS default directory
   * Launch PhPMyAdmin
   * Set up OpenCATS
@@ -29,8 +36,6 @@ Contents
   * CPanel-File Manager
   * CPanel-PHP
   * CPanel-MySQL
-  * CPanel-SSH
-  * Install Composer and dependencies
   * Install the OpenCATS software
 
 **Install Scripts-Linux**
@@ -53,7 +58,6 @@ Contents
   * Installing PHP5.6
   * Setting up your MySQL/MariaDB database
   * Download the OpenCATS files
-  * Composer installation and dependencies
   * Server and Directory permissions
   * Install resume indexing tools
   * Install the OpenCATS software
@@ -64,7 +68,6 @@ Contents
   * Installing PHP5.6
   * Setting up your MySQL/MariaDB database
   * Download the OpenCATS files
-  * Composer installation and dependencies
   * Server and Directory permissions
   * Install resume indexing tools
   * Install the OpenCATS software
@@ -74,7 +77,7 @@ Contents
   * Installing Apache2
   * Installing PHP5
   * Setting up your MySQL/MariaDB database
-  * Composer installation and OpenCATS files
+  * Download OpenCATS Files
   * Server and Directory permissions
   * Install resume indexing tools
   * Install the OpenCATS software
@@ -98,7 +101,18 @@ Contents
   * Add a new job order
   * Adding a candidate and attaching to the job order pipeline
 
+**OpenCATS Backup/Restore and Upgrade Instructions-THIS SECTION INCOMPLETE!**
+  * Backup/Restore best practices and things to consider
+  * About this documentation/different environments
+  * Pros and Cons: GUI vs. Non-GUI
+  * GUI (Graphical, point and click)
+  * Non-GUI
+  * Testing your backups/Setting up a test environment to reuse
+  * Changing your user passwords in phpmyadmin
+
 **Short overview of original OpenCATS Source code**
+
+**F.A.Q. for OpenCATS applicant tracking system**
 
 
 **The remaining items need to be done**

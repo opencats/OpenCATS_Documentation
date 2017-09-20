@@ -97,13 +97,13 @@ Setting up your MySQL/MariaDB database
 Download the OpenCATS files
 ---------------------------
 
-* ``cd /var/www/html``
-* ``$ sudo wget https://github.com/opencats/OpenCATS/archive/0.9.3-3.tar.gz``
-* ``$ sudo tar -xvzf 0.9.3-3.tar.gz``
-* ``$ cd OpenCATS-0.9.3-3``
-* ``$ ls``  Now we should see all of the OpenCATS files in the OpenCATS directory
+* ``$ cd /var/www/html``
+* ``$ sudo wget https://github.com/opencats/OpenCATS/releases/download/0.9.4/opencats-0.9.4-full.zip``
+* ``$ sudo unzip opencats-0.9.4-full.zip``
+* ``$ sudo mv /var/www/html/home/travis/build/opencats/OpenCATS opencats``
+* ``$ sudo rm -Rf /var/www/html/home /var/www/html/opencats/INSTALL_BLOCK``
 
-.. note:: By default, this directory is named OpenCATS0.9.3-3.  You can name it whatever you want.  Just remember that all of the directory locations from here on must match the name of the directory you create, including capitol letters.
+.. note:: By default in this documentation for OpenCATS version 0.9.4 the directory would be ``opencats``.  You can name it whatever you want.  Just remember that all of the directory locations from here on must match the name of the directory you create, including capital letters.
 
 .. note:: If you have tried installing OpenCATS before, or for any reason see something called INSTALL_BLOCK in this directory, you MUST delete it.  This will prevent OpenCATS from installing.  The command for that would be ``$ sudo rm INSTALL_BLOCK``.
 
@@ -111,14 +111,13 @@ Download the OpenCATS files
 Server and Directory permissions
 --------------------------------
 
-* ``$ cd ..`` to go up one directory into the main html folder
-* ``$ sudo chown www-data:www-data OpenCATS-0.9.3-3``
+* ``$ sudo chown www-data:www-data opencats``
 
-.. warning:: make sure this is set to **EXACTLY** the name of your OpenCATS directory, default for version 0.9.3-3 would be ``OpenCATS-0.9.3-3``
+.. warning:: make sure this is set to **EXACTLY** the name of your OpenCATS directory, default for version 0.9.4 would be ``OpenCATS-0.9.4``
 
-* ``$ sudo chown -R www-data:www-data OpenCATS-0.9.3-3``
-* ``$ sudo chmod 770 OpenCATS-0.9.3-3/attachments``
-* ``$ sudo chmod 770 OpenCATS-0.9.3-3/upload``
+* ``$ sudo chown -R www-data:www-data opencats``
+* ``$ sudo chmod 770 opencats/attachments``
+* ``$ sudo chmod 770 opencats/upload``
 
 Install resume indexing tools
 -----------------------------
@@ -132,7 +131,7 @@ Install resume indexing tools
 Install the OpenCATS software
 -----------------------------
 
-In your browser, go to localhost/OpenCATS-0.9.3-3 (Or use the address of your server or VPS in place of "localhost").
+In your browser, go to localhost/opencats (Or use the address of your server or VPS in place of "localhost").
 
 .. note::  If you have already attempted to install OpenCATS and the installer doesn't load, check to see if there is a file called 'INSTALL_BLOCK' in the OpenCATS directory. Delete it to allow the installer to run.
 

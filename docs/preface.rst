@@ -10,7 +10,7 @@ It describes how to install and configure OpenCATS, how recruiters can use it to
 Release information
 -------------------
 
-The current OpenCATS release is 0.9.3.3-3 "Inferno". 
+The current OpenCATS release is 0.9.4 "Countach". 
 
 See the changelog.MD file for details.
 
