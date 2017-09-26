@@ -22,7 +22,7 @@ Configure and start MAMP
 Start MAMP (`First steps <http://documentation.mamp.info/en/MAMP-Mac/First-Steps/>`_)
 
 - On your MAMP click on ``Preferences``
-- Configure MAMP based on 'MAMP instructions <http://documentation.mamp.info/en/MAMP-Mac/Preferences/>`_
+- Configure MAMP based on `MAMP instructions <http://documentation.mamp.info/en/MAMP-Mac/Preferences/>`_
 
 Configure Web Server
 
