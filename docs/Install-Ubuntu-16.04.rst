@@ -109,7 +109,7 @@ Download the OpenCATS files
 * ``$ sudo mv /var/www/html/home/travis/build/opencats/OpenCATS opencats``
 * ``$ sudo rm -Rf /var/www/html/home /var/www/html/opencats/INSTALL_BLOCK``
 
-.. note:: By default in this documentation for OpenCATS version 0.9.4 the directory would be ``opencats``.  You can name it whatever you want.  Just remember that all of the directory locations from here on must match the name of the directory you create, including capitol letters.
+.. note:: By default in this documentation for OpenCATS version 0.9.4 the directory would be ``opencats``.  You can name it whatever you want.  Just remember that all of the directory locations from here on must match the name of the directory you create, including capital letters.
 
 .. note:: If you have tried installing OpenCATS before, or for any reason see something called INSTALL_BLOCK in this directory, you MUST delete it.  This will prevent OpenCATS from installing.  The command for that would be ``$ sudo rm INSTALL_BLOCK``.
 
