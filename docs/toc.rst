@@ -38,6 +38,15 @@ Contents
   * CPanel-MySQL
   * Install the OpenCATS software
 
+**Install on MacOS**
+  * OSX Prerequisites
+  * Downloading software and preparing your system
+  * Configure and start MAMP
+  * Create database
+  * Moving your OpenCATS Applicant Tracking System directory
+  * OPTIONAL - Renaming your OpenCATS directory
+  * Set up OpenCATS
+
 **Install Scripts-Linux**
   * Get the correct script for your distribution
   * Install the OpenCATS software
