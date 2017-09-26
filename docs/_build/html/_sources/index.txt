@@ -20,6 +20,7 @@ Contents:
    introduction
    install-windows
    Install-SharedHosting
+   Install-OSX
    InstallScripts-Linux
    Install-Ubuntu-14.04
    Install-Ubuntu-16.04

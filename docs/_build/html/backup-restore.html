@@ -89,6 +89,7 @@
 <li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction and Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="install-windows.html">Windows - OpenCATS Installation Instructions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Install-SharedHosting.html">Install on Shared-hosting (Bluehost, GoDaddy or similar)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Install-OSX.html">OS X - OpenCATS Installation Instructions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="InstallScripts-Linux.html">Install Scripts-Linux</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Install-Ubuntu-14.04.html">Install on Ubuntu 14.04</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Install-Ubuntu-16.04.html">Install on Ubuntu 16.04</a></li>
@@ -102,6 +103,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#pros-and-cons-gui-vs-non-gui">Pros and Cons: GUI vs. Non-GUI</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#gui-graphical-point-and-click">GUI (Graphical, point and click)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#non-gui">Non-GUI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#automating-a-windows-backup">Automating a windows backup</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#testing-your-backups-setting-up-a-test-environment-to-reuse">Testing your backups/Setting up a test environment to reuse</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#changing-your-user-passwords-in-phpmyadmin">Changing your user passwords in phpmyadmin</a></li>
 </ul>
@@ -277,18 +279,55 @@ Log in to phpmyadmin.  Refer to the installation instructions, under the php or 
 <p>Click <code class="docutils literal"><span class="pre">Go</span></code>.  Phpmyadmin will generate the database backup file and you should automatically start downloading it.</p>
 <p>The file will be named after your database name with an sql extension.  Mine, in this case, was named octest.sql.</p>
 <p>Make sure you move your file to a safe place.</p>
-<p>Linux/VPS</p>
-<p>If you are running Linux, or a VPS, without phpmyadmin, you will need to back up through the command line.</p>
-<p>Enter the following command (replace adminname and current database name with your own)</p>
-<p>$ <code class="docutils literal"><span class="pre">mysqldump</span> <span class="pre">-p</span> <span class="pre">-u</span> <span class="pre">mysqladminname</span> <span class="pre">opencatsdatabasename</span> <span class="pre">&gt;</span> <span class="pre">opencats.sql</span></code></p>
-<p>This should produce the sql database backup file.</p>
 <p><strong>Attachments backup</strong></p>
+<p><strong>Restore non-gui</strong>
+In phpmyadmin:
+Select newly created database from list on the left
+Click import in the upper row
+browse
+select your opencatsdatabasebackup.sql file
+Scroll to the bottom and click &#8220;go&#8221;</p>
+<p><strong>Restore attachments</strong></p>
+<p>Install opencats</p>
+</div>
+<div class="section" id="automating-a-windows-backup">
+<h2>Automating a windows backup<a class="headerlink" href="#automating-a-windows-backup" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="http://forums.opencats.org/viewtopic.php?f=2&amp;t=810&amp;start=10">http://forums.opencats.org/viewtopic.php?f=2&amp;t=810&amp;start=10</a></p>
 </div>
 <div class="section" id="testing-your-backups-setting-up-a-test-environment-to-reuse">
 <h2>Testing your backups/Setting up a test environment to reuse<a class="headerlink" href="#testing-your-backups-setting-up-a-test-environment-to-reuse" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="changing-your-user-passwords-in-phpmyadmin">
 <h2>Changing your user passwords in phpmyadmin<a class="headerlink" href="#changing-your-user-passwords-in-phpmyadmin" title="Permalink to this headline">¶</a></h2>
+<p>Try this</p>
+<p><strong>Restore non-gui</strong>
+Create new database/user in phpmyadmin - Follow install documentation for this step if necessary</p>
+<p>In phpmyadmin:
+Select newly created database from list on the left
+Click import in the upper row
+browse
+select your opencatsdatabasebackup.sql file
+Scroll to the bottom and click &#8220;go&#8221;
+Create user (follow steps from documentation)</p>
+<p>Check for INSTALL_BLOCK file or folder in opencats directory
+Install opencats</p>
+<p>Use existing OpenCATS installation and automatically preform any necessary upgrade (recommended).</p>
+<p>Merge/overwrite old attachments folder into new Opencats attachments directory</p>
+<p>In phpmyadmin:
+Create new database in phpmyadmin - Follow install documentation for this step if necessary
+Select newly created database from list on the left
+Click import in the upper row
+browse
+select your opencatsdatabasebackup.sql file
+Scroll to the bottom and click &#8220;go&#8221;
+Create user (follow steps from documentation) for the database and assign rights.</p>
+<p>In NEW opencats directory
+Check for INSTALL_BLOCK file or folder in opencats directory
+Install opencats through browser</p>
+<p>When you get to the intall type step (new, demo, restore, etc. ) You should see:
+Use existing OpenCATS installation and automatically preform any necessary upgrade (recommended).
+Select that option.</p>
+<p>That should work. Post back with any questions/issues.</p>
 </div>
 </div>
 

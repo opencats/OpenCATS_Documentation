@@ -1,78 +1,61 @@
-Windows - OpenCATS Installation Instructions
+OS X - OpenCATS Installation Instructions
 ============================================
 
  
-Windows Prerequisites
+OS X Prerequisites
 ---------------------
 
-Installation instructions are given for the XAMPP default install environment only.  WAMPP will also work if you prefer it.  The steps will be a little different.
+Installation instructions are given for the MAMP default install environment only.
+Requires OS X 10.10.5 or later.
 
 Downloading software and preparing your system
 ----------------------------------------------
  
-* Download - `XAMPP <https://www.apachefriends.org/xampp-files/5.6.28/xampp-win32-5.6.28-1-VC11-installer.exe>`_
-* Install XAMPP
-* Download - `OpenCATS-0.9.4-full <https://github.com/opencats/OpenCATS/releases/download/0.9.4-full/opencats-0.9.4-full.zip>`_ .  You can not install this yet.
-* Go to the folder where the OpenCATS-0.9.4-full.zip file is located (usually the Downloads folder)
-* RIGHT-CLICK on the ``OpenCATS-0.9.4-full.zip`` file
-* Click ``Extract All``
-* Change the folder that the files will be extracted to, to the following: ``C:\xampp\htdocs\``
-* Click ``extract``
-
-Start Xampp
------------
-
-* Click the Windows start button and type ``xampp``
-* Hit ``enter``. This will open the XAMPP control panel.
-
-.. image:: ../docs/_static/start-xampp.png
-
-* On the right side of Apache and MySQL, click ``start`` for each one.
-
-.. note:: ONLY start the Apache and MySql services.  You do NOT need any of the other services.
-
-.. image:: ../docs/_static/start-services-xampp.png
-
-* Stop the apache service (lower right corner, right click XAMPP, stop apache)
-* Start the apache service
-
-.. image:: ../docs/_static/xampp-quickstart.png
-
-Moving your OpenCATS Applicant Tracking System directory.
----------------------------------------------------------
-
-The current default directory name for the OpenCATS files is ``C:\xampp\htdocs\home``. 
-
-* Go to: ``C:\xampp\htdocs\home\travis\build\opencats``
-* Right click on the OpenCATS directory, select ``cut``.
-* Go to: ``C:\xampp\htdocs``, right click and select ``paste``.  We have moved the main OpenCATS directory into the htdocs directory.
-* Right click on the ``home`` directory and delete it.  We don't need it anymore.
-* Double click on the OpenCATS directory to go into it.
-* Right click on the ``INSTALL_Block`` directory and delete it.  The INSTALL_BLOCK file or folder will prevent OpenCATS from being installed on your system.
+* Download and install - `MAMP <https://www.mamp.info/en/downloads/>`_
+* Download - `OpenCATS-0.9.4-full <https://github.com/opencats/OpenCATS/releases/download/0.9.4-full>`_
+* Extract the files to : ``/Applications/MAMP/htdocs``
 
 
-OPTIONAL - Renaming your OpenCATS directory
--------------------------------------------
+Configure and start MAMP
+------------------------
 
-The current default directory name for the OpenCATS files is opencats. This will result in the web address in your browser being http://localhost/opencats
+Start MAMP (`First steps <http://documentation.mamp.info/en/MAMP-Mac/First-Steps/>`_)
 
-If you want to rename the main OpenCATS directory to something else, you can. 
+- On your MAMP click on ``Preferences``
+- Configure MAMP based on 'MAMP instructions <http://documentation.mamp.info/en/MAMP-Mac/Preferences/>`_
 
-* Simply navigate to C:\xampp\htdocs
-* Right click on the OpenCATS directory
-* Click ``rename``
-* Rename the directory whatever you want (example: ATS)
+Configure Web Server
 
-Now, to access it, your browser address will be http://localhost/ATS
+- Go to the Web Server tab
+- Select Apache or Nginx (whichever is preferred)
+- Select Document root - ``/Applications/MAMP/htdocs``
 
+Setup PHP version
 
-Launch phpMyAdmin
+- Click the php tab
+- Select php version 5.6.X
+
+.. warning:: OpenCATS does not currently support php7.  It must be 5.6.X
+
+.. note:: if php 5.6.X is not in the options (free version supports only 2 php versions), it is necessary to define 'latest' versions.
+
+Setup available PHP versions:
+
+- Open terminal
+- Go to ``/Applications/MAMP/bin/php/`` directory
+- List php versions ``ls`` 
+- Only the last two php versions listed with above command are displayed in the MAMP
+- It is necessary to rename unwanted versions to move them to the begining of the list.
+  Example: php5.6.1 and php5.6.15, then rename like this ``php5.6.15`` to ``aphp5.6.15`` (``mv php5.6.15 aphp5.6.15``)
+- Close and start MAMP, you shoud see in preferences php versions as changed.
+
+Create database
 -----------------
 
-* In your browser, go to:  http://localhost/phpmyadmin/
-
-.. note:: If phpmyadmin does not load in this screen, stop and start your apache service again per the instructions above.
-
+* On your MAMP click on ``Open WebStart Page``
+* It will open a browser with the MAMP dashboard
+* From Tools select phpMyAdmin
+* It opens phpMyAdmin in browser
 * On the left side, click ``new`` to create a new database
 
 .. image:: ../docs/_static/phpmyadmin-main.png
@@ -98,10 +81,43 @@ You should now see "opencats" listed among the databases on the left.
 
 .. image:: ../docs/_static/phpmyadmin-newuser2.png
 
+
+Moving your OpenCATS Applicant Tracking System directory.
+---------------------------------------------------------
+
+The current default directory name for the OpenCATS files is ``/Applications/MAMP/htdocs/home``. 
+
+* Go to: ``/Applications/MAMP/htdocs/travis/build/opencats``
+* Right click on the ``OpenCATS`` directory, select ``cut``.
+* Go to: ``/Applications/MAMP/htdocs``, right click and select ``paste``.  We have moved the main OpenCATS directory into the htdocs directory.
+* Right click on the ``home`` directory and delete it.  We don't need it anymore.
+* Double click on the OpenCATS directory to go into it.
+* Right click on the ``INSTALL_Block`` directory and delete it.  The INSTALL_BLOCK file or folder will prevent OpenCATS from being installed on your system.
+
+
+OPTIONAL - Renaming your OpenCATS directory
+-------------------------------------------
+
+The current default directory name for the OpenCATS files is opencats. This will result in the web address in your browser being http://localhost/opencats
+
+If you want to rename the main OpenCATS directory to something else, you can. 
+
+* Simply navigate to /Applications/MAMP/htdocs/
+* Right click on the OpenCATS directory
+* Click ``rename``
+* Rename the directory whatever you want (example: ATS)
+
+Now, to access it, your browser address will be http://localhost/ATS
+
+
 Set up OpenCATS
 ---------------
 
-In your Web Browser, visit http://localhost/opencats (adjust if you renamed the OpenCATS directory).
+- On your MAMP click on ``Open WebStart Page``
+- It will open a browser with MAMP dashboard
+- From the menu, choose ``My Website``
+- It will open the OpenCATS installation page in the browser.
+
 If OpenCATS has been configured correctly, you should see a page that looks like this: 
 
 .. image:: ../docs/_static/installation-wizard.png
@@ -145,10 +161,10 @@ For a new installation, select ``New Installation``, then ``next``
 
 
 
-**Step.4-full Setup resume indexing**
+**Step 4 Setup resume indexing**
 
 Unfortunately, for now, there is no resume indexing.  
-* Click ``Skip this Step``.
+- Click ``Skip this Step``.
 
 **Step 5 Mail Settings**
 
@@ -189,12 +205,5 @@ Click ``Start OpenCATS`` for your login screen.
 Your brand new OpenCATS applicant System!
 
 .. image:: ../docs/_static/first-login.png
-
-
-
-
-
-
-
 
 

@@ -16,8 +16,7 @@ Downloading software and preparing your system
 * Go to the folder where the OpenCATS-0.9.4-full.zip file is located (usually the Downloads folder)
 * RIGHT-CLICK on the ``OpenCATS-0.9.4-full.zip`` file
 * Click ``Extract All``
-* Change the folder that the files will be extracted to, to the following:
-* ``C:\xampp\htdocs\``
+* Change the folder that the files will be extracted to, to the following: ``C:\xampp\htdocs\``
 * Click ``extract``
 
 Start Xampp
