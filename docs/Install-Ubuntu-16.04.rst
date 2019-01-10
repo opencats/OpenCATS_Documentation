@@ -12,25 +12,28 @@ These instructions will walk you through setting up LAMP (Linux Apache Mysql PHP
 Ubuntu16.04-Installing MySQL 5/Mariadb
 ----------------------------------------------
 
-.. note:: mysql and mariadb are basically the same software with different names.  You can use either, just change the commands to the appropriate name.
-
-
 * ``$ sudo apt-get update``
+
+.. note:: mysql and mariadb are basically the same software with different names.  You can use either, just replace the following command with mysql if you'd prefer to install that.
+
 * ``$ sudo apt-get install mariadb-server mariadb-client``
+
+.. note:: Even if you installed mariadb, use the following command to run the installation. In order to log into MariaDB to secure it, we'll need the current password for the root user.  If you've just installed MariaDB, **and you haven't** set up the root password yet, **the password will be blank**, so you should just press enter here.  If you **have set up a MySQL/MariaDB root password already** you will enter it here.
+
 * ``$ sudo mysql_secure_installation``
 
-.. note:: In order to log into MariaDB to secure it, we'll need the current password for the root user.  If you've just installed MariaDB, **and you haven't** set up the root password yet, **the password will be blank**, so you should just press enter here.  If you **have set up a MySQL/MariaDB root password already** you will enter it here.
+.. note:: The following is the prompt you will receive and the answers we recommend you give.
 
-* Set root password? [Y/n] Y
-* New password: <--yourmariadbpassword  (Remember this or write it down!)
-* Re-enter new password: <--yourmariadbpassword (Remember this or write it down!)
-* Password updated successfully!
-* Reloading privilege tables..... Success!
-* Remove anonymous users? [Y/n] Y
-* Disallow root login remotely? [Y/n] Y
-* Remove test database and access to it? [Y/n] Y
-* Reload privilege tables now? [Y/n] Y
-* All done!  If you've completed all of the above steps, your MariaDB,installation should now be secure.  Thanks for using MariaDB!
+* ``Set root password? [Y/n] Y``
+* ``New password: `` <--yourmariadbpassword  (Remember this or write it down!)
+* ``Re-enter new password: `` <--yourmariadbpassword (Remember this or write it down!)
+* ``Password updated successfully!``
+* ``Reloading privilege tables..... Success!``
+* ``Remove anonymous users? [Y/n] Y``
+* ``Disallow root login remotely? [Y/n] Y``
+* ``Remove test database and access to it? [Y/n] Y``
+* ``Reload privilege tables now? [Y/n] Y``
+* ``All done!  If you've completed all of the above steps, your MariaDB,installation should now be secure.  Thanks for using MariaDB!``
 
 
 Ubuntu16.04-Installing Apache2
@@ -95,7 +98,7 @@ Then it will ask you for your mysql root password
 * You should see a prompt like this: ``mysql>``
 * ``mysql>`` CREATE USER 'opencats'@'localhost' IDENTIFIED BY 'databasepassword';
 * ``mysql>`` CREATE DATABASE opencats;
-* ``mysql>`` GRANT ALL PRIVILEGES ON 'opencats'.* TO 'opencats'@'localhost' IDENTIFIED BY 'databasepassword';
+* ``mysql>`` GRANT ALL PRIVILEGES ON opencats.* TO 'opencats'@'localhost' IDENTIFIED BY 'databasepassword';
 * ``mysql>`` exit;
 
 .. note:: Make sure you don't forget the ; on the end of every line!
@@ -104,12 +107,13 @@ Download the OpenCATS files
 ---------------------------
 
 * ``$ cd /var/www/html``
-* ``$ sudo wget https://github.com/opencats/OpenCATS/releases/download/0.9.4/opencats-0.9.4-full.zip``
-* ``$ sudo unzip opencats-0.9.4-full.zip``
+* ``$ sudo wget https://github.com/opencats/OpenCATS/releases/download/0.9.4-2/opencats-0.9.4-2-full.zip``
+* ``$ sudo unzip opencats-0.9.4-2-full.zip``
+
+.. note:: By default in this documentation for OpenCATS version 0.9.4-2 the directory would be ``opencats``.  You can name it whatever you want.  Just remember that all of the directory locations from here on must match the name of the directory you create, including capitol letters.
+
 * ``$ sudo mv /var/www/html/home/travis/build/opencats/OpenCATS opencats``
 * ``$ sudo rm -Rf /var/www/html/home /var/www/html/opencats/INSTALL_BLOCK``
-
-.. note:: By default in this documentation for OpenCATS version 0.9.4 the directory would be ``opencats``.  You can name it whatever you want.  Just remember that all of the directory locations from here on must match the name of the directory you create, including capitol letters.
 
 .. note:: If you have tried installing OpenCATS before, or for any reason see something called INSTALL_BLOCK in this directory, you MUST delete it.  This will prevent OpenCATS from installing.  The command for that would be ``$ sudo rm INSTALL_BLOCK``.
 
