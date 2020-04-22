@@ -13,40 +13,39 @@
 
   
   
+  
+  
 
   
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
-  
-  
-    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-    <link rel="top" title="OpenCATS 0.9.3 documentation" href="index.html"/>
-        <link rel="next" title="Install on Ubuntu 14.04" href="Install-Ubuntu-14.04.html"/>
-        <link rel="prev" title="Install on Shared-hosting (Bluehost, GoDaddy or similar)" href="Install-SharedHosting.html"/> 
-
-  
-  <script src="_static/js/modernizr.min.js"></script>
-
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="OS X - OpenCATS Installation Instructions" href="Install-OSX.html" /> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
+   
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -81,7 +80,10 @@
           
             
             
-                <ul class="current">
+              
+            
+            
+              <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="warning.html">Gentle warning-read first</a></li>
 <li class="toctree-l1"><a class="reference internal" href="toc.html">Contents</a></li>
 <li class="toctree-l1"><a class="reference internal" href="preface.html">Preface</a></li>
@@ -89,15 +91,13 @@
 <li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction and Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="install-windows.html">Windows - OpenCATS Installation Instructions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Install-SharedHosting.html">Install on Shared-hosting (Bluehost, GoDaddy or similar)</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">Install Scripts-Linux</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="Install-OSX.html">OS X - OpenCATS Installation Instructions</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Install Scripts-Linux</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#get-the-correct-script-for-your-distribution">Get the correct script for your distribution</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#install-the-opencats-software">Install the OpenCATS software</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="Install-Ubuntu-14.04.html">Install on Ubuntu 14.04</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Install-Ubuntu-16.04.html">Install on Ubuntu 16.04</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Install-Debian8.html">Install on Debian 8 Jessie</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Install-CentOS7.html">Install-CentOS 7</a></li>
 <li class="toctree-l1"><a class="reference internal" href="screens-in-depth.html">Screens In-Depth</a></li>
 <li class="toctree-l1"><a class="reference internal" href="useoc.html">Using OpenCATS-The building blocks: companies, contacts, job orders, and candidates</a></li>
 <li class="toctree-l1"><a class="reference internal" href="backup-restore.html">OpenCATS Backup/Restore and Upgrade Instructions-THIS SECTION INCOMPLETE!</a></li>
@@ -114,34 +114,54 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="index.html">OpenCATS</a>
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">OpenCATS</a>
+        
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
- 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="index.html">Docs</a> &raquo;</li>
-      
-    <li>Install Scripts-Linux</li>
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Install Scripts-Linux</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
-            <a href="_sources/InstallScripts-Linux.txt" rel="nofollow"> View page source</a>
+            
+            <a href="_sources/InstallScripts-Linux.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -149,41 +169,37 @@
             
   <div class="section" id="install-scripts-linux">
 <h1>Install Scripts-Linux<a class="headerlink" href="#install-scripts-linux" title="Permalink to this headline">¶</a></h1>
-<p>These install scripts will dramatically reduce the time and effort necessary for installing OpenCATS on a Linux system.  HOWEVER, there are some very specific requirements that must be met for using these scripts.  If you don&#8217;t meet these requirements, there is no telling what can happen to any web-software that you are running from the system you use this script on.</p>
+<p>These install scripts will dramatically reduce the time and effort necessary for installing OpenCATS on a Linux system.  HOWEVER, there are some very specific requirements that must be met for using these scripts.  If you don’t meet these requirements, there is no telling what can happen to any web-software that you are running from the system you use this script on.</p>
 <div class="admonition warning">
 <p class="first admonition-title">Warning</p>
 <p class="last">These scripts are ONLY for Linux systems that do not have Apache, MySQL/MariaDB and PHP installed.  This will install a full lamp stack from scratch.  It will likely wipe out any existing settings that are in place. I can not stress this enough.</p>
 </div>
-<p>All scripts are updated for OpenCATS-0.9.4 using the Travis build (no more composer steps).</p>
-<p>Having gotten that out of the way, let&#8217;s proceed.</p>
+<p>This script is updated for OpenCATS-0.9.4-3.</p>
+<p>Having gotten that out of the way, let’s proceed.</p>
 <p>Open a terminal</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">If you get a wget error, install wget.  <code class="docutils literal"><span class="pre">sudo</span> <span class="pre">apt-get</span> <span class="pre">install</span> <span class="pre">wget</span></code> in Ubuntu and Debian, <code class="docutils literal"><span class="pre">sudo</span> <span class="pre">yum</span> <span class="pre">install</span> <span class="pre">wget</span></code> in CentOS.</p>
+<p class="last">If you get a wget error, install wget.  <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt-get</span> <span class="pre">install</span> <span class="pre">wget</span></code> in Ubuntu and Debian, <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">yum</span> <span class="pre">install</span> <span class="pre">wget</span></code> in CentOS.</p>
 </div>
 <div class="section" id="get-the-correct-script-for-your-distribution">
 <h2>Get the correct script for your distribution<a class="headerlink" href="#get-the-correct-script-for-your-distribution" title="Permalink to this headline">¶</a></h2>
-<p>Wget the install script for your Distro by typing/copy-paste the following into your terminal.
-Ubuntu 14.04:
-<code class="docutils literal"><span class="pre">$</span> <span class="pre">wget</span> <span class="pre">https://raw.githubusercontent.com/opencats/OpenCATS-Installation-Scripts/master/Ubuntu14.04-OpenCATS-Install.sh</span></code>
-Ubuntu 16.04:
-<code class="docutils literal"><span class="pre">$</span> <span class="pre">wget</span> <span class="pre">https://raw.githubusercontent.com/opencats/OpenCATS-Installation-Scripts/master/Ubuntu16.04-OpenCATS-Install.sh</span></code>
-Debian 8:
-<code class="docutils literal"><span class="pre">$</span> <span class="pre">wget</span> <span class="pre">https://raw.githubusercontent.com/opencats/OpenCATS-Installation-Scripts/master/Debian8-OpenCATS-Install.sh</span></code>
-CentOS 7:
-<code class="docutils literal"><span class="pre">$</span> <span class="pre">wget</span> <span class="pre">https://raw.githubusercontent.com/opencats/OpenCATS-Installation-Scripts/master/CentOS7-OpenCATS-install.sh</span></code></p>
+<p>Wget the install script for your Distro by typing/copy-paste the following into your terminal.</p>
+<p>Ubuntu 16.04:
+<code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">wget</span> <span class="pre">https://raw.githubusercontent.com/opencats/OpenCATS-Installation-Scripts/master/Ubuntu16.04-OpenCATS-Install.sh</span></code>
+Ubuntu 18.04:
+<code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">wget</span> <span class="pre">https://raw.githubusercontent.com/opencats/OpenCATS-Installation-Scripts/master/Ubuntu18.04-OpenCATS-Install.sh</span></code></p>
 <p>List directory to see the file name:
-<code class="docutils literal"><span class="pre">ls</span></code></p>
+<code class="docutils literal notranslate"><span class="pre">ls</span></code></p>
 <p>Make the script executable:
-<code class="docutils literal"><span class="pre">sudo</span> <span class="pre">chmod</span> <span class="pre">+x</span> <span class="pre">script-name.sh</span></code></p>
+<code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">chmod</span> <span class="pre">+x</span> <span class="pre">script-name.sh</span></code></p>
 <p>Run the script:
-<code class="docutils literal"><span class="pre">sudo</span> <span class="pre">./script-name.sh</span></code></p>
+<code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">./script-name.sh</span></code></p>
 <p>Wait until it is finished.</p>
 </div>
 <div class="section" id="install-the-opencats-software">
 <h2>Install the OpenCATS software<a class="headerlink" href="#install-the-opencats-software" title="Permalink to this headline">¶</a></h2>
 <p>In your browser, go to <a class="reference external" href="http://localhost/opencats">http://localhost/opencats</a></p>
-<p>Click: <code class="docutils literal"><span class="pre">Installation</span> <span class="pre">Wizard</span></code></p>
+<p>Click: <code class="docutils literal notranslate"><span class="pre">Installation</span> <span class="pre">Wizard</span></code></p>
 <img alt="_images/installation-wizard.png" src="_images/installation-wizard.png" />
 <p><strong>Step 1: System Connectivity</strong></p>
 <p>This step makes sure you have the required server environment set up correctly.</p>
@@ -197,24 +213,24 @@ CentOS 7:
 </div>
 <div class="admonition warning">
 <p class="first admonition-title">Warning</p>
-<p class="last">Red = Bad  You can&#8217;t continue the installation until a server environment issue is fixed.</p>
+<p class="last">Red = Bad  You can’t continue the installation until a server environment issue is fixed.</p>
 </div>
-<p>If there are no issues, it should be all green, click <code class="docutils literal"><span class="pre">Next</span></code></p>
+<p>If there are no issues, it should be all green, click <code class="docutils literal notranslate"><span class="pre">Next</span></code></p>
 <img alt="_images/step1.png" src="_images/step1.png" />
 <p><strong>Step 2: Database connectivity</strong></p>
 <p>Do NOT change anything here. Use the default information.</p>
-<p>Click <code class="docutils literal"><span class="pre">Test</span> <span class="pre">Database</span> <span class="pre">Connectivity</span></code></p>
+<p>Click <code class="docutils literal notranslate"><span class="pre">Test</span> <span class="pre">Database</span> <span class="pre">Connectivity</span></code></p>
 <img alt="_images/step2.png" src="_images/step2.png" />
-<p>If you see all green, click <code class="docutils literal"><span class="pre">next</span></code></p>
+<p>If you see all green, click <code class="docutils literal notranslate"><span class="pre">next</span></code></p>
 <p><strong>Step 3: Loading Data</strong></p>
-<p>For a new installation, select <code class="docutils literal"><span class="pre">New</span> <span class="pre">Installation</span></code>, then <code class="docutils literal"><span class="pre">next</span></code></p>
+<p>For a new installation, select <code class="docutils literal notranslate"><span class="pre">New</span> <span class="pre">Installation</span></code>, then <code class="docutils literal notranslate"><span class="pre">next</span></code></p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last"><code class="docutils literal"><span class="pre">Demonstration</span> <span class="pre">Installation</span></code> will autopopulate OpenCATS with general example clients, candidates, job orders, etc.  There&#8217;s no reason to use this in my opinion.</p>
+<p class="last"><code class="docutils literal notranslate"><span class="pre">Demonstration</span> <span class="pre">Installation</span></code> will autopopulate OpenCATS with general example clients, candidates, job orders, etc.  There’s no reason to use this in my opinion.</p>
 </div>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last"><code class="docutils literal"><span class="pre">Restore</span> <span class="pre">installation</span> <span class="pre">from</span> <span class="pre">backup</span></code> will be covered in a future tutorial</p>
+<p class="last"><code class="docutils literal notranslate"><span class="pre">Restore</span> <span class="pre">installation</span> <span class="pre">from</span> <span class="pre">backup</span></code> will be covered in a future tutorial</p>
 </div>
 <img alt="_images/step3.png" src="_images/step3.png" />
 <p><strong>Step 4 Setup resume indexing</strong></p>
@@ -224,52 +240,72 @@ CentOS 7:
 <li>/usr/bin/pdftotext</li>
 <li>/usr/bin/html2text</li>
 <li>/usr/bin/unrtf</li>
-<li>Click <code class="docutils literal"><span class="pre">Test</span> <span class="pre">Configuration</span></code></li>
 </ul>
+<img alt="_images/resindex.png" src="_images/resindex.png" />
+<ul class="simple">
+<li>Click <code class="docutils literal notranslate"><span class="pre">Test</span> <span class="pre">Configuration</span></code></li>
+</ul>
+<img alt="_images/step4.png" src="_images/step4.png" />
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">I always get red the first couple clicks, then it will go green.  If you get green, proceed.  If it stays red after a few click, the system isn&#8217;t recognizing the executables.  There may be a path issue that needs corrected.</p>
+<p class="last">I always get red the first couple clicks, then it will go green.  If you get green, proceed.  If it stays red after a few click, the system isn’t recognizing the executables.  There may be a path issue that needs corrected.</p>
 </div>
-<img alt="_images/step4.png" src="_images/step4.png" />
+<ul class="simple">
+<li>Click, Click, click, it will turn green.</li>
+</ul>
+<img alt="_images/greengood.png" src="_images/greengood.png" />
 <p><strong>Step 5 Mail Settings</strong></p>
-<p>OpenCATS can send emails.  If you don&#8217;t want to use it, you don&#8217;t have to.  OpenCATS works great either way!</p>
-<p>Choose an option from the Mail Support drop-down bar, fill the necessary information in (if you are using it) and click <code class="docutils literal"><span class="pre">Next</span></code></p>
+<p>OpenCATS can send emails.  If you don’t want to use it, you don’t have to.  OpenCATS works great either way!</p>
+<p>Choose an option from the Mail Support drop-down bar, fill the necessary information in (if you are using it) and click <code class="docutils literal notranslate"><span class="pre">Next</span></code></p>
 <img alt="_images/step5.png" src="_images/step5.png" />
 <p><strong>Step 6 Loading extras</strong></p>
-<p>Don&#8217;t forget to set the time zone to your area!</p>
+<p>Don’t forget to set the time zone to your area!</p>
 <div class="admonition warning">
 <p class="first admonition-title">Warning</p>
-<p class="last">If you forget to set the time zone ALL of the timestamps on every note in OpenCATS will be wrong.   Set the time zone correctly.  You will thank us...</p>
+<p class="last">If you forget to set the time zone ALL of the timestamps on every note in OpenCATS will be wrong.   Set the time zone correctly.  You will thank us…</p>
 </div>
 <p>Choose the date format you like best</p>
 <p>(United States only) choose to install (if you want) zip code lookup</p>
-<p>Click <code class="docutils literal"><span class="pre">next</span></code></p>
+<p>Click <code class="docutils literal notranslate"><span class="pre">next</span></code></p>
 <img alt="_images/step6.png" src="_images/step6.png" />
 <p><strong>Step 7 Finishing installation</strong></p>
-<p>Runs through the installation process.  You should see a box and some pretty bars moving.  It shouldn&#8217;t take long.</p>
+<p>Runs through the installation process.  You should see a box and some pretty bars moving.  It shouldn’t take long.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">The default username and password are: admin/admin (all lowercase)</p>
 </div>
-<p>Click <code class="docutils literal"><span class="pre">Start</span> <span class="pre">OpenCATS</span></code> for your login screen.</p>
+<p>Click <code class="docutils literal notranslate"><span class="pre">Start</span> <span class="pre">OpenCATS</span></code> for your login screen.</p>
 <img alt="_images/step7.png" src="_images/step7.png" />
 <p><strong>Success!!</strong></p>
 <p>Your brand new OpenCATS applicant System!</p>
 <img alt="_images/first-login.png" src="_images/first-login.png" />
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Immediately change your admin password!</p>
+</div>
+<ul class="simple">
+<li>Click <code class="docutils literal notranslate"><span class="pre">Settings</span></code></li>
+<li>Click <code class="docutils literal notranslate"><span class="pre">Administration</span></code></li>
+<li>Click <code class="docutils literal notranslate"><span class="pre">User</span> <span class="pre">Management</span></code></li>
+<li>Click <code class="docutils literal notranslate"><span class="pre">your</span> <span class="pre">name</span></code></li>
+<li>Click <code class="docutils literal notranslate"><span class="pre">edit</span></code></li>
+<li>Click <code class="docutils literal notranslate"><span class="pre">reset</span> <span class="pre">password</span></code></li>
+<li>Type your new password</li>
+<li>Click <code class="docutils literal notranslate"><span class="pre">save</span></code></li>
+</ul>
 </div>
 </div>
 
 
            </div>
+           
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="Install-Ubuntu-14.04.html" class="btn btn-neutral float-right" title="Install on Ubuntu 14.04" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
-      
-        <a href="Install-SharedHosting.html" class="btn btn-neutral" title="Install on Shared-hosting (Bluehost, GoDaddy or similar)" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="Install-OSX.html" class="btn btn-neutral float-left" title="OS X - OpenCATS Installation Instructions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -278,11 +314,11 @@ CentOS 7:
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2016, CC.
+        &copy; Copyright 2016, CC
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -295,35 +331,15 @@ CentOS 7:
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'./',
-            VERSION:'0.9.3',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
-        };
-    </script>
-      <script type="text/javascript" src="_static/jquery.js"></script>
-      <script type="text/javascript" src="_static/underscore.js"></script>
-      <script type="text/javascript" src="_static/doctools.js"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
    
 
 </body>

@@ -13,40 +13,40 @@
 
   
   
+  
+  
 
   
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
-  
-  
-    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-    <link rel="top" title="OpenCATS 0.9.3 documentation" href="index.html"/>
-        <link rel="next" title="Short overview of original OpenCATS Source code" href="shortdevguide.html"/>
-        <link rel="prev" title="Using OpenCATS-The building blocks: companies, contacts, job orders, and candidates" href="useoc.html"/> 
-
-  
-  <script src="_static/js/modernizr.min.js"></script>
-
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Short overview of original OpenCATS Source code" href="shortdevguide.html" />
+    <link rel="prev" title="Using OpenCATS-The building blocks: companies, contacts, job orders, and candidates" href="useoc.html" /> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
+   
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -81,7 +81,10 @@
           
             
             
-                <ul class="current">
+              
+            
+            
+              <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="warning.html">Gentle warning-read first</a></li>
 <li class="toctree-l1"><a class="reference internal" href="toc.html">Contents</a></li>
 <li class="toctree-l1"><a class="reference internal" href="preface.html">Preface</a></li>
@@ -97,7 +100,7 @@
 <li class="toctree-l1"><a class="reference internal" href="Install-CentOS7.html">Install-CentOS 7</a></li>
 <li class="toctree-l1"><a class="reference internal" href="screens-in-depth.html">Screens In-Depth</a></li>
 <li class="toctree-l1"><a class="reference internal" href="useoc.html">Using OpenCATS-The building blocks: companies, contacts, job orders, and candidates</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">OpenCATS Backup/Restore and Upgrade Instructions-THIS SECTION INCOMPLETE!</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">OpenCATS Backup/Restore and Upgrade Instructions-THIS SECTION INCOMPLETE!</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#backup-restore-best-practices-and-things-to-consider">Backup/Restore best practices and things to consider</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#about-this-documentation-different-environments">About this documentation/different environments</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#pros-and-cons-gui-vs-non-gui">Pros and Cons: GUI vs. Non-GUI</a></li>
@@ -121,34 +124,54 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="index.html">OpenCATS</a>
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">OpenCATS</a>
+        
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
- 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="index.html">Docs</a> &raquo;</li>
-      
-    <li>OpenCATS Backup/Restore and Upgrade Instructions-THIS SECTION INCOMPLETE!</li>
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>OpenCATS Backup/Restore and Upgrade Instructions-THIS SECTION INCOMPLETE!</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
-            <a href="_sources/backup-restore.txt" rel="nofollow"> View page source</a>
+            
+            <a href="_sources/backup-restore.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -185,28 +208,28 @@ Will you automate your backup process?</p>
 <h2>Pros and Cons: GUI vs. Non-GUI<a class="headerlink" href="#pros-and-cons-gui-vs-non-gui" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>The GUI, <strong>when it works</strong>, is far easier for non-technical users.</li>
-<li>As far as I know, the GUI backup works in OpenCATS versions 0.9.1, 0.9.1a, and 0.9.4.  I don&#8217;t think it works in any of the other versions.  It is certainly worth a try if you want to.</li>
+<li>As far as I know, the GUI backup works in OpenCATS versions 0.9.1, 0.9.1a, and 0.9.4.  I don’t think it works in any of the other versions.  It is certainly worth a try if you want to.</li>
 <li>Downloading the GUI generated backup file (catsbackup.bak) on certain shared hosting environments can also involve a few additional steps.</li>
 <li>While the GUI backup restore process looks very simple, in my experience, the Non-GUI process is the simpler, and far more consistent way to go.</li>
 </ul>
 </div>
 <div class="section" id="gui-graphical-point-and-click">
 <h2>GUI (Graphical, point and click)<a class="headerlink" href="#gui-graphical-point-and-click" title="Permalink to this headline">¶</a></h2>
-<p>OpenCATS has backup and restore functionality built in.  It works in versions 0.9.1, 0.9.1a, and 0.9.4.  I&#8217;m not sure about the versions in between.</p>
+<p>OpenCATS has backup and restore functionality built in.  It works in versions 0.9.1, 0.9.1a, and 0.9.4.  I’m not sure about the versions in between.</p>
 <img alt="_images/Backup-main-1.png" src="_images/Backup-main-1.png" />
 <p><strong>GUI Backup:</strong></p>
 <p>From the main screen:</p>
 <ul class="simple">
-<li>Click: <code class="docutils literal"><span class="pre">Settings</span></code></li>
-<li>Click: <code class="docutils literal"><span class="pre">Administration</span></code></li>
-<li>Click: <code class="docutils literal"><span class="pre">Site</span> <span class="pre">Backup</span></code></li>
+<li>Click: <code class="docutils literal notranslate"><span class="pre">Settings</span></code></li>
+<li>Click: <code class="docutils literal notranslate"><span class="pre">Administration</span></code></li>
+<li>Click: <code class="docutils literal notranslate"><span class="pre">Site</span> <span class="pre">Backup</span></code></li>
 </ul>
 <img alt="_images/admin-backup.png" src="_images/admin-backup.png" />
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last"><code class="docutils literal"><span class="pre">Create</span> <span class="pre">Attachments</span> <span class="pre">backup</span></code> will backup all the attachments in your OpenCATS system and allow you to export them for storage or redundancy.  This <strong>WILL NOT</strong> allow you to restore your OpenCATS database if you need to recover your OpenCATS system or upgrade in the future.</p>
+<p class="last"><code class="docutils literal notranslate"><span class="pre">Create</span> <span class="pre">Attachments</span> <span class="pre">backup</span></code> will backup all the attachments in your OpenCATS system and allow you to export them for storage or redundancy.  This <strong>WILL NOT</strong> allow you to restore your OpenCATS database if you need to recover your OpenCATS system or upgrade in the future.</p>
 </div>
-<p>Click: <code class="docutils literal"><span class="pre">Create</span> <span class="pre">Full</span> <span class="pre">System</span> <span class="pre">Backup</span></code></p>
+<p>Click: <code class="docutils literal notranslate"><span class="pre">Create</span> <span class="pre">Full</span> <span class="pre">System</span> <span class="pre">Backup</span></code></p>
 <p>This will backup your entire OpenCATS ATS (attachments and database).</p>
 <p>Depending on the database size, this may take a few minutes.  Let it finish and you should return to this screen with a downloadable link for catsbackup.bak</p>
 <img alt="_images/backup-complete.png" src="_images/backup-complete.png" />
@@ -214,19 +237,19 @@ Will you automate your backup process?</p>
 <p>Click the link, the file will download to your local computer.  You can store it wherever you like if you need to recover your opencats system in the future.</p>
 <p><strong>GUI Restore</strong></p>
 <p>Go through the normal installation process for your environment. Do the following before you get to the final, GUI portion of the installation.</p>
-<p>Create a directory called &#8220;restore&#8221; in the main OpenCATS directory.</p>
+<p>Create a directory called “restore” in the main OpenCATS directory.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">If you&#8217;re using a VPS, or linux environment, make sure the directory permissions are writable.  Refer to the &#8220;directory or file permissions section&#8221; and match the permissions of the uploads and attachments folders.</p>
+<p class="last">If you’re using a VPS, or linux environment, make sure the directory permissions are writable.  Refer to the “directory or file permissions section” and match the permissions of the uploads and attachments folders.</p>
 </div>
 <p>Move the backup file that you want to restore into the newly created restore directory.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">When you create/save/store backup files, you can rename them however you want.  When you restore from a backup file, it MUST be named catsbackup.bak.  Make sure the name is correct before attempting the restore.  OpenCATS won&#8217;t recognize any other file name/type.</p>
+<p class="last">When you create/save/store backup files, you can rename them however you want.  When you restore from a backup file, it MUST be named catsbackup.bak.  Make sure the name is correct before attempting the restore.  OpenCATS won’t recognize any other file name/type.</p>
 </div>
-<p>Referring to the &#8220;Install the OpenCATS software&#8221; section of the installation walkthrough, on &#8220;Step 3: Loading Data&#8221;, choose the <code class="docutils literal"><span class="pre">Restore</span> <span class="pre">installation</span> <span class="pre">from</span> <span class="pre">backup</span></code> option.</p>
+<p>Referring to the “Install the OpenCATS software” section of the installation walkthrough, on “Step 3: Loading Data”, choose the <code class="docutils literal notranslate"><span class="pre">Restore</span> <span class="pre">installation</span> <span class="pre">from</span> <span class="pre">backup</span></code> option.</p>
 <img alt="_images/step3.png" src="_images/step3.png" />
-<p>It will ask you to confirm that you have uploaded the catsbackup.bak file into the restore directory.  Check the box and click <code class="docutils literal"><span class="pre">continue</span></code>.</p>
+<p>It will ask you to confirm that you have uploaded the catsbackup.bak file into the restore directory.  Check the box and click <code class="docutils literal notranslate"><span class="pre">continue</span></code>.</p>
 <img alt="_images/gui-restore-3.png" src="_images/gui-restore-3.png" />
 <p>The rest of the installation should be normal.</p>
 <p>This will put you into a newly restored OpenCATS system.</p>
@@ -274,9 +297,9 @@ Log in to phpmyadmin.  Refer to the installation instructions, under the php or 
 <img alt="_images/phpmyadmin-backup1.png" src="_images/phpmyadmin-backup1.png" />
 <p>In the column, on the left side, you should see a list of your MySQL/MariaDB databases.  Click on the name of your OpenCATS database.  You should then see the following screen:</p>
 <img alt="_images/phpmyadmin-backup2.png" src="_images/phpmyadmin-backup2.png" />
-<p>Click the <code class="docutils literal"><span class="pre">Export</span></code> tab towards the top, center.  You should ten see the following screen:</p>
+<p>Click the <code class="docutils literal notranslate"><span class="pre">Export</span></code> tab towards the top, center.  You should ten see the following screen:</p>
 <img alt="_images/phpmyadmin-backup3.png" src="_images/phpmyadmin-backup3.png" />
-<p>Click <code class="docutils literal"><span class="pre">Go</span></code>.  Phpmyadmin will generate the database backup file and you should automatically start downloading it.</p>
+<p>Click <code class="docutils literal notranslate"><span class="pre">Go</span></code>.  Phpmyadmin will generate the database backup file and you should automatically start downloading it.</p>
 <p>The file will be named after your database name with an sql extension.  Mine, in this case, was named octest.sql.</p>
 <p>Make sure you move your file to a safe place.</p>
 <p><strong>Attachments backup</strong></p>
@@ -286,7 +309,7 @@ Select newly created database from list on the left
 Click import in the upper row
 browse
 select your opencatsdatabasebackup.sql file
-Scroll to the bottom and click &#8220;go&#8221;</p>
+Scroll to the bottom and click “go”</p>
 <p><strong>Restore attachments</strong></p>
 <p>Install opencats</p>
 </div>
@@ -307,7 +330,7 @@ Select newly created database from list on the left
 Click import in the upper row
 browse
 select your opencatsdatabasebackup.sql file
-Scroll to the bottom and click &#8220;go&#8221;
+Scroll to the bottom and click “go”
 Create user (follow steps from documentation)</p>
 <p>Check for INSTALL_BLOCK file or folder in opencats directory
 Install opencats</p>
@@ -319,7 +342,7 @@ Select newly created database from list on the left
 Click import in the upper row
 browse
 select your opencatsdatabasebackup.sql file
-Scroll to the bottom and click &#8220;go&#8221;
+Scroll to the bottom and click “go”
 Create user (follow steps from documentation) for the database and assign rights.</p>
 <p>In NEW opencats directory
 Check for INSTALL_BLOCK file or folder in opencats directory
@@ -333,15 +356,16 @@ Select that option.</p>
 
 
            </div>
+           
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="shortdevguide.html" class="btn btn-neutral float-right" title="Short overview of original OpenCATS Source code" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="shortdevguide.html" class="btn btn-neutral float-right" title="Short overview of original OpenCATS Source code" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="useoc.html" class="btn btn-neutral" title="Using OpenCATS-The building blocks: companies, contacts, job orders, and candidates" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="useoc.html" class="btn btn-neutral float-left" title="Using OpenCATS-The building blocks: companies, contacts, job orders, and candidates" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -350,11 +374,11 @@ Select that option.</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2016, CC.
+        &copy; Copyright 2016, CC
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -367,35 +391,15 @@ Select that option.</p>
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'./',
-            VERSION:'0.9.3',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
-        };
-    </script>
-      <script type="text/javascript" src="_static/jquery.js"></script>
-      <script type="text/javascript" src="_static/underscore.js"></script>
-      <script type="text/javascript" src="_static/doctools.js"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
    
 
 </body>

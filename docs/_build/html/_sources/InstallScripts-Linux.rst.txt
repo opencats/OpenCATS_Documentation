@@ -5,6 +5,8 @@ These install scripts will dramatically reduce the time and effort necessary for
 
 .. warning:: These scripts are ONLY for Linux systems that do not have Apache, MySQL/MariaDB and PHP installed.  This will install a full lamp stack from scratch.  It will likely wipe out any existing settings that are in place. I can not stress this enough.
 
+This script is updated for OpenCATS-0.9.4-3.
+
 Having gotten that out of the way, let's proceed.
 
 Open a terminal
@@ -15,14 +17,11 @@ Get the correct script for your distribution
 --------------------------------------------
 
 Wget the install script for your Distro by typing/copy-paste the following into your terminal.
-Ubuntu 14.04:
-``$ wget https://raw.githubusercontent.com/opencats/OpenCATS-Installation-Scripts/master/Ubuntu14.04-OpenCATS-Install.sh``
+
 Ubuntu 16.04:
 ``$ wget https://raw.githubusercontent.com/opencats/OpenCATS-Installation-Scripts/master/Ubuntu16.04-OpenCATS-Install.sh``
-Debian 8:
-``$ wget https://raw.githubusercontent.com/opencats/OpenCATS-Installation-Scripts/master/Debian8-OpenCATS-Install.sh``
-CentOS 7:
-``$ wget https://raw.githubusercontent.com/opencats/OpenCATS-Installation-Scripts/master/CentOS7-OpenCATS-install.sh``
+Ubuntu 18.04:
+``$ wget https://raw.githubusercontent.com/opencats/OpenCATS-Installation-Scripts/master/Ubuntu18.04-OpenCATS-Install.sh``
 
 List directory to see the file name: 
 ``ls``
@@ -91,11 +90,16 @@ For a new installation, select ``New Installation``, then ``next``
 * /usr/bin/pdftotext
 * /usr/bin/html2text
 * /usr/bin/unrtf
+.. image:: ../docs/_static/resindex.png
+
 * Click ``Test Configuration``
+
+.. image:: ../docs/_static/step4.png
 
 .. note:: I always get red the first couple clicks, then it will go green.  If you get green, proceed.  If it stays red after a few click, the system isn't recognizing the executables.  There may be a path issue that needs corrected.
 
-.. image:: ../docs/_static/step4.png
+* Click, Click, click, it will turn green.
+.. image:: ../docs/_static/greengood.png
 
 
 **Step 5 Mail Settings**
@@ -138,6 +142,16 @@ Your brand new OpenCATS applicant System!
 
 .. image:: ../docs/_static/first-login.png
 
+.. warning:: Immediately change your admin password!
+
+* Click ``Settings``
+* Click ``Administration``
+* Click ``User Management``
+* Click ``your name``
+* Click ``edit``
+* Click ``reset password``
+* Type your new password
+* Click ``save``
 
 
 

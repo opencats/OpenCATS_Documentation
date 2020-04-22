@@ -1,5 +1,5 @@
-OpenCATS Backup/Restore and Upgrade Instructions
-================================================
+OpenCATS Backup/Restore and Upgrade Instructions-THIS SECTION INCOMPLETE!
+=========================================================================
 
 The backup/restore and Upgrade processes are the same.  
 
@@ -158,23 +158,31 @@ The file will be named after your database name with an sql extension.  Mine, in
 
 Make sure you move your file to a safe place.
 
-Linux/VPS
 
-If you are running Linux, or a VPS, without phpmyadmin, you will need to back up through the command line.
+
 
 **Attachments backup**
 
 
 
+**Restore non-gui**
+In phpmyadmin:
+Select newly created database from list on the left
+Click import in the upper row
+browse
+select your opencatsdatabasebackup.sql file
+Scroll to the bottom and click "go"
 
 
+**Restore attachments**
+
+Install opencats
 
 
+Automating a windows backup
+---------------------------
 
-
-
-
-
+http://forums.opencats.org/viewtopic.php?f=2&t=810&start=10
 
 
 
@@ -183,3 +191,51 @@ Testing your backups/Setting up a test environment to reuse
 
 Changing your user passwords in phpmyadmin
 ------------------------------------------
+
+
+
+
+Try this
+
+
+**Restore non-gui**
+Create new database/user in phpmyadmin - Follow install documentation for this step if necessary
+
+In phpmyadmin:
+Select newly created database from list on the left
+Click import in the upper row
+browse
+select your opencatsdatabasebackup.sql file
+Scroll to the bottom and click "go"
+Create user (follow steps from documentation)
+
+
+Check for INSTALL_BLOCK file or folder in opencats directory
+Install opencats
+
+Use existing OpenCATS installation and automatically preform any necessary upgrade (recommended).
+
+
+Merge/overwrite old attachments folder into new Opencats attachments directory
+
+In phpmyadmin:
+Create new database in phpmyadmin - Follow install documentation for this step if necessary
+Select newly created database from list on the left
+Click import in the upper row
+browse
+select your opencatsdatabasebackup.sql file
+Scroll to the bottom and click "go"
+Create user (follow steps from documentation) for the database and assign rights.
+
+In NEW opencats directory
+Check for INSTALL_BLOCK file or folder in opencats directory
+Install opencats through browser
+
+When you get to the intall type step (new, demo, restore, etc. ) You should see:
+Use existing OpenCATS installation and automatically preform any necessary upgrade (recommended).
+Select that option.
+
+That should work. Post back with any questions/issues.
+
+
+

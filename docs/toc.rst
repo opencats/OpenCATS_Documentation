@@ -47,48 +47,8 @@ Contents
   * OPTIONAL - Renaming your OpenCATS directory
   * Set up OpenCATS
 
-**Install Scripts-Linux**
+**Install Scripts, Ubuntu Linux**
   * Get the correct script for your distribution
-  * Install the OpenCATS software
-
-**Install on Ubuntu 14.04**
-  * Installing MySQL 5/Mariadb
-  * Installing Apache2
-  * Installing PHP5
-  * Setting up your MySQL/MariaDB database
-  * Download the OpenCATS files
-  * Server and Directory permissions
-  * Install resume indexing tools
-  * Install the OpenCATS software
-
-**Install on Ubuntu 16.04**
-  * Installing MySQL 5/Mariadb
-  * Installing Apache2
-  * Installing PHP5.6
-  * Setting up your MySQL/MariaDB database
-  * Download the OpenCATS files
-  * Server and Directory permissions
-  * Install resume indexing tools
-  * Install the OpenCATS software
-
-**Install on Debian 8 Jessie**
-  * Installing MySQL/Mariadb
-  * Installing Apache2
-  * Installing PHP5.6
-  * Setting up your MySQL/MariaDB database
-  * Download the OpenCATS files
-  * Server and Directory permissions
-  * Install resume indexing tools
-  * Install the OpenCATS software
-
-**Install on CentOS 7**
-  * Installing MySQL5/Mariadb
-  * Installing Apache2
-  * Installing PHP5
-  * Setting up your MySQL/MariaDB database
-  * Download OpenCATS Files
-  * Server and Directory permissions
-  * Install resume indexing tools
   * Install the OpenCATS software
 
 **Screens in-depth**

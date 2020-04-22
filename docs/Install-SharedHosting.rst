@@ -1,10 +1,10 @@
-Install on Shared-hosting (Bluehost, GoDaddy or similar)
+Install on Shared-hosting (Godaddy, Bluehost or similar)
 ========================================================
 
 
 You can install OpenCATS right to your shared hosting account!  This way OpenCATS will be web accessible from any computer and multiple users, without the hassle of setting up and running a server.
 
-These instructions will walk you through setting up OpenCATS on a Bluehost hosting account.  Major web-hosts should be a similar process, though you may have to search and make small tweaks.
+These instructions will walk you through setting up OpenCATS on a Godaddy hosting account.  Major web-hosts should be a similar process, though you may have to search and make small tweaks.
  
 .. note:: There are benefits and down-sides to running your OpenCATS system through a shared hosting account.  The main benefit is that OpenCATS will be web accessible to any user from any location, and not limited to your local machine.  You will however lose the resume-indexing tools with a shared-hosting environment.  Which means that resumes will NOT be keyword searchable.
 
@@ -14,25 +14,30 @@ Download OpenCATS to your computer
 ----------------------------------
 Click this link to download the OpenCATS files, we will need them later:
 
-`OpenCATS Files <https://github.com/opencats/OpenCATS/releases/download/0.9.4/opencats-0.9.4-full.zip>`_
+`OpenCATS Files <https://codeload.github.com/opencats/OpenCATS/zip/0.9.4-3>`_
 
+GoDaddy My Hosting Dashboard
+----------------------------
+.. note:: All images use Godaddy for an example.  If you have a different hosting provider, this will likely look a little different.
+
+Log into your Godaddy account
+Scroll down to the webhosting section and click manager (on the right)
+It should look like this:
+
+.. image:: ../docs/_static/gddashboard.png
+
+* In the SSH access section, click ``Manage``
+* Turn SSH access On
 
 
 CPanel-File Manager
-----------------------------------------------
+---------------------------------------------
 
-.. note:: All images use Bluehost for an example.  If you have a different hosting provider, this will likely look a little different.
+* Click on ``CPanel Admin``
 
-Log in to your shared hosting account and click ``CPanel``
-
-.. image:: ../docs/_static/shost1.png
-
-
-Scroll down to the "files" section and click "File Manager".  
+Towards the top, find the "files" section and click "File Manager".  
 
 .. image:: ../docs/_static/shost2.png
-
-
 
 It will open up a new tab in your browser.
 
@@ -59,9 +64,9 @@ This should bring you to a file upload screen.
 
 * When the upload is finished, click the ``Go Back to public _html``
 
-* Scroll down to the ``opencats-0.9.4-full.zip`` we just uploaded and click it once to highlight it.
+* Scroll down to the ``opencats-0.9.4-3.zip`` we just uploaded and click it once to highlight it.
 
-* Click on ``Extract`` at the top to extract the OpenCATS files from the Tar file.
+* Click on ``Extract`` at the top to extract the OpenCATS files from the Zip file.
 
 .. image:: ../docs/_static/extract.png
 
@@ -75,17 +80,7 @@ Now you should see the extracted folder ``home`` listed in your public _html dir
 
 .. image:: ../docs/_static/shost6-3.png
 
-.. note:: Currently, the directory in the above image should say ``home``.
-
-.. note:: If you want to rename the folder, that's ok.  The folder name will be part of the web address you use to access your OpenCATS Installation. 
-
-* Double click on the ``home`` directory, then click ``travis``, then click ``build``, then click ``opencats``.  Now you should see the final ``OpenCATS`` directory.
-
-* Right click on the ``OpenCATS`` directory, click ``cut`` (or ``move``), and place the file in your main html directory (called public_html or something similar).
-
-* Go back into your main html directory (public_html or something similar), right click and delete the ``home`` folder (NOT the home.html file if you have one there).
-
-* Double click on the OpenCATS directory and find folder named ``INSTALL_BLOCK``, right click and delete it.  The ``INSTALL_BLOCK`` file or directory will prevent OpenCATS from installing on your system.
+.. note:: If you want to rename the folder, that's ok.  The folder name will be part of the web address you use to access your OpenCATS Installation.
 
 CPanel-PHP
 ----------
@@ -94,22 +89,25 @@ CPanel-PHP
 
 .. warning:: Changing PHP versions on hosting accounts MAY affect web sites or programs that are already installed.  You should back up any critical websites or programs BEFORE switching PHP versions.
 
-* Scroll down to the Programming section and click on "PHP Config".
+* Scroll down to the Software section and click on "Select PHP Version".
 
-.. image:: ../docs/_static/programming-php.png
+.. image:: ../docs/_static/phpselect.png
 
-This will open a screen to select what version of PHP your hosting is running.  OpenCATS should have PHP 5.6.  Select whatever PHP 5.6 option you prefer, I usually have the single ini option selected.
+This will open a screen to select what version of PHP your hosting is running.  OpenCATS should have PHP 5.6. 
 
-.. image:: ../docs/_static/php56.png
+.. image:: ../docs/_static/phpselecttext.png
 
-* Scroll down and click ``save changes``, then go back to the main CPanel dashboard.
+Select the following extensions (If they are available)
+MySQL, PCRE, ctype, GD, LDAP, SOAP, ZIP
+
+* Go back to the main CPanel menu
 
 CPanel-MySQL
 ------------
 
 .. note:: You will need the MySQL database name, user name and password later.  Make sure you write it down as you create them.
 
-* Scroll down to the Database Tools section and click ``MYSQL Wizard``.
+* Scroll down to the Database Tools section and click ``MYSQL Database Wizard``.
 
 .. image:: ../docs/_static/cpanel-databases.png
 
@@ -135,6 +133,15 @@ CPanel-MySQL
 If everything has been done correctly, you should be done in your web hosting account.
 
 * Open your web browser
+
+SSH and Run Composer
+--------------------
+Download and install Putty (A program that allows you to SSH into the shared hosting server)
+Putty-Download <https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html>`_
+
+For Ubuntu, in terminal type: ``sudo apt install putty``
+
+
 
 
 Install the OpenCATS software

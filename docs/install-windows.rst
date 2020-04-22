@@ -12,9 +12,12 @@ Downloading software and preparing your system
  
 * Download - `XAMPP <https://www.apachefriends.org/xampp-files/5.6.28/xampp-win32-5.6.28-1-VC11-installer.exe>`_
 * Install XAMPP
-* Download - `OpenCATS-0.9.4-full <https://github.com/opencats/OpenCATS/releases/download/0.9.4-full/opencats-0.9.4-full.zip>`_ .  You can not install this yet.
-* Go to the folder where the OpenCATS-0.9.4-full.zip file is located (usually the Downloads folder)
-* RIGHT-CLICK on the ``OpenCATS-0.9.4-full.zip`` file
+.. note:: You may get Windows defender warnings for Apache and MYSQL.  Just check the boxes that you want Windows to allow access to.  Private network would be for your home or office network only, public network would be for anything else.
+.. image:: ../docs/_static/network-block.png
+
+* Download - `OpenCATS-0.9.4-3 <https://github.com/opencats/OpenCATS/archive/0.9.4-3.zip>`_ .  You can not install this yet.
+* Go to the folder where the OpenCATS-0.9.4-3.zip file is located (usually the Downloads folder)
+* RIGHT-CLICK on the ``OpenCATS-0.9.4-3.zip`` file
 * Click ``Extract All``
 * Change the folder that the files will be extracted to, to the following: ``C:\xampp\htdocs\``
 * Click ``extract``
@@ -38,27 +41,14 @@ Start Xampp
 
 .. image:: ../docs/_static/xampp-quickstart.png
 
-Moving your OpenCATS Applicant Tracking System directory.
----------------------------------------------------------
-
-The current default directory name for the OpenCATS files is ``C:\xampp\htdocs\home``. 
-
-* Go to: ``C:\xampp\htdocs\home\travis\build\opencats``
-* Right click on the OpenCATS directory, select ``cut``.
-* Go to: ``C:\xampp\htdocs``, right click and select ``paste``.  We have moved the main OpenCATS directory into the htdocs directory.
-* Right click on the ``home`` directory and delete it.  We don't need it anymore.
-* Double click on the OpenCATS directory to go into it.
-* Right click on the ``INSTALL_Block`` directory and delete it.  The INSTALL_BLOCK file or folder will prevent OpenCATS from being installed on your system.
-
-
 OPTIONAL - Renaming your OpenCATS directory
 -------------------------------------------
 
-The current default directory name for the OpenCATS files is opencats. This will result in the web address in your browser being http://localhost/opencats
+The current default directory name for the OpenCATS files is OpenCATS-0.9.4-3. This will result in the web address in your browser being http://localhost/OpenCATS-0.9.4-3
 
 If you want to rename the main OpenCATS directory to something else, you can. 
 
-* Simply navigate to C:\xampp\htdocs
+* Simply navigate to ``C:\xampp\htdocs``
 * Right click on the OpenCATS directory
 * Click ``rename``
 * Rename the directory whatever you want (example: ATS)
@@ -98,10 +88,29 @@ You should now see "opencats" listed among the databases on the left.
 
 .. image:: ../docs/_static/phpmyadmin-newuser2.png
 
+Install and run Composer
+------------------------
+
+* Download and install- `Composer <https://getcomposer.org/Composer-Setup.exe>`_
+
+On the settings Check screen, it should read: ``C:\xampp\php\php.exe``
+
+.. image:: ../docs/_static/composer-wampp.png
+
+* In the windows search menu, type ``cmd`` the open a command prompt.
+* Type (Or copy/paste) ``cd C:\xampp\htdocs\opencats``
+* Type ``composer install``
+
+Composer will install some things.  
+
+.. note:: If you get a composer install token error, just hit enter and it will continue without any issues.
+
+Once composer is finished, close the command prompt and open your web broswer.
+
 Set up OpenCATS
 ---------------
 
-In your Web Browser, visit http://localhost/opencats (adjust if you renamed the OpenCATS directory).
+In your Web Browser, visit http://localhost/OpenCATS-0.9.4-3 (adjust if you renamed the OpenCATS directory).
 If OpenCATS has been configured correctly, you should see a page that looks like this: 
 
 .. image:: ../docs/_static/installation-wizard.png
