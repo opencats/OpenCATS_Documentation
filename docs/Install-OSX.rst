@@ -11,7 +11,7 @@ Requires OS X 10.10.5 or later.
 Downloading software and preparing your system
 ----------------------------------------------
  
-* Download and install - `MAMP <https://www.mamp.info/en/downloads/>`_
+* Download and install - `MAMP <https://downloads.mamp.info/MAMP-PRO/releases/4.5/MAMP_MAMP_PRO_4.5.pkg>`_
 * Download - `OpenCATS-0.9.4-full <https://github.com/opencats/OpenCATS/releases/download/0.9.4-full>`_
 * Extract the files to : ``/Applications/MAMP/htdocs``
 
