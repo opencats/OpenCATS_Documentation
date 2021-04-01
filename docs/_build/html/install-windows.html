@@ -13,43 +13,40 @@
 
   
   
+  
+  
 
   
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
-  
-  
-    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-        <link rel="index" title="Index"
-              href="genindex.html"/>
-        <link rel="search" title="Search" href="search.html"/>
-    <link rel="top" title="OpenCATS 0.9.3 documentation" href="index.html"/>
-        <link rel="next" title="Install on Linux" href="install-linux.html"/>
-        <link rel="prev" title="Introduction" href="introduction.html"/> 
-
-  
-  <script src="_static/js/modernizr.min.js"></script>
-
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Install on Shared-hosting (Godaddy, Bluehost or similar)" href="Install-SharedHosting.html" />
+    <link rel="prev" title="Introduction and Overview" href="introduction.html" /> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
+   
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -84,17 +81,34 @@
           
             
             
-                <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="warning.html">WARNING-READ FIRST</a></li>
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="warning.html">Gentle warning-read first</a></li>
 <li class="toctree-l1"><a class="reference internal" href="toc.html">Contents</a></li>
 <li class="toctree-l1"><a class="reference internal" href="preface.html">Preface</a></li>
-<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Windows - OpenCATS Installation Instructions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="install-linux.html">Install on Linux</a></li>
-<li class="toctree-l1"><a class="reference internal" href="install-linux.html#install-resume-indexing-tools">Install resume indexing tools</a></li>
-<li class="toctree-l1"><a class="reference internal" href="install-linux.html#install-the-opencats-software">Install the OpenCATS software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="authors-contrib.html">Authors and Contributors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction and Overview</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Windows - OpenCATS Installation Instructions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#windows-prerequisites">Windows Prerequisites</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#downloading-software-and-preparing-your-system">Downloading software and preparing your system</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#start-xampp">Start Xampp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#optional-renaming-your-opencats-directory">OPTIONAL - Renaming your OpenCATS directory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#launch-phpmyadmin">Launch phpMyAdmin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#install-and-run-composer">Install and run Composer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#set-up-opencats">Set up OpenCATS</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Install-SharedHosting.html">Install on Shared-hosting (Godaddy, Bluehost or similar)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Install-OSX.html">OS X - OpenCATS Installation Instructions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="InstallScripts-Linux.html">Install Scripts-Linux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Install-Ubuntu-16.04.html">Install on Ubuntu 16.04</a></li>
 <li class="toctree-l1"><a class="reference internal" href="screens-in-depth.html">Screens In-Depth</a></li>
 <li class="toctree-l1"><a class="reference internal" href="useoc.html">Using OpenCATS-The building blocks: companies, contacts, job orders, and candidates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="backup-restore.html">OpenCATS Backup/Restore and Upgrade Instructions-THIS SECTION INCOMPLETE!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="shortdevguide.html">Short overview of original OpenCATS Source code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">F.A.Q. for OpenCATS applicant tracking system</a></li>
 </ul>
 
             
@@ -106,34 +120,54 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="index.html">OpenCATS</a>
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">OpenCATS</a>
+        
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
- 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="index.html">Docs</a> &raquo;</li>
-      
-    <li>Windows - OpenCATS Installation Instructions</li>
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Windows - OpenCATS Installation Instructions</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
-            <a href="_sources/install-windows.txt" rel="nofollow"> View page source</a>
+            
+            <a href="_sources/install-windows.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -141,130 +175,196 @@
             
   <div class="section" id="windows-opencats-installation-instructions">
 <h1>Windows - OpenCATS Installation Instructions<a class="headerlink" href="#windows-opencats-installation-instructions" title="Permalink to this headline">¶</a></h1>
-<p><strong>Windows Prerequisites</strong></p>
-<p>These instructions are for the (Windows) XAMPP environment only.  Download and install the following software:</p>
+<div class="section" id="windows-prerequisites">
+<h2>Windows Prerequisites<a class="headerlink" href="#windows-prerequisites" title="Permalink to this headline">¶</a></h2>
+<p>Installation instructions are given for the XAMPP default install environment only.  WAMPP will also work if you prefer it.  The steps will be a little different.</p>
+</div>
+<div class="section" id="downloading-software-and-preparing-your-system">
+<h2>Downloading software and preparing your system<a class="headerlink" href="#downloading-software-and-preparing-your-system" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><a class="reference external" href="http://www.apachefriends.org/en/xampp-windows.html">XAMPP</a></li>
-<li><a class="reference external" href="http://downloads.opencats.org/setupResumeIndexingTools.exe">OpenCATS resume indexing tools</a></li>
-<li><a class="reference external" href="http://www.winfield.demon.nl/#Windows">Antiword</a></li>
-<li><a class="reference external" href="http://www.foolabs.com/xpdf/download.html">PdfToText</a></li>
-<li><a class="reference external" href="http://www.mbayer.de/html2text/">html2text</a></li>
-<li><a class="reference external" href="http://www.gnu.org/software/unrtf/unrtf.html">UnRTF</a></li>
-<li><a class="reference external" href="http://www.7-zip.org/">7-Zip or equivalent</a></li>
+<li>Download - <a class="reference external" href="https://www.apachefriends.org/xampp-files/5.6.28/xampp-win32-5.6.28-1-VC11-installer.exe">XAMPP</a></li>
+<li>Install XAMPP</li>
 </ul>
-<p>Installation instructions are given for the XAMPP default install environment only. And Prequisite Installation notes below.</p>
-<ul class="simple">
-<li>Download and install XAMPP to c:xampp by following the directions provided on the XAMPP website. Very easy.</li>
-<li>Download the <a class="reference external" href="http://downloads.opencats.org/setupResumeIndexingTools.exe">OpenCATS resume indexing tools</a>. Install the executable (exe file) and accept the default install locations.</li>
-<li>Optionally download <a class="reference external" href="http://www.7-zip.org/">7-Zip or equivalent</a> and install. This will allow you to extract the tar ball and gz files later. If you already have an extractor then you may skip this step.</li>
-<li>Now you are ready to get OpenCats Download <a class="reference external" href="http://downloads.opencats.org/opencats-0.9.1a.tar.gz">OpenCATS.9.1a</a></li>
-</ul>
-<p>Open tarball (cats-0.9.1.tar.gz) using 7Zip and extract all files to C:xampphtdocsopencats Verify that there is a readme.txt file in the directory C:/xampp/htdocs/opencats. If so you got it right :)</p>
-<p>Launch phpMyAdmin. <a class="reference external" href="http://localhost/phpmyadmin/">http://localhost/phpmyadmin/</a></p>
-<ul class="simple">
-<li>In the page that displays, type &#8216;opencats&#8217; into the textbox under Create new database and click the Create button.</li>
-<li>Accept all the other defaults.</li>
-</ul>
-<p>In your Web Browser, visit <a class="reference external" href="http://localhost/opencats">http://localhost/opencats</a> If OpenCATS has been configured correctly, you should see a page that looks like this:</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<ul class="last simple">
-<li>If you are running OpenCATS locally on your computer, the host address will be localhost.</li>
+<p class="last">You may get Windows defender warnings for Apache and MYSQL.  Just check the boxes that you want Windows to allow access to.  Private network would be for your home or office network only, public network would be for anything else.</p>
+</div>
+<img alt="_images/network-block.png" src="_images/network-block.png" />
+<ul class="simple">
+<li>Download - <a class="reference external" href="https://github.com/opencats/OpenCATS/archive/0.9.4-3.zip">OpenCATS-0.9.4-3</a> .  You can not install this yet.</li>
+<li>Go to the folder where the OpenCATS-0.9.4-3.zip file is located (usually the Downloads folder)</li>
+<li>RIGHT-CLICK on the <code class="docutils literal notranslate"><span class="pre">OpenCATS-0.9.4-3.zip</span></code> file</li>
+<li>Click <code class="docutils literal notranslate"><span class="pre">Extract</span> <span class="pre">All</span></code></li>
+<li>Change the folder that the files will be extracted to, to the following: <code class="docutils literal notranslate"><span class="pre">C:\xampp\htdocs\</span></code></li>
+<li>Click <code class="docutils literal notranslate"><span class="pre">extract</span></code></li>
 </ul>
 </div>
+<div class="section" id="start-xampp">
+<h2>Start Xampp<a class="headerlink" href="#start-xampp" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Click the Windows start button and type <code class="docutils literal notranslate"><span class="pre">xampp</span></code></li>
+<li>Hit <code class="docutils literal notranslate"><span class="pre">enter</span></code>. This will open the XAMPP control panel.</li>
+</ul>
+<img alt="_images/start-xampp.png" src="_images/start-xampp.png" />
+<ul class="simple">
+<li>On the right side of Apache and MySQL, click <code class="docutils literal notranslate"><span class="pre">start</span></code> for each one.</li>
+</ul>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<ul class="last simple">
-<li>If your server, VPS (some shared hosting too) has a specific address or IP, you will need to enter the specific address in place of localhost to access.</li>
-</ul>
+<p class="last">ONLY start the Apache and MySql services.  You do NOT need any of the other services.</p>
 </div>
+<img alt="_images/start-services-xampp.png" src="_images/start-services-xampp.png" />
+<ul class="simple">
+<li>Stop the apache service (lower right corner, right click XAMPP, stop apache)</li>
+<li>Start the apache service</li>
+</ul>
+<img alt="_images/xampp-quickstart.png" src="_images/xampp-quickstart.png" />
+</div>
+<div class="section" id="optional-renaming-your-opencats-directory">
+<h2>OPTIONAL - Renaming your OpenCATS directory<a class="headerlink" href="#optional-renaming-your-opencats-directory" title="Permalink to this headline">¶</a></h2>
+<p>The current default directory name for the OpenCATS files is OpenCATS-0.9.4-3. This will result in the web address in your browser being <a class="reference external" href="http://localhost/OpenCATS-0.9.4-3">http://localhost/OpenCATS-0.9.4-3</a></p>
+<p>If you want to rename the main OpenCATS directory to something else, you can.</p>
+<ul class="simple">
+<li>Simply navigate to <code class="docutils literal notranslate"><span class="pre">C:\xampp\htdocs</span></code></li>
+<li>Right click on the OpenCATS directory</li>
+<li>Click <code class="docutils literal notranslate"><span class="pre">rename</span></code></li>
+<li>Rename the directory whatever you want (example: ATS)</li>
+</ul>
+<p>Now, to access it, your browser address will be <a class="reference external" href="http://localhost/ATS">http://localhost/ATS</a></p>
+</div>
+<div class="section" id="launch-phpmyadmin">
+<h2>Launch phpMyAdmin<a class="headerlink" href="#launch-phpmyadmin" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>In your browser, go to:  <a class="reference external" href="http://localhost/phpmyadmin/">http://localhost/phpmyadmin/</a></li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If phpmyadmin does not load in this screen, stop and start your apache service again per the instructions above.</p>
+</div>
+<ul class="simple">
+<li>On the left side, click <code class="docutils literal notranslate"><span class="pre">new</span></code> to create a new database</li>
+</ul>
+<img alt="_images/phpmyadmin-main.png" src="_images/phpmyadmin-main.png" />
+<ul class="simple">
+<li>In the box labeled <code class="docutils literal notranslate"><span class="pre">database</span> <span class="pre">name</span></code> type <code class="docutils literal notranslate"><span class="pre">opencats</span></code>.</li>
+<li>Hit <code class="docutils literal notranslate"><span class="pre">create</span></code></li>
+</ul>
+<img alt="_images/phpmyadmin-newdb.png" src="_images/phpmyadmin-newdb.png" />
+<p>You should now see “opencats” listed among the databases on the left.</p>
+<ul class="simple">
+<li>Click the opencats database</li>
+<li>In the top row of tabs, on the right side of the screen, click <code class="docutils literal notranslate"><span class="pre">privileges</span></code></li>
+<li>Click <code class="docutils literal notranslate"><span class="pre">add</span> <span class="pre">user</span> <span class="pre">account</span></code></li>
+</ul>
+<img alt="_images/phpmyadmin-newuser.png" src="_images/phpmyadmin-newuser.png" />
+<ul class="simple">
+<li>User name, make sure <code class="docutils literal notranslate"><span class="pre">use</span> <span class="pre">text</span> <span class="pre">field</span></code> is selected, in the empty box next to it type <code class="docutils literal notranslate"><span class="pre">opencats</span></code></li>
+<li>Host name: In the first box, select <code class="docutils literal notranslate"><span class="pre">local</span></code> from the drop-down options.  The second box should say <code class="docutils literal notranslate"><span class="pre">localhost</span></code></li>
+<li>Type opencats for the database password twice</li>
+<li>In the “database for user account section”, confirm that the third checkbox <code class="docutils literal notranslate"><span class="pre">Grant</span> <span class="pre">all</span> <span class="pre">privileges</span> <span class="pre">on</span> <span class="pre">database</span> <span class="pre">&quot;opencats&quot;</span></code> is checked.</li>
+<li>Scroll down to the bottom and click <code class="docutils literal notranslate"><span class="pre">go</span></code></li>
+</ul>
+<img alt="_images/phpmyadmin-newuser2.png" src="_images/phpmyadmin-newuser2.png" />
+</div>
+<div class="section" id="install-and-run-composer">
+<h2>Install and run Composer<a class="headerlink" href="#install-and-run-composer" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Download and install- <a class="reference external" href="https://getcomposer.org/Composer-Setup.exe">Composer</a></li>
+</ul>
+<p>On the settings Check screen, it should read: <code class="docutils literal notranslate"><span class="pre">C:\xampp\php\php.exe</span></code></p>
+<img alt="_images/composer-wampp.png" src="_images/composer-wampp.png" />
+<ul class="simple">
+<li>In the windows search menu, type <code class="docutils literal notranslate"><span class="pre">cmd</span></code> the open a command prompt.</li>
+<li>Type (Or copy/paste) <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">C:\xampp\htdocs\opencats</span></code></li>
+<li>Type <code class="docutils literal notranslate"><span class="pre">composer</span> <span class="pre">install</span></code></li>
+</ul>
+<p>Composer will install some things.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If you get a composer install token error, just hit enter and it will continue without any issues.</p>
+</div>
+<p>Once composer is finished, close the command prompt and open your web broswer.</p>
+</div>
+<div class="section" id="set-up-opencats">
+<h2>Set up OpenCATS<a class="headerlink" href="#set-up-opencats" title="Permalink to this headline">¶</a></h2>
+<p>In your Web Browser, visit <a class="reference external" href="http://localhost/OpenCATS-0.9.4-3">http://localhost/OpenCATS-0.9.4-3</a> (adjust if you renamed the OpenCATS directory).
+If OpenCATS has been configured correctly, you should see a page that looks like this:</p>
 <img alt="_images/installation-wizard.png" src="_images/installation-wizard.png" />
 <p><strong>Step 1 System Connectivity</strong>
 This step makes sure you have the required server environment set up correctly.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">Green = good.</p>
+<p class="last">Disregard the yellow errors.  They are not necessary for this installation and you will not lose any OpenCATS functionality.</p>
 </div>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Yellow = OpenCATS will work, but some functions may not.</p>
-</div>
+<p>If you see all green and/or yellow, click <code class="docutils literal notranslate"><span class="pre">Next</span></code></p>
+<img alt="_images/win-install-wizard.png" src="_images/win-install-wizard.png" />
 <div class="admonition warning">
 <p class="first admonition-title">Warning</p>
-<p class="last">Red = Bad  You can&#8217;t continue the installation until a server environment issue is fixed.</p>
+<p class="last">Red = Bad  You can’t continue the installation until a server environment issue is fixed.</p>
 </div>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">(I am setting up this example instance of OpenCATS in a shared hosting service.  I do not have command line access and can not install the required modules to get rid of the yellow areas.  For this Windows installation tutorial, you should have all green here.)</p>
-</div>
-<p>I you see all green and/or yellow, click <code class="docutils literal"><span class="pre">Next</span></code></p>
-<img alt="_images/step1.png" src="_images/step1.png" />
 <p><strong>Step 2 Database connectivity</strong></p>
-<p>When asked for database name, user, and password use database <strong>opencats</strong>, user <strong>root</strong>, and <strong>a blank password</strong>.</p>
-<p>Click <code class="docutils literal"><span class="pre">Test</span> <span class="pre">Database</span> <span class="pre">Connectivity</span></code></p>
+<p>Enter the following information:
+Database Name: opencats
+Database User: opencats
+Database Password: opencats
+Database Host: localhost</p>
+<p>Click <code class="docutils literal notranslate"><span class="pre">Test</span> <span class="pre">Database</span> <span class="pre">Connectivity</span></code></p>
 <p>If the SQL information is set up and entered correctly, you should have all green.  If you see red, something needs to be corrected or set up correctly.</p>
 <img alt="_images/step2.png" src="_images/step2.png" />
 <p><strong>Step 3 Loading Data</strong></p>
-<p>For a new installation, select <code class="docutils literal"><span class="pre">New</span> <span class="pre">Installation</span></code>, then <code class="docutils literal"><span class="pre">next</span></code></p>
+<p>For a new installation, select <code class="docutils literal notranslate"><span class="pre">New</span> <span class="pre">Installation</span></code>, then <code class="docutils literal notranslate"><span class="pre">next</span></code></p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">Demonstration Installation will autopopulate OpenCATS with general example clients, candidates, job orders, etc.  There&#8217;s no reason to use this in my opinion.</p>
+<p class="last">Demonstration Installation will auto-populate OpenCATS with general example clients, candidates, job orders, etc.  There’s no reason to use this in my opinion.</p>
 </div>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">Restore installation from backup will be covered in a future tutorial</p>
 </div>
 <img alt="_images/step3.png" src="_images/step3.png" />
-<p><strong>Step 4 Setup resume indexing</strong></p>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">This is only is you have root/administrative access, or are in a REALLY flexible shared hosting environment.  Most major shared hosting companies will not install this software for you.  So if you do not have root/administrative access, just skip this step.</p>
-</div>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">If you are running on a local machine, on a self-hosted server, VPS, or on a web host that will install packages for you, you can use this functionality.</p>
-</div>
-<p>If you followed the steps above you may safely accept the default locations for Antiword, PDF2Text, HTML2Text and UnRTF.</p>
-<p>Click <code class="docutils literal"><span class="pre">Test</span> <span class="pre">configuration</span></code> or <code class="docutils literal"><span class="pre">skip</span> <span class="pre">this</span> <span class="pre">step</span></code>.  If it&#8217;s all green, proceed.</p>
-<img alt="_images/step4.png" src="_images/step4.png" />
+<p><strong>Step.4-full Setup resume indexing</strong></p>
+<p>Unfortunately, for now, there is no resume indexing.
+* Click <code class="docutils literal notranslate"><span class="pre">Skip</span> <span class="pre">this</span> <span class="pre">Step</span></code>.</p>
 <p><strong>Step 5 Mail Settings</strong></p>
-<p>OpenCATS can send emails.  If you don&#8217;t want to use it, you don&#8217;t have to.  OpenCATS works great either way!</p>
-<p>Choose an option from the Mail Support drop-down bar, fill the necessary information in (if you are using it) and click <code class="docutils literal"><span class="pre">Next</span></code></p>
+<p>OpenCATS can send emails.  If you don’t want to use it, you don’t have to.  OpenCATS works great either way!</p>
+<p>Choose an option from the Mail Support drop-down bar, fill the necessary information in (if you are using it) and click <code class="docutils literal notranslate"><span class="pre">Next</span></code></p>
 <img alt="_images/step5.png" src="_images/step5.png" />
 <p><strong>Step 6 Loading extras</strong></p>
-<p>Don&#8217;t forget to set the time zone to your area!</p>
+<p>Don’t forget to set the time zone to your area!</p>
 <div class="admonition warning">
 <p class="first admonition-title">Warning</p>
-<p class="last">If you forget to set the time zone ALL of the timestamps on every note in OpenCATS will be wrong.  Set the time zone correctly.  You will thank us...</p>
+<p class="last">If you forget to set the time zone ALL of the timestamps on every note in OpenCATS will be wrong.  Set the time zone correctly.  You will thank us…</p>
 </div>
 <p>Choose the date format you like best</p>
 <p>(United States only) choose to install (if you want) zip code lookup</p>
-<p>Click <code class="docutils literal"><span class="pre">next</span></code></p>
+<p>Click <code class="docutils literal notranslate"><span class="pre">next</span></code></p>
 <img alt="_images/step6.png" src="_images/step6.png" />
 <p><strong>Step 7 Finishing installation</strong></p>
-<p>Runs through the installation process.  You should see a box and some pretty bars moving.  It shouldn&#8217;t take long.</p>
+<p>Runs through the installation process.  You should see a box and some pretty bars moving.  It shouldn’t take long.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">The default username and password are: admin/admin  or admin/cats (all lowercase) depending on your OpenCATS version</p>
 </div>
-<p>Click <code class="docutils literal"><span class="pre">Start</span> <span class="pre">OpenCATS</span></code> for your login screen.</p>
+<p>Click <code class="docutils literal notranslate"><span class="pre">Start</span> <span class="pre">OpenCATS</span></code> for your login screen.</p>
 <img alt="_images/step7.png" src="_images/step7.png" />
 <p><strong>Success!!</strong></p>
 <p>Your brand new OpenCATS applicant System!</p>
 <img alt="_images/first-login.png" src="_images/first-login.png" />
 </div>
+</div>
 
 
            </div>
+           
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="install-linux.html" class="btn btn-neutral float-right" title="Install on Linux" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="Install-SharedHosting.html" class="btn btn-neutral float-right" title="Install on Shared-hosting (Godaddy, Bluehost or similar)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="introduction.html" class="btn btn-neutral" title="Introduction" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="introduction.html" class="btn btn-neutral float-left" title="Introduction and Overview" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -273,11 +373,11 @@ This step makes sure you have the required server environment set up correctly.<
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2016, CC.
+        &copy; Copyright 2016, CC
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -290,35 +390,15 @@ This step makes sure you have the required server environment set up correctly.<
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'./',
-            VERSION:'0.9.3',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
-        };
-    </script>
-      <script type="text/javascript" src="_static/jquery.js"></script>
-      <script type="text/javascript" src="_static/underscore.js"></script>
-      <script type="text/javascript" src="_static/doctools.js"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
    
 
 </body>
